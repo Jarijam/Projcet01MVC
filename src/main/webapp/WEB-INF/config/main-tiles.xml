@@ -5,8 +5,8 @@
        
 <tiles-definitions>
 	<!-- 템플릿 -->
-	<definition name="indexTemplate" template="/WEB-INF/layout/navbar.jsp">
-		<put-attribute name="main" value="/WEB-INF/main/index.jsp"/>
+	<definition name="indexTemplate" template="/WEB-INF/main/index.jsp">
+		<put-attribute name="navbar" value="/WEB-INF/layout/navbar.jsp"/>
 	</definition>
 	
 	<!-- 뷰 -->
