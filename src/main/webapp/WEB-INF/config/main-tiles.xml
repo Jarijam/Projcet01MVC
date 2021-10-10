@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+	<!-- 템플릿 -->
+	<definition name="indexTemplate" template="/WEB-INF/layout/navbar.jsp">
+		<put-attribute name="main" value="/WEB-INF/main/index.jsp"/>
+	</definition>
+	
+	<!-- 뷰 -->
+	<definition name ="index" extends="indexTemplate">
+	
+	</definition>
+</tiles-definitions>
