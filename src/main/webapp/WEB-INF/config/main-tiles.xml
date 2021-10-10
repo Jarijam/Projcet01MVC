@@ -11,6 +11,8 @@
 	
 	<!-- 뷰 -->
 	<definition name ="index" extends="indexTemplate">
+	</definition>
 	
+	<definition name="review" extends="indexTemplate">
 	</definition>
 </tiles-definitions>

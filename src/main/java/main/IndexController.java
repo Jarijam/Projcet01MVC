@@ -10,4 +10,10 @@ public class IndexController {
 		System.out.println("pro01 index 실행");
 		return "index"; //tiles 설정 파일에 등록된 view 이름
 	}
+	
+	@RequestMapping("/review.do")
+	public String review() {
+		System.out.println("pro01 review 실행");
+		return "review"; //tiles 설정 파일에 등록된 view 이름(review)
+	}
 }
