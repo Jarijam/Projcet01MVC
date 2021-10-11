@@ -1,16 +1,16 @@
 package multi.project.userinfo;
 
-public class userInfoVO {
+public class UserInfoVO {
 	private String userid;
 	private String password;
 	private String name;
 	private int cellnum;
 	
-	public userInfoVO() {
+	public UserInfoVO() {
 		
 	}
 
-	public userInfoVO(String userid, String password, String name, int cellnum) {
+	public UserInfoVO(String userid, String password, String name, int cellnum) {
 		super();
 		this.userid = userid;
 		this.password = password;
