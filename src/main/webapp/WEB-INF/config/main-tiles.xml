@@ -23,4 +23,14 @@
 		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
 	</definition>
+	
+	<definition name="login" template="/WEB-INF/login/join.jsp">
+		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+	</definition>
+	
+	<definition name="signup" template="/WEB-INF/SignUp/signup.jsp">
+		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+	</definition>
 </tiles-definitions>

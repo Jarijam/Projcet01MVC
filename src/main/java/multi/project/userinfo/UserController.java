@@ -12,6 +12,6 @@ public class UserController {
 	@RequestMapping("/user/insert.do")
 	public String insert(UserVO command) {
 		service.insert(command);
-		return "redirect:/index.do";
+		return "redirect:/login.do";
 	}
 }

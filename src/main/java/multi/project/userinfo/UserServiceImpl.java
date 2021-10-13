@@ -15,11 +15,4 @@ public class UserServiceImpl implements UserService {
 		dao.insert(user);
 		return 0;
 	}
-
-	@Override
-	public List<UserVO> getMemberList() {
-		
-		return null;
-	}
-
 }

@@ -15,11 +15,4 @@ public class UserDAOImpl implements UserDAO {
 		sqlSession.insert("project.userinfo.insert", user);
 		return 0;
 	}
-
-	@Override
-	public List<UserVO> getMemberList() {
-		
-		return null;
-	}
-
 }

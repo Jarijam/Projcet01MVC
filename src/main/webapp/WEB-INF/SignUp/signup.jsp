@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,29 +23,37 @@
 	<body>
 		<tiles:insertAttribute name="top"></tiles:insertAttribute>
 		<br/>
-		<div id="signin">
-			<form method="post" action="/clientweb/project01/signin.do">
-				
-				<h2>회원가입 하기</h2>
-				<hr/>
-				<div>
-					<h4>아이디</h4>
-					<input type="text" placeholder="아이디" name="id">
+		 <section class="bg-success py-5">
+			<div class="container">
+				<div class="row align-items-center py-5">
+					<div class="col-md-80 text-white">
+						<form method="post" action="/user/insert.do">
+							<h2>회원가입 하기</h2>
+							<hr/>
+							<div>
+								<h4>아이디</h4>
+								<input type="text" placeholder="아이디" name="id">
+							</div>
+							<br/>
+							<div>	
+								<h4>비밀번호</h4>
+								<input type="text" placeholder="비밀번호" name="password">
+							</div>
+							<br/>
+							<div>
+								<h4>이름</h4>
+								<input type="text" placeholder="이름" name="name">
+							</div>
+							<br/>
+							<div>
+								<h4>전화번호</h4>
+								<input type="text" placeholder="전화번호" name="cellnum"> <input type="submit" value="회원가입">
+							</div>
+						</form>
+					</div>
 				</div>
-				<div>	
-					<h4>비밀번호</h4>
-					<input type="text" placeholder="비밀번호" name="password">
-				</div>
-				<div>
-					<h4>이름</h4>
-					<input type="text" placeholder="이름" name="name">
-				</div>
-				<div>
-					<h4>전화번호</h4>
-					<input type="text" placeholder="전화번호" name="cellnum"> <input type="submit" value="회원가입">
-				</div>
-			</form>
-		</div>
-		<jsp:include page="/WEB-INF/layout/footer.jsp"></jsp:include>
+			</div>
+		</section>
+		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 	</body>
 </html>
