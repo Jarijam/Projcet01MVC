@@ -20,7 +20,7 @@
 
 	</head>
 	<body>
-		<jsp:include page="/WEB-INF/layout/navbar.jsp"></jsp:include>
+		<tiles:insertAttribute name="top"></tiles:insertAttribute>
 		<br/>
 		<div id="signin">
 			<form method="post" action="/clientweb/project01/signin.do">

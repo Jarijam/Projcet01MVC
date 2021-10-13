@@ -6,7 +6,8 @@
 <tiles-definitions>
 	<!-- 템플릿 -->
 	<definition name="indexTemplate" template="/WEB-INF/main/index.jsp">
-		<put-attribute name="navbar" value="/WEB-INF/layout/navbar.jsp"/>
+		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
 	</definition>
 	
 	<!-- 뷰 -->
@@ -14,5 +15,10 @@
 	</definition>
 	
 	<definition name="review" extends="indexTemplate">
+	</definition>
+	
+	<definition name="review_write" template="/WEB-INF/review/review_write.jsp">
+		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
 	</definition>
 </tiles-definitions>

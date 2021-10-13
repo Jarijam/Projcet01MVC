@@ -7,28 +7,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
-<link rel="shortcut icon" type="image/x-icon" href="/pro01/images/favicon.ico">
+<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+<link rel="shortcut icon" type="image/x-icon"
+	href="assets/img/favicon.ico">
 
-<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
-<link rel="stylesheet" href="/pro01/common/css/custom.css">
-
-<!-- Load fonts style after rendering the layout styles -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/templatemo.css">
+<link rel="stylesheet" href="assets/css/custom.css">
 
 <!-- Load fonts style after rendering the layout styles -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
 <!-- Load map styles -->
 <link rel="stylesheet"
 	href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
 	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 	crossorigin="" />
-<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/map.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 	        function count(message) {
@@ -58,8 +55,8 @@
 
 <body>
 
-	<%-- <jsp:include page="includes/navbar.jsp"></jsp:include> --%>
-	
+	<<tiles:insertAttribute name="top"></tiles:insertAttribute>
+
 	<!-- Start Content Page -->
 	<div class="container-fluid bg-light py-5">
 		<div class="col-md-6 m-auto text-center">
@@ -392,6 +389,7 @@
 	                    var MAX_MESSAGE_BYTE = 500;
 	                    var slash = '/';
 	                    document.getElementById('max-count').innerHTML = slash.toString()+MAX_MESSAGE_BYTE.toString();
+	                    
 	                </script>
 				</div>
 				

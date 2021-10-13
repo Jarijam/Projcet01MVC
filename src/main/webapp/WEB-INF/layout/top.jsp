@@ -65,7 +65,7 @@
                             <a class="nav-link" href="review.do">리뷰 모음</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pro01/review.do">리뷰 작성</a>
+                            <a class="nav-link" href="review_write.do">리뷰 작성</a>
                         </li>
                     </ul>
                 </div>
