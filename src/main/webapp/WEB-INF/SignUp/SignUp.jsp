@@ -20,7 +20,7 @@
 
 	</head>
 	<body>
-		<%-- <jsp:include page=""></jsp:include> --%>
+		<jsp:include page="/WEB-INF/layout/navbar.jsp"></jsp:include>
 		<br/>
 		<div id="signin">
 			<form method="post" action="/clientweb/project01/signin.do">
@@ -45,5 +45,6 @@
 				</div>
 			</form>
 		</div>
+		<jsp:include page="/WEB-INF/layout/footer.jsp"></jsp:include>
 	</body>
 </html>
