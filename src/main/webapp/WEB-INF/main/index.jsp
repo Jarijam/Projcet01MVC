@@ -29,7 +29,7 @@ https://templatemo.com/tm-559-zay-shop
 
 <body>
 	<div>
-		<tiles:insertAttribute name="top"></tiles:insertAttribute>
+	<%-- 	<tiles:insertAttribute name="top"></tiles:insertAttribute> --%>
 	</div>
     <!-- Start Banner Hero -->
     <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -231,7 +231,7 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </section>
     <!-- End Featured Product -->
-	<tiles:insertAttribute name="footer"></tiles:insertAttribute>
+	<%-- <tiles:insertAttribute name="footer"></tiles:insertAttribute> --%>
 
     <!-- Start Script -->
     <script src="/pro01/common/js/jquery-1.11.0.min.js"></script>

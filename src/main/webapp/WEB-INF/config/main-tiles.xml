@@ -5,8 +5,9 @@
        
 <tiles-definitions>
 	<!-- 템플릿 -->
-	<definition name="indexTemplate" template="/WEB-INF/main/index.jsp">
+	<definition name="indexTemplate" template="/WEB-INF/layout/content.jsp">
 		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/main/index.jsp"/>
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
 	</definition>
 	
@@ -17,7 +18,7 @@
 	
 	
 	<definition name="review" extends="indexTemplate">
-		
+		<put-attribute name="content" value="/WEB-INF/review/review.jsp"/>
 	</definition>
 	
 	<definition name="review_write" template="/WEB-INF/review/review_write.jsp">
