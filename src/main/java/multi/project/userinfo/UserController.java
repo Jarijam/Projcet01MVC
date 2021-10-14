@@ -11,7 +11,8 @@ public class UserController {
 	
 	@RequestMapping("/user/insert.do")
 	public String insert(UserVO command) {
-		service.insert(command);
+		System.out.println("인서트 매핑!");
+//		service.insert(command);
 		return "redirect:/login.do";
 	}
 }
