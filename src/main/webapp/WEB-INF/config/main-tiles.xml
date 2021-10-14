@@ -27,13 +27,11 @@
 		<put-attribute name="content" value="/WEB-INF/review/review_form.jsp"/>
 	</definition>
 	
-	<definition name="login" template="/WEB-INF/login/join.jsp">
-		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
-		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+	<definition name="login" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/login/join.jsp"/>
 	</definition>
 	
-	<definition name="signup" template="/WEB-INF/signup/signup.jsp">
-		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
-		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+	<definition name="signup" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/SignUp/signup.jsp"/>
 	</definition>
 </tiles-definitions>
