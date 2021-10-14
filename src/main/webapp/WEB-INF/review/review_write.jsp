@@ -56,7 +56,7 @@
 
 <body>
 
-	<<tiles:insertAttribute name="top"></tiles:insertAttribute>
+	<tiles:insertAttribute name="top"></tiles:insertAttribute>
 
 	<!-- Start Content Page -->
 	<div class="container-fluid bg-light py-5">
