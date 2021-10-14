@@ -14,12 +14,18 @@
 	<definition name ="index" extends="indexTemplate">
 	</definition>
 	
-	<definition name="review" template="/WEB-INF/review/review.jsp">
+	
+	
+	<definition name="review" extends="indexTemplate">
+		
+	</definition>
+	
+	<definition name="review_write" template="/WEB-INF/review/review_write.jsp">
 		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
 	</definition>
 	
-	<definition name="review_write" template="/WEB-INF/review/review_write.jsp">
+	<definition name="review_form" template="/WEB-INF/review/review_form.jsp">
 		<put-attribute name="top" value="/WEB-INF/layout/top.jsp"/>
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
 	</definition>
