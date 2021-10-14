@@ -23,10 +23,11 @@
 	<body>
 		<tiles:insertAttribute name="top"></tiles:insertAttribute>
 		<br/>
-		 <section class="bg-success py-5">
+		
+		<section class="bg-success py-5">
 			<div class="container">
 				<div class="row align-items-center py-5">
-					<div class="col-md-80 text-white">
+					<div class="col-md-8 text-white">
 						<form method="post" action="/user/insert.do">
 							<h2>회원가입 하기</h2>
 							<hr/>
@@ -54,6 +55,7 @@
 				</div>
 			</div>
 		</section>
+		
 		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 	</body>
 </html>
