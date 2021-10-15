@@ -3,8 +3,12 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="project.userinfo">
+  <mapper namespace="project.user">
   	<insert id="insert" parameterType="user">
   		insert into userinfo values(#{userid}, #{password}, #{name}, #{cellnum})
   	</insert>
+  	
+  	<select id="idCheck" parameterMap="String" resultType="user">
+  		select * from userinfo where id = #{id}
+  	</select>
   </mapper>

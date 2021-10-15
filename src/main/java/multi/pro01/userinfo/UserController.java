@@ -15,4 +15,16 @@ public class UserController {
 		service.insert(command);
 		return "redirect:/login.do";
 	}
+	
+	public String idCheck(String id) {
+		boolean state = service.idCheck(id);
+		String result = "";
+		if(state) {
+			result = "사용 가능";
+		}else {
+			result = "사용 불가";
+		}
+		
+		return result;
+	}
 }

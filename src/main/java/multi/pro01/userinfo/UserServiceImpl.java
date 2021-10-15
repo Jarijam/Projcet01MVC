@@ -16,4 +16,9 @@ public class UserServiceImpl implements UserService {
 		dao.insert(user);
 		return 0;
 	}
+
+	@Override
+	public boolean idCheck(String id) {
+		return dao.idCheck(id);
+	}
 }
