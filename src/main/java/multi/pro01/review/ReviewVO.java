@@ -1,4 +1,4 @@
-package multi.project.review;
+package multi.pro01.review;
 
 import org.springframework.web.multipart.MultipartFile;
 
