@@ -6,7 +6,7 @@ public class ReviewVO {
 	private String userid;
 	private String rev_content;
 	private String rev_date;
-	MultipartFile[] files;
+	//MultipartFile[] files;
 	
 	
 	public ReviewVO() {
@@ -17,16 +17,16 @@ public class ReviewVO {
 		this.userid = userid;
 		this.rev_content = rev_content;
 		this.rev_date = rev_date;
-		this.files = files;
+		//this.files = files;
 	}
 
-	public MultipartFile[] getFiles() {
-		return files;
-	}
-
-	public void setFiles(MultipartFile[] files) {
-		this.files = files;
-	}
+//	public MultipartFile[] getFiles() {
+//		return files;
+//	}
+//
+//	public void setFiles(MultipartFile[] files) {
+//		this.files = files;
+//	}
 
 	public String getUserid() {
 		return userid;
@@ -54,7 +54,8 @@ public class ReviewVO {
 	
 	@Override
 	public String toString() {
-		return "ReviewVO [userid=" + userid + ", rev_content=" + rev_content + ", rev_date=" + rev_date + ", files=" + files
-				+ "]";
+//		return "ReviewVO [userid=" + userid + ", rev_content=" + rev_content + ", rev_date=" + rev_date + ", files=" + files
+//				+ "]";
+		return "ReviewVO [userid=" + userid + ", rev_content=" + rev_content + ", rev_date=" + rev_date + "]";
 	}
 }

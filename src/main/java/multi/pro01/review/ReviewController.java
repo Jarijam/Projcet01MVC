@@ -46,11 +46,11 @@ public class ReviewController { //컨트롤러->서비스임플->dao임플 순�
 	//Ajax로 카테고리별 게시판 데이터를 요청하는 메소드
 	//=> 컨트롤러 메소드처럼 ModealAndView를 리턴하지 ㅇ낳고 일반메소드 처럼 ArrayList<reviewVO>를 리턴하며
 	//	jackson json라이브러리가 자동으로 ArrayList<reviewVO>를 json으로 변환해서 리턴해준다.
-	@RequestMapping(value = "/review/ajax_list.do", method = RequestMethod.GET, 
-			produces = "application/json;charset=utf-8")
-	public @ResponseBody ArrayList<ReviewVO> categoryList(String category){
-		ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)service.findByCategory(category);
-		System.out.println("ajax통신 확인"+reviewlist.size());
-		return reviewlist;
-	}
+//	@RequestMapping(value = "/review/ajax_list.do", method = RequestMethod.GET, 
+//			produces = "application/json;charset=utf-8")
+//	public @ResponseBody ArrayList<ReviewVO> categoryList(String category){
+//		ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)service.findByCategory(category);
+//		System.out.println("ajax통신 확인"+reviewlist.size());
+//		return reviewlist;
+//	}
 }
