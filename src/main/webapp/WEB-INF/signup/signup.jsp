@@ -28,7 +28,7 @@
 			<div class="container">
 				<div class="row align-items-center py-5">
 					<div class="col-md-8 text-white">
-						<form method="post" action="/pro01/userinfo/insert.do">
+						<form method="post" action="/pro01/user/insert.do">
 							<h2>회원가입 하기</h2>
 							<hr/>
 							<div>

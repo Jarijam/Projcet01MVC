@@ -17,7 +17,7 @@ ajax 작업중 - 회원가입시 즉시 아이디 중복여부 체크
 scott/tiger 계정에 userinfo 테이블에 정보 올라감
 create table userinfo(
 	userid varchar2(10) primary key,
-	passward varchar2(15),
+	password varchar2(15),
 	name varchar2(10),
 	cellnum varchar2(12));
 

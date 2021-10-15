@@ -8,7 +8,7 @@
   		insert into userinfo values(#{userid}, #{password}, #{name}, #{cellnum})
   	</insert>
   	
-  	<select id="idCheck" parameterMap="String" resultType="user">
+  	<select id="idCheck" parameterType="String" resultType="user">
   		select * from userinfo where id = #{id}
   	</select>
   </mapper>

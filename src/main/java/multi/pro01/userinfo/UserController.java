@@ -9,13 +9,14 @@ public class UserController {
 	@Autowired
 	UserService service;
 	
-	@RequestMapping("/userinfo/insert.do")
+	@RequestMapping("/user/insert.do")
 	public String insert(UserVO command) {
 		System.out.println("인서트 매핑!");
 		service.insert(command);
 		return "redirect:/login.do";
 	}
 	
+	@RequestMapping(value="/user/idCheck.do")
 	public String idCheck(String id) {
 		boolean state = service.idCheck(id);
 		String result = "";
