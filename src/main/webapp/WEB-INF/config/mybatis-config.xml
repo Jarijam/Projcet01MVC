@@ -4,7 +4,7 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="multi.project.userinfo.UserVO" alias="user"/>
+		<typeAlias type="multi.pro01.userinfo.UserVO" alias="user"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/user.xml"/>

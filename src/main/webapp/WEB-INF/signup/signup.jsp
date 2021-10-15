@@ -22,16 +22,16 @@
 	</head>
 	<body>
 		<br/>
-		<!-- <section class="bg-success py-5">
+		<section class="bg-success py-5">
 			<div class="container">
 				<div class="row align-items-center py-5">
 					<div class="col-md-8 text-white">
-						<form method="post" action="/pro01/insert.do">
+						<form method="post" action="/pro01/userinfo/insert.do">
 							<h2>회원가입 하기</h2>
 							<hr/>
 							<div>
 								<h4>아이디</h4>
-								<input type="text" placeholder="아이디" name="id">
+								<input type="text" placeholder="아이디" name="userid">
 							</div>
 							<br/>
 							<div>	
@@ -52,7 +52,6 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
-		<a href="/pro01/userinfo/insert.do">회원가입</a>
+		</section>
 	</body>
 </html>
