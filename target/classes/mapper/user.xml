@@ -5,6 +5,6 @@
   
   <mapper namespace="project.userinfo">
   	<insert id="insert" parameterType="user">
-  		insert into userinfo valeus(#{userid}, #{password}, #{name}, #{cellnum})
+  		insert into userinfo values(#{userid}, #{password}, #{name}, #{cellnum})
   	</insert>
   </mapper>
