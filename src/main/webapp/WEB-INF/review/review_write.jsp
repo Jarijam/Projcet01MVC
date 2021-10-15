@@ -56,8 +56,6 @@
 
 <body>
 
-	<tiles:insertAttribute name="top"></tiles:insertAttribute>
-
 	<!-- Start Content Page -->
 	<div class="container-fluid bg-light py-5">
 		<div class="col-md-6 m-auto text-center">
@@ -405,7 +403,6 @@
 		</div>
 
 	<!-- End Contact -->
-	<tiles:insertAttribute name="footer"></tiles:insertAttribute>	
 
 	<!-- Start Script -->
 	<script src="/pro01/common/js/jquery-1.11.0.min.js"></script>

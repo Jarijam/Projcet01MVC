@@ -1,16 +1,16 @@
-package multi.project.userinfo;
+package multi.pro01.userinfo;
 
 public class UserVO {
 	private String userid;
 	private String password;
 	private String name;
-	private int cellnum;
+	private String cellnum;
 	
 	public UserVO() {
 		
 	}
 
-	public UserVO(String userid, String password, String name, int cellnum) {
+	public UserVO(String userid, String password, String name, String cellnum) {
 		super();
 		this.userid = userid;
 		this.password = password;
@@ -42,11 +42,11 @@ public class UserVO {
 		this.name = name;
 	}
 
-	public int getCellnum() {
+	public String getCellnum() {
 		return cellnum;
 	}
 
-	public void setCellnum(int cellnum) {
+	public void setCellnum(String cellnum) {
 		this.cellnum = cellnum;
 	}
 	

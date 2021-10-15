@@ -1,4 +1,4 @@
-package multi.project.userinfo;
+package multi.pro01.userinfo;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;

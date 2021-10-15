@@ -28,7 +28,6 @@ https://templatemo.com/tm-559-zay-shop
 </head>
 
 <body>
-   <tiles:insertAttribute name="top"></tiles:insertAttribute>
    
     <!-- Start Content -->
     <div class="container py-5">
@@ -556,7 +555,6 @@ https://templatemo.com/tm-559-zay-shop
     </section>
     <!--End Brands-->
 
-	<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 
     <!-- Start Script -->
     <script src="/pro01/common/js/jquery-1.11.0.min.js"></script>

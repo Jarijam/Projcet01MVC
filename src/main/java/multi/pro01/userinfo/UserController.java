@@ -1,4 +1,4 @@
-package multi.project.userinfo;
+package multi.pro01.userinfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,10 +9,10 @@ public class UserController {
 	@Autowired
 	UserService service;
 	
-	@RequestMapping("/user/insert.do")
+	@RequestMapping("/userinfo/insert.do")
 	public String insert(UserVO command) {
 		System.out.println("인서트 매핑!");
-//		service.insert(command);
+		service.insert(command);
 		return "redirect:/login.do";
 	}
 }

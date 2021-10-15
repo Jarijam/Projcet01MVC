@@ -21,19 +21,17 @@
 
 	</head>
 	<body>
-		<tiles:insertAttribute name="top"></tiles:insertAttribute>
 		<br/>
-		
 		<section class="bg-success py-5">
 			<div class="container">
 				<div class="row align-items-center py-5">
 					<div class="col-md-8 text-white">
-						<form method="post" action="/user/insert.do">
+						<form method="post" action="/pro01/userinfo/insert.do">
 							<h2>회원가입 하기</h2>
 							<hr/>
 							<div>
 								<h4>아이디</h4>
-								<input type="text" placeholder="아이디" name="id">
+								<input type="text" placeholder="아이디" name="userid">
 							</div>
 							<br/>
 							<div>	
@@ -55,7 +53,5 @@
 				</div>
 			</div>
 		</section>
-		
-		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 	</body>
 </html>
