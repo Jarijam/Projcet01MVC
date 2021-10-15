@@ -1,4 +1,4 @@
-1014 업무분담.
+1015 금요일 업무분담.
 
 data : 서초구 음식점
 
@@ -9,11 +9,21 @@ data : 서초구 음식점
  검색한 데이터를 가져오는거 - db
 fe be => 연동.
 
+메모장 확인!
+
+
+
+
 
 재현님
 view설정 마무리	//완료
 로그인이랑 회원가입 db연동 // 완료
 ajax 작업중 - 회원가입시 즉시 아이디 중복여부 체크
+
+카카오 로그인 api 적용
+
+
+
 scott/tiger 계정에 userinfo 테이블에 정보 올라감
 create table userinfo(
 	userid varchar2(10) primary key,
@@ -21,9 +31,12 @@ create table userinfo(
 	name varchar2(10),
 	cellnum varchar2(12));
 
+
+
+
 정원님
 
-review view설정
+review view설정 //완료
 review 목록보여줄 페이지완성. list select, sql연동.
 
 map
