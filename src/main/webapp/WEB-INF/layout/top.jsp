@@ -60,7 +60,7 @@
                             <a class="nav-link" href="index.do">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="">식당검색</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="review.do">리뷰 모음</a>
