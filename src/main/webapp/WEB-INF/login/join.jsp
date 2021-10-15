@@ -22,8 +22,6 @@
 
 </head>
 <body>  
-    <tiles:insertAttribute name="top"></tiles:insertAttribute>
-
     <section class="bg-success py-5">
         <div class="container">
             <div class="row align-items-center py-5">
@@ -195,9 +193,6 @@
         </div>
     </section>
     <!--End Brands-->
-
-
-    <tiles:insertAttribute name="footer"></tiles:insertAttribute>
 </body>
 
 </html>

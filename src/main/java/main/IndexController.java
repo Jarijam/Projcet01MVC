@@ -42,4 +42,9 @@ public class IndexController {
 		System.out.println("pro01 회원가입 실행");
 		return "signup"; //tiles 설정 파일에 등록된 view 이름(review)
 	}
+	@RequestMapping("/userinfo/insert.do")
+	public String insert() {
+		System.out.println("인서트 실행");
+		return "redirect:/login.do"; //tiles 설정 파일에 등록된 view 이름(review)
+	}
 }

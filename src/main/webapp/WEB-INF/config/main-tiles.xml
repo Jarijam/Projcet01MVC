@@ -32,6 +32,6 @@
 	</definition>
 	
 	<definition name="signup" extends="indexTemplate">
-		<put-attribute name="content" value="/WEB-INF/SignUp/signup.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/signup/signup.jsp"/>
 	</definition>
 </tiles-definitions>

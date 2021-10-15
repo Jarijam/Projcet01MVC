@@ -1,4 +1,4 @@
-package multi.project.userinfo;
+package multi.pro01.userinfo;
 
 public class UserVO {
 	private String userid;
