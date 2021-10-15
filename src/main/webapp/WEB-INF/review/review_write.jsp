@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
 <link rel="shortcut icon" type="image/x-icon"
 	href="assets/img/favicon.ico">
 
