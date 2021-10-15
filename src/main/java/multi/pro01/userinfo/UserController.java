@@ -10,9 +10,9 @@ public class UserController {
 	UserService service;
 	
 	@RequestMapping("/userinfo/insert.do")
-	public String insert() {
+	public String insert(UserVO command) {
 		System.out.println("인서트 매핑!");
-//		service.insert(command);
+		service.insert(command);
 		return "redirect:/login.do";
 	}
 }
