@@ -29,3 +29,4 @@ map
 	
 
 리뷰 테이블 sql code.
+컬럼 : user_id, rev_content, rev_date  (pk를 뭘로 해야 할까...)
