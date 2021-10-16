@@ -1,5 +1,7 @@
 package multi.pro01.restaurant;
 
+import java.util.List;
+
 public interface RestaurantService {
-	RestaurantVO serach(RestaurantVO restaurant_name);
+	List<RestaurantVO> restaurantList();	
 }

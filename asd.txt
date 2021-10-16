@@ -14,6 +14,17 @@ boardlist.jsp 연동시키기
 6. dao를 만들고 daoimpl이 dao를 상속하게 만든다
 
 7. service와 serviceimpl에 식당검색메소드를 추가
+=> service에 List<RestaurantVO> restaurantList();
+=> serviceimpl에 Override라고 리턴 타입은 일단 null로 했음
 
+8. dao와 daoimpl에 db에 저장된 식당데이터를 꺼내기 위한 메소드 추가
+=> dao에 식당 조회, 등록, 삭제 등 기본 기능을 추가
+=> daoimpl에 Override했음
+=> ※return sqlSession.selectList("") // 따옴표 안에 적은 값은 아직 이해가 안됌
 
- VO(Value Object) 
+-----------여기까지 했음----------
+
+9. VO(Value Object) 여기에 restaurant_no, write_date, category 등등
+변수 설정 해야하는데 data.go.kr에서 가져올 db정보가 어떻게 되있을지 몰라 일단 보류
+
+그래서 일단 데이터가져오는 youtube에 강의 보고 가져오는 중

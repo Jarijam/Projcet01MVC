@@ -1,5 +1,7 @@
 package multi.pro01.restaurant;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,11 +9,11 @@ import org.springframework.stereotype.Service;
 public class RestaurantServiceImpl implements RestaurantService  {
 	@Autowired
 	RestaurantDAO dao;
-
+	
 	@Override
-	public RestaurantVO serach(RestaurantVO restaurant_name) {
+	public List<RestaurantVO> restaurantList() {
 		System.out.println("식당 검색 테스트");
-		return restaurant_name;
+		return null;
 	}
 
 	
