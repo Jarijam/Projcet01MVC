@@ -1,0 +1,19 @@
+boardlist.jsp 연동시키기
+
+1. src -> main -> webapp -> WEB-INF -> board -> boardlist.jsp 생성
+
+2. src/main/java -> main > IndexController.java 에서 45~49줄 작성
+=> path: restaurant.do 라고 설정
+
+3. src/main/java -> multi.pro01.restaurant 패키지 생성
+
+4. restaurant /service, serviceimpl, dao, daoimpl, vo, controller/ class 생성
+
+5. service를 만들고 serviceimpl이 service를 상속하게 만든다 
+
+6. dao를 만들고 daoimpl이 dao를 상속하게 만든다
+
+7. service와 serviceimpl에 식당검색메소드를 추가
+
+
+ VO(Value Object) 
