@@ -30,4 +30,3 @@ boardlist.jsp 연동시키기
 그래서 일단 데이터가져오는 youtube에 강의 보고 가져오는 중
 
 
-왜 다시 push / pull 안됌?

@@ -34,4 +34,8 @@
 	<definition name="signup" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/signup/signup.jsp"/>
 	</definition>
+	
+	<definition name="restaurant" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/boardlist.jsp"/>
+	</definition>
 </tiles-definitions>
