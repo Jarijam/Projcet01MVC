@@ -36,29 +36,29 @@
 			<div class="container">
 				<div class="row align-items-center py-5">
 					<div class="col-md-8 text-white">
-						<form method="post" action="/pro01/user/insert.do">
+						<form method="post" action="/pro01/user/insert.do" class="form-horizontal">
 							<h2>회원가입 하기</h2>
 							<hr/>
 							<div>
 								<h4>아이디</h4>
-								<input type="text" placeholder="아이디" name="userid" id="userid">
+								<input type="text" placeholder="아이디" name="userid" id="userid"  minlength="4" required>
 								<span id="checkVal">${result}</span>
 							</div>
 							
 							<br/>
 							<div>	
 								<h4>비밀번호</h4>
-								<input type="text" placeholder="비밀번호" name="password">
+								<input type="text" placeholder="비밀번호" name="password" minlength="5" required>
 							</div>
 							<br/>
 							<div>
 								<h4>이름</h4>
-								<input type="text" placeholder="이름" name="name">
+								<input type="text" placeholder="이름" name="name" minlength="3" required>
 							</div>
 							<br/>
 							<div>
 								<h4>전화번호</h4>
-								<input type="text" placeholder="전화번호" name="cellnum"> <input type="submit" value="회원가입">
+								<input type="text" placeholder="전화번호" name="cellnum" minlength="010" required> <input type="submit" value="회원가입">
 							</div>
 						</form>
 					</div>

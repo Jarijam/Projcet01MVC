@@ -21,10 +21,14 @@ public class UserController {
 	public @ResponseBody String idCheck(String id) {
 		boolean state = service.idCheck(id);
 		String result = "";
-		if(state) {
-			result = "사용 가능한 아이디";
+		if(id.length() < 5) {
+			result = "아이디가 너무 짧습니다";
 		}else {
-			result = "사용 불가한 아이디";
+			if(state) {
+				result = "사용 가능한 아이디";
+			}else {
+				result = "사용 불가한 아이디";
+			}
 		}
 		return result;
 	}
