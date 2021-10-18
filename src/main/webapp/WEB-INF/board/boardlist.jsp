@@ -19,7 +19,11 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
-
+	
+	<script type="text/javascript">
+		category = "${category}";
+		//alert(category);
+	</script>
 </head>
 <body>  
     <section class="bg-success py-5">
@@ -29,9 +33,12 @@
                     <h1>식당</h1>                   
                 </div>
                 <div>
-                	<div class="">맛집 이름</div>
-                	<input type="text" name="id" size="100">                																					
-               	 </div>               
+                	<div class="">키워드로 검색하세요</div>
+                	<input type="text" name="search" size="50">                																					
+               	 </div>              
+               	 <div>
+               	 	<input type="submit" value="검색">              	 	
+               	 </div>               	 
             </div>
         </div>
     </section>
