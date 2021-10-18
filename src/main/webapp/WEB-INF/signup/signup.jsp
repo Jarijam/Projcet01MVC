@@ -1,26 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>회원가입 페이지</title>
 		<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
-<link rel="shortcut icon" type="image/x-icon"
-	href="/pro01/images/favicon.ico">
-
-<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
-<link rel="stylesheet" href="/pro01/common/css/custom.css">
-
-<!-- Load fonts style after rendering the layout styles -->
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
+		<link rel="shortcut icon" type="image/x-icon"
+			href="/pro01/images/favicon.ico">
+		
+		<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+		<link rel="stylesheet" href="/pro01/common/css/custom.css">
+		
+		<!-- Load fonts style after rendering the layout styles -->
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+		<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#userid").on("keyup", function(){
+					$.get("/pro01/user/idCheck.do", {"id":$("#userid").val()},
+							function(data){
+								$("#checkVal").text(data);
+							}, "text")
+				})
+			});
+		</script>
 	</head>
 	<body>
 		<br/>
@@ -33,8 +41,10 @@
 							<hr/>
 							<div>
 								<h4>아이디</h4>
-								<input type="text" placeholder="아이디" name="userid">
+								<input type="text" placeholder="아이디" name="userid" id="userid">
+								<span id="checkVal">${result}</span>
 							</div>
+							
 							<br/>
 							<div>	
 								<h4>비밀번호</h4>

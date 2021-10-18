@@ -9,6 +9,6 @@
   	</insert>
   	
   	<select id="idCheck" parameterType="String" resultType="user">
-  		select * from userinfo where id = #{id}
+  		select * from userinfo where userid = #{userid}
   	</select>
   </mapper>
