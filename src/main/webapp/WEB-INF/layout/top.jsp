@@ -59,8 +59,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.do">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="restaurant.do">식당검색1</a>
+                        <li class="nav-item">                           
+                            <a class="nav-link" href="restaurant.do">식당검색</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="review.do">리뷰 모음</a>
