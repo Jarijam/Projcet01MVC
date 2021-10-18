@@ -28,3 +28,6 @@ boardlist.jsp 연동시키기
 변수 설정 해야하는데 data.go.kr에서 가져올 db정보가 어떻게 되있을지 몰라 일단 보류
 
 그래서 일단 데이터가져오는 youtube에 강의 보고 가져오는 중
+
+
+왜 다시 push / pull 안됌?
