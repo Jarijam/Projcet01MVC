@@ -87,8 +87,8 @@
                     <h2 class="h5 mt-4 text-center">24 Hours Service</h2>
                 </div>
             </div>
-        </div> -->
-    </section>
+        </div> 
+    </section> -->
     <!-- End Section -->
 
     <!-- Start Brands -->

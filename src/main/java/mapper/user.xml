@@ -11,4 +11,8 @@
   	<select id="idCheck" parameterType="String" resultType="user">
   		select * from userinfo where userid = #{userid}
   	</select>
+  	
+  	<select id="login" parameterType="user" resultType="user">
+  		select * from userinfo where userid = #{userid} and password = #{password}
+  	</select>
   </mapper>
