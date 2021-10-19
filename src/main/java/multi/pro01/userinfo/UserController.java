@@ -38,12 +38,12 @@ public class UserController {
 		return result;
 	}
 
-	@RequestMapping("/user/list.do")
+	@RequestMapping("/user/userlist.do")
 	public ModelAndView getMemberList() {
 		ModelAndView mav = new ModelAndView();
 		List<UserVO> userlist = service.getMemberList();
 		
-		mav.setViewName("user/list");
+		mav.setViewName("user/userlist");
 		mav.addObject("userlist", userlist);
 		return mav;
 	}
