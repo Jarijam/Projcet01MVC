@@ -48,7 +48,7 @@ public class UserController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/user/login.do")
+	@RequestMapping(value="/user/login.do", method=RequestMethod.POST)
 	public ModelAndView login(UserVO user, HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView();
 		UserVO loginOKUser = service.login(user);
