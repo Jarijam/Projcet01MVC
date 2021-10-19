@@ -20,4 +20,10 @@ public class UserServiceImpl implements UserService {
 	public boolean idCheck(String id) {
 		return dao.idCheck(id);
 	}
+
+	@Override
+	public UserVO login(UserVO loginUser) {
+		return dao.login(loginUser);
+	}
+	
 }

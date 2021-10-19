@@ -1,10 +1,13 @@
 package multi.pro01.userinfo;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
@@ -31,5 +34,12 @@ public class UserController {
 			}
 		}
 		return result;
+	}
+	@RequestMapping(value="/user/login.do", method=RequestMethod.POST)
+	public ModelAndView login(UserVO user, HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView();
+		UserVO loginOKUser = service.login(user);
+		
+		return mav;
 	}
 }
