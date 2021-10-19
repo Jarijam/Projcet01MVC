@@ -1,5 +1,7 @@
 package multi.pro01.userinfo;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -26,6 +28,10 @@ public class UserDAOImpl implements UserDAO {
 	public UserVO login(UserVO loginUser) {
 		UserVO loginOK = sqlSession.selectOne("project.user.login", loginUser);
 		return loginOK;
+	}
+	@Override
+	public List<UserVO> getMemberList() {
+		return sqlSession.selectList("project.user.list");
 	}
 	
 	

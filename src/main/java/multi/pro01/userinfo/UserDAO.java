@@ -6,4 +6,5 @@ public interface UserDAO {
 	int insert(UserVO user);
 	boolean idCheck(String id);
 	UserVO login(UserVO loginUser);
+	List<UserVO> getMemberList();
 }

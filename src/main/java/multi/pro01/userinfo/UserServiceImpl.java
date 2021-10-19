@@ -25,5 +25,10 @@ public class UserServiceImpl implements UserService {
 	public UserVO login(UserVO loginUser) {
 		return dao.login(loginUser);
 	}
+
+	@Override
+	public List<UserVO> getMemberList() {
+		return null;
+	}
 	
 }

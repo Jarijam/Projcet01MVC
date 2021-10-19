@@ -38,4 +38,8 @@
 	<definition name="restaurant" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/board/boardlist.jsp"/>
 	</definition>
+	
+	<definition name="userlist" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/userlist.jsp"/>
+	</definition>
 </tiles-definitions>

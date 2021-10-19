@@ -43,7 +43,9 @@ public class UserController {
 		ModelAndView mav = new ModelAndView();
 		List<UserVO> userlist = service.getMemberList();
 		
-		mav.setViewName(viewName);
+		mav.setViewName("user/list");
+		mav.addObject("userlist", userlist);
+		return mav;
 	}
 	
 	@RequestMapping(value="/user/login.do")
