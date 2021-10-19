@@ -8,7 +8,6 @@ public interface RestaurantDAO {
 	//게시글 등록		
 	int insert(RestaurantVO restaurant_board);
 	List<RestaurantVO> searchList(String search);
-	List<RestaurantVO> searchList(String tag, String search);
 	List<RestaurantVO> pageList();
 	//게시글 조회
 	RestaurantVO read(String restaurant_no);
