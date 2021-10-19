@@ -33,7 +33,7 @@ https://templatemo.com/tm-559-zay-shop
 </head>
 
 <body>
-	<tiles:insertAttribute name="top"></tiles:insertAttribute>
+	
     <!-- Open Content -->
     <section class="bg-light">
         <div class="container pb-5">
@@ -745,6 +745,6 @@ https://templatemo.com/tm-559-zay-shop
         });
     </script>
     <!-- End Slider Script -->
-	<tiles:insertAttribute name="footer"></tiles:insertAttribute>	
+	
 </body>
 </html>

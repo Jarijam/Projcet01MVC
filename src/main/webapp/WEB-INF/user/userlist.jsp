@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/pro01/images/favicon.ico">
 
     <link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+    <link rel="stylesheet" href="/pro01/common/css/tUserlatemo.css">
     <link rel="stylesheet" href="/pro01/common/css/custom.css">
 
     <!-- Load fonts style after rendering the layout styles -->
@@ -26,8 +26,10 @@
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
 </head>
 <body>
-	<tiles:insertAttribute name="top"></tiles:insertAttribute>
 	
+	<% ArrayList<UserVO> userlist = (ArrayList<UserVO>)request.getAttribute("userlist"); 
+		int size = userlist.size(); 
+	%>
 	<h3>회원 목록 조회</h3>
 
 	<div style="padding-top: 30px">
@@ -35,38 +37,27 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>사번</th>
-					<th>성명</th>
-					<th>부서코드</th>
-					<th>주소</th>
+					<th>id</th>
+					<th>password</th>
+					<th>name</th>
+					<th>cellnum</th>
 				</tr>
 			</thead>
-			<%-- <tbody>
+			<tbody>
 				<%for(int i =0; i<size ; i++) {
 					UserVO user = userlist.get(i);
 				%>
 					<tr>
-						<td ><%=  %></td>
+						<td ><%= user.getUserid() %></td>
+						<td><%= user.getPassword() %></td>
 						<td><%= user.getName() %></td>
-					
-						<td><%=  %></td>
-						<td><%=  %></td>
+						<td><%= user.getCellnum() %></td>
 					</tr>
-				<% } %> --%>
+				<% } %>
 			</tbody>
 		</table>
 	</div>
-	<form action="/erp/board/search.do">
-		<select name="tag">
-			<option value="id">작성자</option>
-			<option value="title">제목</option>
-			<option value="content">본문</option>
-			<option value="write_date">작성일</option>
-		</select> <input type="text" name="search" /> <input type="submit" value="검색">
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/erp/board/user/insertView.do" style="text-align: right;">글쓰기</a></li>
-		</ul>
-	</form>
-	<tiles:insertAttribute name="footer"></tiles:insertAttribute>	
+	
+		
 </body>
 </html>

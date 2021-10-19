@@ -43,7 +43,7 @@ public class UserController {
 		ModelAndView mav = new ModelAndView();
 		List<UserVO> userlist = service.getMemberList();
 		
-		mav.setViewName("user/userlist");
+		mav.setViewName("userlist");
 		mav.addObject("userlist", userlist);
 		return mav;
 	}
