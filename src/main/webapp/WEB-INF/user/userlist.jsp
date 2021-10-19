@@ -26,13 +26,17 @@
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
 </head>
 <body>
-	
-	<% ArrayList<UserVO> userlist = (ArrayList<UserVO>)request.getAttribute("userlist"); 
+	<%-- <% ArrayList<UserVO> userlist = (ArrayList<UserVO>)request.getAttribute("userlist"); 
 		int size = userlist.size(); 
-	%>
-	<h3>회원 목록 조회</h3>
+	%> --%>
+	<div class="container-fluid bg-light py-5">
+		<div class="col-md-6 m-auto text-center">
+			<h1 class="h1">가입 회원목록 조회</h1>
+			
+		</div>
+	</div>
 
-	<div style="padding-top: 30px">
+	<div >
 		
 		<table class="table">
 			<thead>
@@ -44,7 +48,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<%for(int i =0; i<size ; i++) {
+				<%-- <%for(int i =0; i<size ; i++) {
 					UserVO user = userlist.get(i);
 				%>
 					<tr>
@@ -53,11 +57,53 @@
 						<td><%= user.getName() %></td>
 						<td><%= user.getCellnum() %></td>
 					</tr>
-				<% } %>
+				<% } %> --%>
 			</tbody>
 		</table>
 	</div>
-	
+	<div class="container py-5">
+		<div class="row py-5">
+			<form class="col-md-9 m-auto" method="post" role="form">
+				<div class="mb-3">
+					<label for="inputsubject">식당이름</label> <input type="text"
+						class="form-control mt-1" id="subject" name="subject"
+						placeholder="Subject">
+				</div>
+				<div class="mb-3">
+					<label for="inputsubject">식당주소</label> <input type="text"
+						class="form-control mt-1" id="subject" name="subject"
+						placeholder="Subject">
+				</div>
+				<div class="mb-3">
+					<label for="inputsubject">전화번호</label> <input type="text"
+						class="form-control mt-1" id="subject" name="subject"
+						placeholder="Subject">
+				</div>
+				<div class="mb-3">
+					<label for="inputsubject">음식 종류</label> <input type="text"
+						class="form-control mt-1" id="subject" name="subject"
+						placeholder="Subject">
+				</div>
+				<div class="mb-3">
+					<label for="inputsubject">식당 홈페이지 바로가기</label> <input type="text"
+						class="form-control mt-1" id="subject" name="subject"
+						placeholder="Subject">
+				</div>
+				<div class="row">
+					<div class="form-group col-md-6 mb-3">
+						<label for="inputname">작성자 id </label> <input type="text"
+							class="form-control mt-1" id="name" name="name" placeholder="Id">
+					</div>
+					<div class="form-group col-md-6 mb-3">
+						<label for="inputemail">작성자 Email</label> <input type="email"
+							class="form-control mt-1" id="email" name="email"
+							placeholder="Email">
+					</div>
+				</div>
+				</form>
+			
+			</div>
+		</div>
 		
 </body>
 </html>

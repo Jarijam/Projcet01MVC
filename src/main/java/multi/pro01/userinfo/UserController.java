@@ -38,7 +38,7 @@ public class UserController {
 		return result;
 	}
 
-	@RequestMapping("/user/userlist.do")
+	@RequestMapping("/userlist.do")
 	public ModelAndView getMemberList() {
 		ModelAndView mav = new ModelAndView();
 		List<UserVO> userlist = service.getMemberList();
