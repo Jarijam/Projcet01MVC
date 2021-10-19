@@ -27,13 +27,7 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 		
 		return null;
 	}
-
-	@Override
-	public List<RestaurantVO> searchList(String tag, String search) {
-		
-		return null;
-	}
-
+	
 	@Override
 	public List<RestaurantVO> pageList() {
 		

@@ -30,17 +30,17 @@
                 </div>
                 <div>
                 	<div class="">아이디</div>
-                	<input type="text" name="id" size="20">
+                	<input type="text" name="userid" size="20">
                 	
 					<div class="">비밀번호</div>
-					<input type="text" name="pwd" size="20">
+					<input type="password" name="password" size="20">
 					
 					<div>
 					<input type="checkbox" name="chk"><label for="chk">아이디 저장</label>
 					</div>
 					<br/>
 					<div>	
-					<input type="button" value="로그인"> <a href="signup.do"><input type="button" value="회원가입"></a>
+					<a href="/pro01/user/login.do"><input type="button" value="로그인"></a> <a href="signup.do"><input type="button" value="회원가입"></a>
 					</div>
 					
                	 </div>               
@@ -87,8 +87,8 @@
                     <h2 class="h5 mt-4 text-center">24 Hours Service</h2>
                 </div>
             </div>
-        </div> -->
-    </section>
+        </div> 
+    </section> -->
     <!-- End Section -->
 
     <!-- Start Brands -->

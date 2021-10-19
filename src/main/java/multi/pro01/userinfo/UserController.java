@@ -1,10 +1,15 @@
 package multi.pro01.userinfo;
 
+
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
@@ -31,5 +36,32 @@ public class UserController {
 			}
 		}
 		return result;
+	}
+
+	@RequestMapping("/user/userlist.do")
+	public ModelAndView getMemberList() {
+		ModelAndView mav = new ModelAndView();
+		List<UserVO> userlist = service.getMemberList();
+		
+		mav.setViewName("user/userlist");
+		mav.addObject("userlist", userlist);
+		return mav;
+	}
+	
+	@RequestMapping(value="/user/login.do")
+	public ModelAndView login(UserVO user, HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView();
+		UserVO loginOKUser = service.login(user);
+		String viewname = null;
+		if(loginOKUser != null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("loginOKUser", loginOKUser);
+			viewname = "index";
+		}else {
+			viewname = "login";
+		}
+		mav.setViewName(viewname);
+
+		return mav;
 	}
 }

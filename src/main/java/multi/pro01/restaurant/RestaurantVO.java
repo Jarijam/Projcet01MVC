@@ -1,7 +1,7 @@
 package multi.pro01.restaurant;
 
 public class RestaurantVO {
-	private String restaurant_name;
+	String restaurant_name;
 	
 	public RestaurantVO() {
 		
