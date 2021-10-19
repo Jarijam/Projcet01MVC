@@ -2,38 +2,36 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bootstrap Example</title>
-<meta charset="UTF-8">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript">
+<title>회원목록 조회</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</script>
+    <link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/pro01/images/favicon.ico">
+
+    <link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+    <link rel="stylesheet" href="/pro01/common/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
 </head>
 <body>
-	<h3>사원목록보기</h3>
-	<% ArrayList<UserVO> userlist = (ArrayList<UserVO>)request.getAttribute("userlist"); 
-		int size = userlist.size(); 
-	%>
+	<tiles:insertAttribute name="top"></tiles:insertAttribute>
+	
+	<h3>회원 목록 조회</h3>
+
 	<div style="padding-top: 30px">
-		<div class="col-md-3" style="padding-bottom: 10px">
-		    구분:
-			<form >
-				<select name="category"  id="category">
-					<option value="all">전체게시물</option>
-					<option value="경조사">경조사</option>
-					<option value="사내소식">사내소식</option>
-					<option value="게시판">게시판</option>
-				</select>
-			</form>
-		</div>
+		
 		<table class="table">
 			<thead>
 				<tr>
@@ -43,7 +41,7 @@
 					<th>주소</th>
 				</tr>
 			</thead>
-			<tbody>
+			<%-- <tbody>
 				<%for(int i =0; i<size ; i++) {
 					UserVO user = userlist.get(i);
 				%>
@@ -54,7 +52,7 @@
 						<td><%=  %></td>
 						<td><%=  %></td>
 					</tr>
-				<% } %>
+				<% } %> --%>
 			</tbody>
 		</table>
 	</div>
@@ -69,6 +67,6 @@
 			<li><a href="/erp/board/user/insertView.do" style="text-align: right;">글쓰기</a></li>
 		</ul>
 	</form>
-
+	<tiles:insertAttribute name="footer"></tiles:insertAttribute>	
 </body>
 </html>
