@@ -26,9 +26,9 @@
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
 </head>
 <body>
-	<%-- <% ArrayList<UserVO> userlist = (ArrayList<UserVO>)request.getAttribute("userlist"); 
+	<% ArrayList<UserVO> userlist = (ArrayList<UserVO>)request.getAttribute("userlist"); 
 		int size = userlist.size(); 
-	%> --%>
+	%>
 	<div class="container-fluid bg-light py-5">
 		<div class="col-md-6 m-auto text-center">
 			<h1 class="h1">가입 회원목록 조회</h1>
@@ -48,7 +48,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<%-- <%for(int i =0; i<size ; i++) {
+				<%for(int i =0; i<size ; i++) {
 					UserVO user = userlist.get(i);
 				%>
 					<tr>
@@ -57,7 +57,7 @@
 						<td><%= user.getName() %></td>
 						<td><%= user.getCellnum() %></td>
 					</tr>
-				<% } %> --%>
+				<% } %>
 			</tbody>
 		</table>
 	</div>
