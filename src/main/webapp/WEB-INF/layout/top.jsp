@@ -101,8 +101,8 @@
 	                    	<span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
 	                    </a>
 	                    <a class="nav-icon position-relative text-decoration-none" href="/pro01/logout.do">
-	                        <span class="position-absolute top-100 left-100 badge rounded-pill bg-light text-dark">로그아웃</span>
-	                    </a>
+	                        <span class="top-100 left-100 badge rounded-pill bg-light text-dark" style="margin-bottom: 5px">로그아웃</span>
+	                    </a><!-- position-absolute top-100 left-100 badge rounded-pill bg-light text-dark -->
 	                    <%} %>
 	                    <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
 	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">test</span>
