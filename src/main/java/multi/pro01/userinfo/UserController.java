@@ -64,4 +64,11 @@ public class UserController {
 
 		return mav;
 	}
+	@RequestMapping("/logout.do")
+	public String logout(HttpSession ses) throws Exception{
+		if(ses != null) {
+			ses.invalidate();
+		}
+		return "redirect:/index.do";
+	}
 }

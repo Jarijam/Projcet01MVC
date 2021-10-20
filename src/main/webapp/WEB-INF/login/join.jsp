@@ -4,33 +4,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>로그인 페이지</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/pro01/images/favicon.ico">
-
-    <link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/pro01/common/css/templatemo.css">
-    <link rel="stylesheet" href="/pro01/common/css/custom.css">
-
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
-
-</head>
-<body>  
-    <section class="bg-success py-5">
-        <div class="container">
-            <div class="row align-items-center py-5">
-                <div class="col-md-8 text-white">
-                    <h1>로그인</h1>                   
-                </div>
+	<head>
+	    <title>로그인 페이지</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	    <link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
+	    <link rel="shortcut icon" type="image/x-icon" href="/pro01/images/favicon.ico">
+	
+	    <link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+	    <link rel="stylesheet" href="/pro01/common/css/custom.css">
+	
+	    <!-- Load fonts style after rendering the layout styles -->
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+	    <link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+	</head>
+	<body>  
+		<section class="bg-success py-5">
+        	<div class="container">
+            	<div class="row align-items-center py-5">
+                	<div class="col-md-8 text-white">
+                    	<h1>로그인</h1>                   
+                	</div>
                 <form method="post" action="/pro01/user/login.do" class="form-horizontal">
                		<div>
-	                	<div class="">아이디</div>
+                		<div class="">아이디</div>
                 		<input type="text" name="userid" size="20">                	
 						<div class="">비밀번호</div>
 						<input type="password" name="password" size="20">
@@ -42,10 +41,10 @@
 						<input type="submit" value="로그인"><a href="signup.do"><input type="button" value="회원가입"></a>
 						</div>
                		</div>
-               	 </form>            
-            </div>
-        </div>
-    </section>
+           		</form>            
+            	</div>
+			</div>
+    	</section>
     
     <!-- <section class="container py-5">
         <div class="row text-center pt-5 pb-3">
