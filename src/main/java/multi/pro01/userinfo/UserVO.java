@@ -17,6 +17,12 @@ public class UserVO {
 		this.name = name;
 		this.cellnum = cellnum;
 	}
+	
+	public UserVO(String userid, String password) {
+		super();
+		this.userid = userid;
+		this.password = password;
+	}
 
 	public String getUserid() {
 		return userid;

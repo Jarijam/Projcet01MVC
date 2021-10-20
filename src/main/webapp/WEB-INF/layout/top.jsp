@@ -61,16 +61,16 @@
 	                <div class="flex-fill">
 	                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
 	                        <li class="nav-item">
-	                            <a class="nav-link" href="index.do">Home</a>
+	                            <a class="nav-link" href="/pro01/index.do">Home</a>
 	                        </li>
 	                        <li class="nav-item">                           
-	                            <a class="nav-link" href="restaurant.do">식당검색</a>
+	                            <a class="nav-link" href="/pro01/restaurant.do">식당검색</a>
 	                        </li>
 	                        <li class="nav-item">
-	                            <a class="nav-link" href="review.do">리뷰 모음</a>
+	                            <a class="nav-link" href="/pro01/review.do">리뷰 모음</a>
 	                        </li>
 	                        <li class="nav-item">
-	                            <a class="nav-link" href="review_write.do">리뷰 작성</a>
+	                            <a class="nav-link" href="/pro01/review_write.do">리뷰 작성</a>
 	                        </li>
 	                    </ul>
 	                </div>
@@ -91,11 +91,22 @@
 	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
 	                    </a>
 	                    <% if(user == null){ %>
-	                    <a class="nav-icon position-relative text-decoration-none" href="login.do">
-	                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+</span>
+	                    <a class="nav-icon position-relative text-decoration-none" href="/pro01/login.do">	                    	
+	                    	<i class="fa fa-fw fa-user text-dark mr-3"></i>
+	                    	<span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+</span>
 	                    </a>
+	                    <%}else{ %>
+	                    <a class="nav-icon position-relative text-decoration-none" href="#">	                    	
+	                    	<i class="fa fa-fw fa-user text-dark mr-3"></i>
+	                    	<span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+	                    </a>
+	                    <a class="nav-icon position-relative text-decoration-none" href="/pro01/logout.do">
+	                        <span class="top-100 left-100 badge rounded-pill bg-light text-dark" style="margin-bottom: 5px">로그아웃</span>
+	                    </a><!-- position-absolute top-100 left-100 badge rounded-pill bg-light text-dark -->
 	                    <%} %>
+	                    <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
+	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">test</span>
+	                    </a> -->
 	                </div>
 	            </div>
 	

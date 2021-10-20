@@ -38,17 +38,17 @@ public class UserController {
 		return result;
 	}
 
-	@RequestMapping("/user/list.do")
+	@RequestMapping("/userlist.do")
 	public ModelAndView getMemberList() {
 		ModelAndView mav = new ModelAndView();
 		List<UserVO> userlist = service.getMemberList();
 		
-		mav.setViewName("user/list");
+		mav.setViewName("userlist");
 		mav.addObject("userlist", userlist);
 		return mav;
 	}
 	
-	@RequestMapping(value="/user/login.do")
+	@RequestMapping(value="/user/login.do", method=RequestMethod.POST)
 	public ModelAndView login(UserVO user, HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView();
 		UserVO loginOKUser = service.login(user);
@@ -63,5 +63,12 @@ public class UserController {
 		mav.setViewName(viewname);
 
 		return mav;
+	}
+	@RequestMapping("/logout.do")
+	public String logout(HttpSession ses) throws Exception{
+		if(ses != null) {
+			ses.invalidate();
+		}
+		return "redirect:/index.do";
 	}
 }

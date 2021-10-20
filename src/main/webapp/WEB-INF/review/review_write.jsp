@@ -398,8 +398,8 @@
 							작성</button>
 					</div>
 				</div>
+			</form>
 			</div>
-			
 		</div>
 
 	<!-- End Contact -->
