@@ -36,7 +36,7 @@
 	</definition>
 	
 	<definition name="restaurant" extends="indexTemplate">
-		<put-attribute name="content" value="/WEB-INF/board/boardlist.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/board/restaurantlist.jsp"/>
 	</definition>
 	
 	<definition name="userlist" extends="indexTemplate">

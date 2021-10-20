@@ -14,15 +14,12 @@ public class RestaurantController {
 	@Autowired
 	RestaurantService service;
 	
-	@RequestMapping("/board/insert.do")
-	public ModelAndView boardlist(String category) {
-		System.out.println("====="+category);
-		ModelAndView mav = new ModelAndView();
-		List<RestaurantVO> boardlist = service.findByCategory(category);
-		//dao에서 결과가 넘어오는 경우 디버깅 작업은 넘어오는 데이터를 sysout으로 컨트롤러 단까지 모두 출력해보기	
-		System.out.println(boardlist);
-		mav.addObject("boardlist", boardlist);
-		mav.addObject("category", category);
+	@RequestMapping("/restaurant/search.do")
+	public ModelAndView restaurantlist(String restaurant) {
+		System.out.println("mapping확인"+restaurant);		
+		ModelAndView mav = new ModelAndView();		
+		List<RestaurantVO> restaurant_name = service.searchList(restaurant);
+		
 		return mav;
 	}
 }
