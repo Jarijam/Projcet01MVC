@@ -101,7 +101,7 @@
 	                    	<span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
 	                    </a>
 	                    <a class="nav-icon position-relative text-decoration-none" href="/pro01/logout.do">
-	                        <span class="position-absolute bottom-100 left-100 badge rounded-pill bg-light text-dark">로그아웃</span>
+	                        <span class="position-absolute top-100 left-100 badge rounded-pill bg-light text-dark">로그아웃</span>
 	                    </a>
 	                    <%} %>
 	                    <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
