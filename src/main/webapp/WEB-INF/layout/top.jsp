@@ -91,16 +91,22 @@
 	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
 	                    </a>
 	                    <% if(user == null){ %>
-	                    <a class="nav-icon position-relative text-decoration-none" href="login.do">
-	                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+</span>
+	                    <a class="nav-icon position-relative text-decoration-none" href="/pro01/login.do">	                    	
+	                    	<i class="fa fa-fw fa-user text-dark mr-3"></i>
+	                    	<span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+</span>
 	                    </a>
 	                    <%}else{ %>
+	                    <a class="nav-icon position-relative text-decoration-none" href="#">	                    	
+	                    	<i class="fa fa-fw fa-user text-dark mr-3"></i>
+	                    	<span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+	                    </a>
 	                    <a class="nav-icon position-relative text-decoration-none" href="/pro01/logout.do">
-	                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">logout</span>
+	                        <span class="position-absolute bottom-100 left-100 badge rounded-pill bg-light text-dark">로그아웃</span>
 	                    </a>
 	                    <%} %>
+	                    <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
+	                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">test</span>
+	                    </a> -->
 	                </div>
 	            </div>
 	
