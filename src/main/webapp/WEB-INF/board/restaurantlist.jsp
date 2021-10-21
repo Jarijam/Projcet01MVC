@@ -26,6 +26,7 @@
 	</script>
 </head>
 <body>  
+	<form action="/pro01/restaurant/search.do">
     <section class="bg-success py-5">
         <div class="container">
             <div class="row align-items-center py-5">
@@ -34,7 +35,7 @@
                 </div>
                 <div>
                 	<div class="">키워드로 검색하세요</div>
-                	<input type="text" name="search" size="50">                																					
+                	<input type="text" name="restaurant" size="50">                																					
                	 </div>              
                	 <div>
                	 	<input type="submit" value="검색">              	 	
@@ -42,6 +43,7 @@
             </div>
         </div>
     </section>
+    </form>
     
     
     </section>

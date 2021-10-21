@@ -20,8 +20,11 @@ view설정 마무리	//완료
 로그인이랑 회원가입 db연동 // 완료
 ajax 작업중 - 회원가입시 즉시 아이디 중복여부 체크 // 완료
 최소 아이디 길이 설정 // 완료
-메인 페이지에 서로 다른 정보 출력 (로그인&회원가입 / 로그아웃)
-로그인 시, 회원 정보 보기+수정 페이지 만들기
+메인 페이지에 서로 다른 정보 출력 (로그인&회원가입 / 로그아웃) // 완료
+
+리뷰 작성 페이지 - 로그인 상태로만 작성되게 바꾸면 입력 내용 몇개 줄여도 될 듯 (식당 주소 & 전화번호 & 홈페이지 & id & email)
+리뷰 작성 클릭시 db에 insert - userid 를 pk-fk로 설정(설정은 잘 됨) / 테이블 create 후 alter table review add constraint 로 설정
+
 
 
 
@@ -54,7 +57,7 @@ user에 회원목록 불러오기, 개인별회원정보보기 시작.
 리뷰 테이블 sql code.
 컬럼 : userid, rev_content, rev_date  (pk를 뭘로 해야 할까...)
  create table review(
-     userid varchar2(10) primary key,
+     userid varchar2(10),
      rev_content varchar2(500),
      rev_date date 
      );

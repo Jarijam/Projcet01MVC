@@ -48,7 +48,7 @@ public class UserController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/user/login.do")
+	@RequestMapping(value="/user/login.do", method=RequestMethod.POST)
 	public ModelAndView login(UserVO user, HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView();
 		UserVO loginOKUser = service.login(user);
@@ -63,5 +63,12 @@ public class UserController {
 		mav.setViewName(viewname);
 
 		return mav;
+	}
+	@RequestMapping("/logout.do")
+	public String logout(HttpSession ses) throws Exception{
+		if(ses != null) {
+			ses.invalidate();
+		}
+		return "redirect:/index.do";
 	}
 }
