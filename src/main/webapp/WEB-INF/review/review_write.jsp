@@ -27,13 +27,13 @@
 			crossorigin="" />
 		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
 		
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			$(document).ready(function(){
-				$("radio").click(function(){
+				$("#5-stars").click(function(){
 					alert("점을 주셨습니다");
 				})
 			});
-		</script> -->
+		</script>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
