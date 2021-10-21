@@ -2,57 +2,56 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html>
-<html>
-<head>
-<title>리뷰 작성하기</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
-<link rel="shortcut icon" type="image/x-icon"
-	href="assets/img/favicon.ico">
-
-<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
-<link rel="stylesheet" href="/pro01/common/css/custom.css">
-
-<!-- Load fonts style after rendering the layout styles -->
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
-
-<!-- Load map styles -->
-<link rel="stylesheet"
-	href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-	crossorigin="" />
-<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-	        function count(message) {
-	            var totalByte = 0;
-	
-	            for (var index=0, length=message.length; index<length; index++) {
-	                var currentByte = message.charCodeAt(index);
-	                (currentByte > 256) ? totalByte += 2: totalByte++;
-	            }
-	            return totalByte;
-	        }
-	
-	        function checkByte(event) {
-	            const totalByte = count(event.target.value);
-	
-	            if(totalByte <= MAX_MESSAGE_BYTE) {
-	                countSpan.innerText = totalByte.toString();
-	                message= event.target.value;
-	            }else {
-	                alert(MAX_MESSAGE_BYTE+"바이트까지 작성가능합니다.");
-	                countSpan.innerText = count(message).toString();
-	                event.target.value = message;
-	            }
-	        }
+	<html>
+	<head>
+		<title>리뷰 작성하기</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+		
+		<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+		<link rel="stylesheet" href="/pro01/common/css/custom.css">
+		
+		<!-- Load fonts style after rendering the layout styles -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+		<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+		<link rel="stylesheet" href="/pro01/common/css/star_rate.css">
+		
+		<!-- Load map styles -->
+		<link rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin="" />
+		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			function count(message) {
+		        var totalByte = 0;
+		
+		        for (var index=0, length=message.length; index<length; index++) {
+		            var currentByte = message.charCodeAt(index);
+		            (currentByte > 256) ? totalByte += 2: totalByte++;
+		        }
+		        return totalByte;
+		    }
+		
+		    function checkByte(event) {
+		        const totalByte = count(event.target.value);
+		
+		        if(totalByte <= MAX_MESSAGE_BYTE) {
+		            countSpan.innerText = totalByte.toString();
+		            message= event.target.value;
+		        }else {
+		            alert(MAX_MESSAGE_BYTE+"바이트까지 작성가능합니다.");
+		            countSpan.innerText = count(message).toString();
+		            event.target.value = message;
+		        }
+		    }
 	    </script>
-</head>
+	</head>
 
 <body>
 
@@ -365,6 +364,21 @@
 							placeholder="Email">
 					</div>
 				</div>
+				<div>
+					<label for="inputsubject">별점 주기</label>
+					<div class="star-rating">
+						<input type="radio" id="5-stars" name="rating" value="5" />
+						<label for="5-stars" class="star">&#9733;</label>
+						<input type="radio" id="4-stars" name="rating" value="4" />
+						<label for="4-stars" class="star">&#9733;</label>
+						<input type="radio" id="3-stars" name="rating" value="3" />
+						<label for="3-stars" class="star">&#9733;</label>
+						<input type="radio" id="2-stars" name="rating" value="2" />
+						<label for="2-stars" class="star">&#9733;</label>
+						<input type="radio" id="1-star" name="rating" value="1" />
+						<label for="1-star" class="star">&#9733;</label>
+					</div>
+				</div>
 				<div class="mb-3">
 					<label for="inputmessage">리뷰내용</label>
 					<textarea class="form-control mt-1" id="text-area" name="message"
@@ -394,8 +408,7 @@
 				
 				<div class="row">
 					<div class="col text-end mt-2">
-						<button type="submit" class="btn btn-success btn-lg px-3">리뷰
-							작성</button>
+						<button type="submit" class="btn btn-success btn-lg px-3">리뷰 작성</button>
 					</div>
 				</div>
 			</form>

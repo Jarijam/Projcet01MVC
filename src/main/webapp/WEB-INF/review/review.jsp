@@ -111,9 +111,9 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                             <!-- card start -->
                             <div class="card-body">
-                                <a href="review_form.jsp" class="h3 text-decoration-none">멀티캠퍼스</a>
+                                <a href="review_form.do" class="h3 text-decoration-none">음식점 이름</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li>서울시 역삼동 000</li>
+                                    <li>식당 주소(?)</li>
                                     <li class="pt-2">
                                         <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
@@ -456,10 +456,9 @@ https://templatemo.com/tm-559-zay-shop
         <div class="container my-4">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Brands</h1>
+                    <h1 class="h1">아마도 광고</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        Lorem ipsum dolor sit amet.
+                        광고 내용
                     </p>
                 </div>
                 <div class="col-lg-9 m-auto tempaltemo-carousel">
