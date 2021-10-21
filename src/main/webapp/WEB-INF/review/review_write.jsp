@@ -26,6 +26,15 @@
 			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 			crossorigin="" />
 		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
+		
+		<!-- <script type="text/javascript">
+			$(document).ready(function(){
+				$("radio").click(function(){
+					alert("점을 주셨습니다");
+				})
+			});
+		</script> -->
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			function count(message) {

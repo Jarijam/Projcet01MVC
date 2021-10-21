@@ -21,12 +21,12 @@
 }
 
 .star-rating :checked ~ label {
-  color:#f90;
+  color:#fc0;
 }
 
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-  color:#fc0;
+  color:#f90;
 }
 
 /* explanation */
