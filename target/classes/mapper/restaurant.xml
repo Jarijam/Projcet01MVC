@@ -4,9 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="pro01.restaurant">
+<<<<<<< HEAD
 	
 	<select id="restaurant_list" resultType="restaurant" parameterType="String">
   		select * from restaurant where restaurant_name = #{restaurant}
   	</select>
+=======
+	<insert id="insert" parameterType="restaurant">
+		insert into review		
+	</insert>
+>>>>>>> 9477345c0f47beabb2cb98ae907124320a368e66
 		
 </mapper>
