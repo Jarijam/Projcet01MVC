@@ -14,7 +14,7 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	@Override
 	public List<RestaurantVO> searchList(String restaurant) {	
 		System.out.println("serviceimpl확인"+restaurant);
-		ArrayList<RestaurantVO> list = dao.searchList(restaurant);
+		List<RestaurantVO> list = dao.searchList(restaurant);
 		return dao.searchList(restaurant); 
 	}
 	

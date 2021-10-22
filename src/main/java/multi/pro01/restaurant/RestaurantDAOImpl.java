@@ -13,10 +13,10 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 	SqlSession sqlSession;
 				
 	@Override
-	public ArrayList<RestaurantVO> searchList(String restaurant) {
-		System.out.println("service에서넘어오는지 확인"+restaurant);
-		//ArrayList<RestaurantVO> list = sqlSession.selectList("pro01.board.search", restaurant)
-		//return list;
-		return null;
+	public List<RestaurantVO> searchList(String restaurant) {
+		System.out.println("service에서넘어오는지 확인"+restaurant);		
+		List<RestaurantVO> list = sqlSession.selectList("pro01.restaurant.restaurant_list", restaurant);
+		System.out.println("db연동체크"+list);
+		return list;
 	}	
 } 

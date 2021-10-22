@@ -19,6 +19,7 @@ public class RestaurantController {
 		System.out.println("mapping확인"+restaurant);		
 		ModelAndView mav = new ModelAndView();		
 		List<RestaurantVO> restaurant_name = service.searchList(restaurant);
+		mav.addObject("restaurant_name", restaurant_name);
 		
 		return mav;
 	}
