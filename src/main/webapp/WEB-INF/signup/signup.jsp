@@ -41,7 +41,7 @@
 							<hr/>
 							<div>
 								<h4>아이디</h4>
-								<input type="text" placeholder="아이디" name="userid" id="userid"  minlength="4" required>
+								<input type="text" placeholder="아이디" name="userid" minlength="4" required>
 								<span id="checkVal">${result}</span>
 							</div>
 							

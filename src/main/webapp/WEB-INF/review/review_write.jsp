@@ -33,7 +33,7 @@
 					alert("점을 주셨습니다");
 				})
 			});
-		</script>
+		</script>	
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
@@ -336,43 +336,17 @@
 	<!-- Start Contact -->
 	<div class="container py-5">
 		<div class="row py-5">
-			<form class="col-md-9 m-auto" method="post" role="form">
+			<form class="col-md-9 m-auto" method="post" role="form" action="/review/write.do">
 				<div class="mb-3">
 					<label for="inputsubject">식당이름</label> <input type="text"
-						class="form-control mt-1" id="subject" name="subject"
-						placeholder="Subject">
-				</div>
-				<div class="mb-3">
-					<label for="inputsubject">식당주소</label> <input type="text"
-						class="form-control mt-1" id="subject" name="subject"
-						placeholder="Subject">
-				</div>
-				<div class="mb-3">
-					<label for="inputsubject">전화번호</label> <input type="text"
-						class="form-control mt-1" id="subject" name="subject"
-						placeholder="Subject">
-				</div>
+						class="form-control mt-1" id="name" name="name"
+						placeholder="식당 이름">
+				</div>				
 				<div class="mb-3">
 					<label for="inputsubject">음식 종류</label> <input type="text"
-						class="form-control mt-1" id="subject" name="subject"
-						placeholder="Subject">
-				</div>
-				<div class="mb-3">
-					<label for="inputsubject">식당 홈페이지 바로가기</label> <input type="text"
-						class="form-control mt-1" id="subject" name="subject"
-						placeholder="Subject">
-				</div>
-				<div class="row">
-					<div class="form-group col-md-6 mb-3">
-						<label for="inputname">작성자 id </label> <input type="text"
-							class="form-control mt-1" id="name" name="name" placeholder="Id">
-					</div>
-					<div class="form-group col-md-6 mb-3">
-						<label for="inputemail">작성자 Email</label> <input type="email"
-							class="form-control mt-1" id="email" name="email"
-							placeholder="Email">
-					</div>
-				</div>
+						class="form-control mt-1" id="food" name="food"
+						placeholder="음식 종류">
+				</div>				
 				<div>
 					<label for="inputsubject">별점 주기</label>
 					<div class="star-rating">
@@ -388,10 +362,11 @@
 						<label for="1-star" class="star">&#9733;</label>
 					</div>
 				</div>
+				<p></p>
 				<div class="mb-3">
 					<label for="inputmessage">리뷰내용</label>
 					<textarea class="form-control mt-1" id="text-area" name="message"
-						placeholder="Message" rows="8"></textarea>
+						placeholder="리뷰 작성하기" rows="8"></textarea>
 					<div><span id="count"></span><span id="max-count"></span></div>
 					 <script type="text/javascript">
 	                    $(document).ready(function () {
