@@ -29,38 +29,17 @@
 				</div>
 			</div>
 		</div>
+		<h3>검색해서 db에 있는 정보면 여기에 뿌려주고 싶음</h3>
+		<h4>그렇게 하려면 db에 저장된 컬럼대로 테이블을 만들어서 테이블에 깔끔하게 뿌려주면 좋을 듯</h4>
+		<h6>		해야 할 일 	</h6>
+		<h6>1. data.go.kr에서 정보를 뽑아서 컬럼을 찾기</h6>
+		<h6>2. 그 컬럼대로 테이블 만들기</h6>
+		<h6>3. 식당 정보를 입력,수정,삭제 가능하게 만들기</h6>
+		<h6>4. 식당을 클릭하면 사용자에게 어떤 정보를 주기(일단 음식사진)</h6>		
 	</section>
 	</form>
-	<h3>식당 리스트</h3>
-	<div style="padding-top: 30px">
-		<div class="col-md-3" style="padding-bottom: 10px">
-			<form>
-				<select name="restaurant_category" id="restaurant_category">
-					<option value="all">전체 식당</option>
-					<option value="한식">한식</option>
-					<option value="중식">중식</option>
-					<option value="일식">일식</option>
-				</select>
-			</form>
-		</div>
-		<form action="/pro01/restaurant/search.do">
-			
-
-				<select name="tag">
-					<option value="id">작성자</option>
-					<option value="title">제목</option>
-					<option value="content">본문</option>
-					<option value="write_date">작성일</option>
-				</select>
-				<input type="text" name="search" />
-				<input type="submit" value="검색">
-				
-
-
-		</form>
-
-
-		</section>
+		
+		
 		<!-- End Section -->
 
 		<!-- Start Brands -->
