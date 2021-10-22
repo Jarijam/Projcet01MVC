@@ -11,8 +11,7 @@
 </head>
 <body>
 	<%
-		ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_name");
-	//	int size = restaurantList.size();
+		ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_name");	
 	%>
 	<form  action="/pro01/restaurant/search.do">
 	<section class="bg-success py-5">

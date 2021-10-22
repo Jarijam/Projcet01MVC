@@ -4,7 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="pro01.restaurant">
-	
 	<select id="restaurant_list" resultType="restaurant" parameterType="String">
   		select * from restaurant where restaurant_name = #{restaurant}
   	</select>
