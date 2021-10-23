@@ -7,5 +7,7 @@
 	<select id="restaurant_list" resultType="restaurant" parameterType="String">
   		select * from restaurant where restaurant_name = #{restaurant}
   	</select>
-		
+	<insert id="insert" parameterType="restaurant">
+		insert into restaurant values(#{no},#{name},#{addr})
+	</insert>	
 </mapper>
