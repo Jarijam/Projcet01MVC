@@ -17,5 +17,10 @@ public class RestaurantServiceImpl implements RestaurantService  {
 		List<RestaurantVO> list = dao.searchList(restaurant);
 		return dao.searchList(restaurant); 
 	}
+
+	@Override
+	public int insert(RestaurantVO restaurant) {
+		return 0;
+	}
 	
 }

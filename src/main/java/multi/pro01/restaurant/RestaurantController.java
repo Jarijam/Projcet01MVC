@@ -14,6 +14,14 @@ public class RestaurantController {
 	@Autowired
 	RestaurantService service;
 	
+	@RequestMapping("/restaurant/insert.do")
+	public String insert(RestaurantVO restaurant) {
+		System.out.println("dao연동확인"+restaurant);				
+		service.insert(restaurant);
+		return "redirect:/restaurant/insert.do?restaurant=all";
+		
+	}
+	
 	@RequestMapping("/restaurant/search.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		System.out.println("mapping확인"+restaurant);		
