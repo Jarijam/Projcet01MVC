@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%
-		ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_name");	
+		ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_name");			
 	%>
 	<form  action="/pro01/restaurant/search.do">
 	<section class="bg-success py-5">
@@ -29,18 +29,27 @@
 				</div>
 			</div>
 		</div>
-		
-		<form action="/pro01/restaurant/search.do">
-		<select name="tag">
-			<option value="id">작성자</option>
-			<option value="title">제목</option>
-			<option value="content">본문</option>
-			<option value="write_date">작성일</option>
-		</select> <input type="text" name="search" /> <input type="submit" value="검색">
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#" style="text-align: right;">글쓰기</a></li>
-		</ul>
-	</form>
+			<h3>맛집 목록</h3>	
+		<table class="table">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>등록일</th>
+				</tr>
+			</thead>
+			<tbody>						
+					<tr>
+						<td> 1</td>
+						<td> 2</td>											
+						<td> 3</td>
+						<td> 4</td>
+					</tr>
+				
+			</tbody>
+		</table>
+	</div>	
 		<h3>검색해서 db에 있는 정보면 여기에 뿌려주고 싶음</h3>
 		<h4>그렇게 하려면 db에 저장된 컬럼대로 테이블을 만들어서 테이블에 깔끔하게 뿌려주면 좋을 듯</h4>
 		<h6>		해야 할 일 	</h6>

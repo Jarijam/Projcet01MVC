@@ -20,7 +20,7 @@ public class RestaurantServiceImpl implements RestaurantService  {
 
 	@Override
 	public int insert(RestaurantVO restaurant) {
-		return 0;
+		return dao.insert(restaurant);
 	}
 	
 }

@@ -5,8 +5,7 @@
 <tiles-definitions>
 	<definition name="restaurant" extends="mainTemplate">
 	 	<put-attribute name="menu" value="/WEB-INF/menu/board_menu.jsp"/>
-		<put-attribute name="content" value="/WEB-INF/board/restaurant-write.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/board/restaurantlist.jsp"/>
 	</definition>
-	
-	
+			
 </tiles-definitions>

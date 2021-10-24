@@ -18,5 +18,13 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 		List<RestaurantVO> list = sqlSession.selectList("pro01.restaurant.restaurant_list", restaurant);
 		System.out.println("db연동체크"+list);
 		return list;
-	}	
+	}
+
+	@Override
+	public int insert(RestaurantVO restaurant) {
+		int result = sqlSession.insert("pro01.restaurant.restaurant_insert", restaurant);
+		return result;
+	}
+
+	
 } 

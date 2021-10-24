@@ -12,7 +12,7 @@
 		<a href="#" class="list-group-item">경조사</a>
 		<a href="#" class="list-group-item">사내소식</a>
 		<a href="#"	class="list-group-item">회사일정</a>
-		<a href="/mvc/dept/insertPage.do"	class="list-group-item">맛집등록</a>
+		<a href="/pro01/restaurant/insert.do"	class="list-group-item">맛집등록</a>
 		<a href="#"	class="list-group-item">게시판</a>
 	</div>
 </body>

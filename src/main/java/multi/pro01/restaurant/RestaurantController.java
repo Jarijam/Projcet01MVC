@@ -18,7 +18,7 @@ public class RestaurantController {
 	public String insert(RestaurantVO restaurant) {
 		System.out.println("dao연동확인"+restaurant);				
 		service.insert(restaurant);
-		return "redirect:/restaurant/insert.do?restaurant=all";
+		return "redirect:/pro01/restaurant/insertPage.do";
 		
 	}
 	
