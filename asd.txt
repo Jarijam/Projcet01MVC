@@ -29,4 +29,31 @@ boardlist.jsp 연동시키기
 
 그래서 일단 데이터가져오는 youtube에 강의 보고 가져오는 중
 
+SQL> conn scott/tiger
+Connected.
+SQL> set linesize300
+SQL> desc restaurant
+ERROR:
+ORA-04043: object restaurant does not exist
+
+
+SQL> create table restaurant(
+  2  restaurant_no varchar2(20) primary key,
+  3  restaurant_name varchar2(100),
+  4  restaurant_addr varchar2(100))
+  5  ;
+
+Table created.
+
+SQL> insert into restaurant values(
+  2  '1','한솥','seoul')
+  3  ;
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+
 

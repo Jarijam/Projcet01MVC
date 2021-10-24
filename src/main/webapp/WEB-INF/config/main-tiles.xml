@@ -42,4 +42,8 @@
 	<definition name="userlist" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/user/userlist.jsp"/>
 	</definition>
+	
+	<definition name="kakaomap" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/kakaomaptest.jsp"/>
+	</definition>
 </tiles-definitions>

@@ -14,12 +14,21 @@ public class RestaurantController {
 	@Autowired
 	RestaurantService service;
 	
+	@RequestMapping("/restaurant/insert.do")
+	public String insert(RestaurantVO restaurant) {
+		System.out.println("dao연동확인"+restaurant);				
+		service.insert(restaurant);
+		return "redirect:/pro01/restaurant/insertPage.do";
+		
+	}
+	
 	@RequestMapping("/restaurant/search.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		System.out.println("mapping확인"+restaurant);		
 		ModelAndView mav = new ModelAndView();		
 		List<RestaurantVO> restaurant_name = service.searchList(restaurant);
-		
+		mav.addObject("restaurant_name", restaurant_name);
+		mav.setViewName("pro01/restaurant_list");
 		return mav;
 	}
 }

@@ -5,8 +5,10 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="multi.pro01.userinfo.UserVO" alias="user"/>
+		<typeAlias type="multi.pro01.restaurant.RestaurantVO" alias="restaurant"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/user.xml"/>
+		<mapper resource="mapper/restaurant.xml"/>
 	</mappers>
 </configuration>

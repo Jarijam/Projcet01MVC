@@ -9,7 +9,7 @@
 
 	<!-- ========== 뷰만 response하는 컨트롤러 추가============== -->
 	<view-controller path="/emp/loginPage.do" view-name="login"/>
-	<view-controller path="/board/insertPage.do" view-name="board/insert"/>
+	<view-controller path="/restaurant/insertPage.do" view-name="restaurant/insert"/>
 	<view-controller path="/dept/insertPage.do" view-name="dept/insert"/>
 	<view-controller path="/emp/insertPage.do" view-name="emp/insert"/>
 	
