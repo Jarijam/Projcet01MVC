@@ -30,7 +30,7 @@ public class ReviewController {
 		}
 		return url;
 	}
-	@RequestMapping("/pro01/review.do")
+	@RequestMapping("/review/reviewlist.do")
 	public ModelAndView getReviewList() {
 		ModelAndView mav = new ModelAndView();
 		List<ReviewVO> reviewlist = service.getReviewList();
