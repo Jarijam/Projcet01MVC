@@ -24,7 +24,7 @@ public class ReviewController {
 		int result = service.insert(command);
 		
 		if (result >=1) {
-			url = "redirect:/index.do";
+			url = "redirect:/review.do";
 		}else {
 			url = "redirect:/pro01/review_write.do";
 		}
@@ -34,7 +34,7 @@ public class ReviewController {
 	public ModelAndView getReviewList() {
 		ModelAndView mav = new ModelAndView();
 		List<ReviewVO> reviewlist = service.getReviewList();
-		mav.setViewName("review/review");
+		mav.setViewName("review");
 		mav.addObject("reviewlist", reviewlist);
 		return mav;
 	}

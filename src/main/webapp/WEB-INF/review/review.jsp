@@ -101,21 +101,26 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
                 <div class="row">
+                    <% for(int i=0; i<size; i++) {
+                    	ReviewVO review = reviewlist.get(i);	
+                    	%>
+                    
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="/pro01/images/restaurant01.PNG">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <!-- <form action="/pro01/review/select.do"></form> -->
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="review_form.do"><i class="far fa-heart"></i></a></li>
+                                        <!-- <li><a class="btn btn-success text-white" href="review_form.do"><i class="far fa-heart"></i></a></li> -->
                                         <li><a class="btn btn-success text-white mt-2" href="review_form.do"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="review_form.do"><i class="fas fa-cart-plus"></i></a></li>
+                                       <!--  <li><a class="btn btn-success text-white mt-2" href="review_form.do"><i class="fas fa-cart-plus"></i></a></li> -->
                                     </ul>
                                 </div>
                             </div>
                             <!-- card start -->
                             <div class="card-body">
-                                <a href="review_form.do" class="h3 text-decoration-none">음식점 이름</a>
+                                <a href="review_form.do" class="h3 text-decoration-none"><%= review.getRes_name() %></a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>식당 주소(?)</li>
                                     <li class="pt-2">
@@ -128,17 +133,23 @@ https://templatemo.com/tm-559-zay-shop
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
                                     <li>
+                                    	<% int rating = review.getRating(); %>
+                                        <%for (int j =1; j<=rating; j++) {%>
                                         <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
+                                        <%} %>
+                                        <%for (int k=1;k<=5-rating;k++) { %>
                                         <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
+                                        <%} %>
+                                       <!--  <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i> -->
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">코딩/한식</p>
+                                <p class="text-center mb-0"><%= review.getType_of_food() %></p>
                             </div>
                         </div>
                     </div>
+                    <%} %>
                     <!-- <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
@@ -451,8 +462,8 @@ https://templatemo.com/tm-559-zay-shop
                 </div>
             </div>
 
-        </div>
-    </div>
+        
+    
     <!-- End Content -->
 
     <!-- Start Brands -->
