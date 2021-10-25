@@ -31,11 +31,11 @@ public class RestaurantController {
 		mav.setViewName("pro01/restaurant_list");
 		return mav;
 	}
-	@RequestMapping("/restaurant/list.do")
+	@RequestMapping("/pro01/restaurant.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		ModelAndView mav = new ModelAndView();
 		List<RestaurantVO> restaurant_list = service.restaurantlist();
-		mav.setViewName("restaurant/list");
+		mav.setViewName("restaurant");
 		mav.addObject("restaurant_list",restaurant_list);
 		return mav;
 	}
