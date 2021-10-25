@@ -1,11 +1,11 @@
 package multi.pro01.review;
 
-import org.springframework.web.multipart.MultipartFile;
 
 public class ReviewVO {
 	private String res_name;
 	private String rev_content;
 	private String type_of_food;
+	//String category;
 	private int rating;
 	
 	
@@ -18,6 +18,7 @@ public class ReviewVO {
 		this.rev_content = rev_content;
 		this.type_of_food = type_of_food;
 		this.rating = rating;
+		//this.category = category;
 	}
 
 //	public MultipartFile[] getFiles() {

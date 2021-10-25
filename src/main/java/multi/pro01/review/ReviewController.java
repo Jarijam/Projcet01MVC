@@ -30,18 +30,26 @@ public class ReviewController {
 		}
 		return url;
 	}
-	
+	@RequestMapping("/review/list.do")
+	public ModelAndView getReviewList() {
+		ModelAndView mav = new ModelAndView();
+		List<ReviewVO> reviewlist = service.getReviewList();
+		mav.setViewName("review/list");
+		mav.addObject("reviewlist", reviewlist);
+		return mav;
+	}
 //	@RequestMapping("/review/list.do")
 //	public ModelAndView reviewlist(String category) {
 //		System.out.println("===========>"+category);
 //		ModelAndView mav = new ModelAndView("review/list");
-//		List<ReviewVO> reviewlist = service.findByCategory(category);
+////		List<ReviewVO> reviewlist = service.findByCategory(category);
+//		//List<ReviewVO> reviewlist = service;
 //		//dao에서 결과가 넘어오는 경우 디버깅 작업은 넘어오는 데이터 sysout으로 컨트롤러 단까지 모두 출력해보기
 //		//tiles에 등록한 뷰의 이름
 //		 mav.setViewName("review/list"); 
-//		mav.addObject("reviewlist", reviewlist);
-//		mav.addObject("category", category);
-//		return mav;
+//		//mav.addObject("reviewlist", reviewlist);
+//		//mav.addObject("category", category);
+////		return mav;
 //	}
 	
 }

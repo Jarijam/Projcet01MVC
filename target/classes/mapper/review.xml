@@ -7,7 +7,7 @@
 	<insert id="insert" parameterType="review">
 		insert into review values(#{res_name}, #{type_of_food}, #{rating}, #{rev_content}, sysdate)
 	</insert>
-	<select id="list" resultType="review">
+	<select id="list" resultType="review" >
 		select * from review
 	</select>
 	<!-- <select id="category" parameterType="String" resultType="review"> ajax위해 필요한 사전작업

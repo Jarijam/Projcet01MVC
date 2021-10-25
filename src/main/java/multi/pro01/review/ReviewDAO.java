@@ -7,9 +7,8 @@ public interface ReviewDAO {
 //	List<ReviewVO> reviewList();
 	//리뷰 작성
 	int insert(ReviewVO review);
-	
 	//리뷰 조회
-	
+	List<ReviewVO> getReviewList();
 	//리뷰 수정
 	
 	//리뷰 삭제

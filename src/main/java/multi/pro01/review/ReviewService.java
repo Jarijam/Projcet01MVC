@@ -12,6 +12,8 @@ public interface ReviewService {
 //	ReviewVO read(String board_no);
 //	int update(ReviewVO board);
 //	int delete(String board_no);
+
+	List<ReviewVO> getReviewList();
 	
 	
 //	List<ReviewVO> findByCategory(String category);

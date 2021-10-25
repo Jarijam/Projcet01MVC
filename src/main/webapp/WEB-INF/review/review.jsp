@@ -1,6 +1,8 @@
+<%@page import="multi.pro01.review.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,6 +30,9 @@ https://templatemo.com/tm-559-zay-shop
 </head>
 
 <body>
+<% ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)request.getAttribute("reviewlist"); 
+		 int size = reviewlist.size();  
+	%>
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
