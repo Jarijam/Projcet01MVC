@@ -3,10 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="pro01.review">
+<mapper namespace="project.review">
 	<insert id="insert" parameterType="review">
-		insert into review
-		values(review_seq.nextval,#{userid},#{rev_content}, sysdate)
+		insert into review values(#{res_name}, #{type_of_food}, #{rating}, #{rev_content}, sysdate)
 	</insert>
 	<select id="list" resultType="review">
 		select * from review

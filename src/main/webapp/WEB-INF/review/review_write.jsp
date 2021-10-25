@@ -26,15 +26,14 @@
 			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 			crossorigin="" />
 		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
-		
+			
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#5-stars").click(function(){
-					alert("점을 주셨습니다");
+				$("#submit").click(function(){
+					alert("리뷰 작성이 완료되었습니다!");
 				})
 			});
-		</script>	
-		
+		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			function count(message) {
@@ -336,15 +335,15 @@
 	<!-- Start Contact -->
 	<div class="container py-5">
 		<div class="row py-5">
-			<form class="col-md-9 m-auto" method="post" role="form" action="/review/write.do">
+			<form class="col-md-9 m-auto" method="post" role="form" action="/pro01/review/insert.do">
 				<div class="mb-3">
 					<label for="inputsubject">식당이름</label> <input type="text"
-						class="form-control mt-1" id="name" name="name"
+						class="form-control mt-1" id="res_name" name="res_name"
 						placeholder="식당 이름">
 				</div>				
 				<div class="mb-3">
 					<label for="inputsubject">음식 종류</label> <input type="text"
-						class="form-control mt-1" id="food" name="food"
+						class="form-control mt-1" id="type_of_food" name="type_of_food"
 						placeholder="음식 종류">
 				</div>				
 				<div>
@@ -365,7 +364,7 @@
 				<p></p>
 				<div class="mb-3">
 					<label for="inputmessage">리뷰내용</label>
-					<textarea class="form-control mt-1" id="text-area" name="message"
+					<textarea class="form-control mt-1" id="text-area" name="rev_content"
 						placeholder="리뷰 작성하기" rows="8"></textarea>
 					<div><span id="count"></span><span id="max-count"></span></div>
 					 <script type="text/javascript">
@@ -392,7 +391,7 @@
 				
 				<div class="row">
 					<div class="col text-end mt-2">
-						<button type="submit" class="btn btn-success btn-lg px-3">리뷰 작성</button>
+						<button type="submit" class="btn btn-success btn-lg px-3" name="submit">리뷰 작성</button>
 					</div>
 				</div>
 			</form>

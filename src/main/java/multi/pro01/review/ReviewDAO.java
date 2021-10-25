@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface ReviewDAO {
 	//리뷰 전체목록조회
-	List<ReviewVO> reviewList();
+//	List<ReviewVO> reviewList();
 	//리뷰 작성
-	int insert(ReviewVO reiview);
+	int insert(ReviewVO review);
 	
 	//리뷰 조회
 	

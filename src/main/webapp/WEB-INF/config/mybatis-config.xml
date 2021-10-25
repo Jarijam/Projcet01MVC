@@ -6,9 +6,11 @@
 	<typeAliases>
 		<typeAlias type="multi.pro01.userinfo.UserVO" alias="user"/>
 		<typeAlias type="multi.pro01.restaurant.RestaurantVO" alias="restaurant"/>
+		<typeAlias type="multi.pro01.review.ReviewVO" alias="review"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/user.xml"/>
 		<mapper resource="mapper/restaurant.xml"/>
+		<mapper resource="mapper/review.xml"/>
 	</mappers>
 </configuration>

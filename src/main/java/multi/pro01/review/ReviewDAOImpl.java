@@ -11,15 +11,17 @@ public class ReviewDAOImpl implements ReviewDAO {
 
 	@Autowired
 	SqlSession sqlSession;
-	@Override
-	public int insert(ReviewVO reiview) {
-		return 0;
-	}
 	
 	@Override
-	public List<ReviewVO> reviewList() {
-		return null;
+	public int insert(ReviewVO review) {
+		int result = sqlSession.insert("project.review.insert", review);
+		return result;
 	}
+	
+//	@Override
+//	public List<ReviewVO> reviewList() {
+//		return null;
+//	}
 
 	
 }

@@ -3,21 +3,21 @@ package multi.pro01.review;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ReviewVO {
-	private String userid;
+	private String res_name;
 	private String rev_content;
-	private String rev_date;
-	//MultipartFile[] files;
+	private String type_of_food;
+	private int rating;
 	
 	
 	public ReviewVO() {
 	}
 	
-	public ReviewVO(String userid, String rev_content, String rev_date, MultipartFile[] files) {
+	public ReviewVO(String res_name, String rev_content, String type_of_food, int rating) {
 		super();
-		this.userid = userid;
+		this.res_name = res_name;
 		this.rev_content = rev_content;
-		this.rev_date = rev_date;
-		//this.files = files;
+		this.type_of_food = type_of_food;
+		this.rating = rating;
 	}
 
 //	public MultipartFile[] getFiles() {
@@ -28,12 +28,12 @@ public class ReviewVO {
 //		this.files = files;
 //	}
 
-	public String getUserid() {
-		return userid;
+	public String getRes_name() {
+		return res_name;
 	}
 	
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setRes_name(String res_name) {
+		this.res_name = res_name;
 	}
 	
 	public String getRev_content() {
@@ -44,18 +44,26 @@ public class ReviewVO {
 		this.rev_content = rev_content;
 	}
 	
-	public String getRev_date() {
-		return rev_date;
+	public String getType_of_food() {
+		return type_of_food;
 	}
 	
-	public void setRev_date(String rev_date) {
-		this.rev_date = rev_date;
+	public void setType_of_food(String type_of_food) {
+		this.type_of_food = type_of_food;
 	}
 	
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
 	@Override
 	public String toString() {
-//		return "ReviewVO [userid=" + userid + ", rev_content=" + rev_content + ", rev_date=" + rev_date + ", files=" + files
+//		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", type_of_food=" + type_of_food + ", files=" + files
 //				+ "]";
-		return "ReviewVO [userid=" + userid + ", rev_content=" + rev_content + ", rev_date=" + rev_date + "]";
+		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", type_of_food=" + type_of_food + "]";
 	}
 }
