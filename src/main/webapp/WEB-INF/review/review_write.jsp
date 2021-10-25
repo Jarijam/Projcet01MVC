@@ -392,6 +392,7 @@
 				<div class="row">
 					<div class="col text-end mt-2">
 						<button type="submit" class="btn btn-success btn-lg px-3" name="submit">리뷰 작성</button>
+						
 					</div>
 				</div>
 			</form>

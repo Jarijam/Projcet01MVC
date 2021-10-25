@@ -9,10 +9,12 @@ public class RestaurantVO {
 	public RestaurantVO() {
 		
 	}
-
-	public RestaurantVO(String restaurant_name) {
+	
+	public RestaurantVO(String restaurant_no, String restaurant_name, String restaurant_addr) {
 		super();
+		this.restaurant_no = restaurant_no;
 		this.restaurant_name = restaurant_name;
+		this.restaurant_addr = restaurant_addr;
 	}
 
 	public String getRestaurant_name() {

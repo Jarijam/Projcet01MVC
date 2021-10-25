@@ -10,8 +10,8 @@
 <title>식당검색 페이지</title>
 </head>
 <body>
-	<%
-		ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_name");			
+	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");		
+		 
 	%>
 	<form  action="/pro01/restaurant/search.do">
 	<section class="bg-success py-5">
@@ -28,37 +28,40 @@
 					<input type="submit" value="검색">
 				</div>
 			</div>
+		</div>  
+			<h3>맛집 목록</h3>
+	<div style="padding-top: 30px">
+		<div class="col-md-3" style="padding-bottom: 10px">
+		    구분:
+			<form>
+				<select name="category"  id="category">
+					<option value="all">전체게시물</option>
+					<option value="경조사">경조사</option>
+					<option value="사내소식">사내소식</option>				
+				</select>
+			</form>
 		</div>
-			<h3>맛집 목록</h3>	
 		<table class="table">
 			<thead>
 				<tr>
 					<th>번호</th>
 					<th>제목</th>
-					<th>작성자</th>
-					<th>등록일</th>
+					<th>작성자</th>					
 				</tr>
 			</thead>
-			<tbody>						
+			<tbody>
+				<%-- 	<% for(int i=0;i<size;i++){
+					RestaurantVO user = restaurantList.get(i);
+					%>			
 					<tr>
-						<td> 1</td>
-						<td> 2</td>											
-						<td> 3</td>
-						<td> 4</td>
+						<td><%= user.getRestaurant_no() %></td>
+						<td><%= user.getRestaurant_name() %></td>											
+						<td><%= user.getRestaurant_addr() %></td>						
 					</tr>
-				
+					<% } %> --%>
 			</tbody>
 		</table>
-	</div>	
-		<h3>검색해서 db에 있는 정보면 여기에 뿌려주고 싶음</h3>
-		<h4>그렇게 하려면 db에 저장된 컬럼대로 테이블을 만들어서 테이블에 깔끔하게 뿌려주면 좋을 듯</h4>
-		<h6>		해야 할 일 	</h6>
-		<h6>1. data.go.kr에서 정보를 뽑아서 컬럼을 찾기</h6>
-		<h6>2. 그 컬럼대로 테이블 만들기</h6>
-		<h6>3. 식당 정보를 입력,수정,삭제 가능하게 만들기</h6>
-		<h6>4. 식당을 클릭하면 사용자에게 어떤 정보를 주기(일단 음식사진)</h6>		
-	</section>
-	</form>						
-</body>
+		</div>			
+	</body>
 
 </html>
