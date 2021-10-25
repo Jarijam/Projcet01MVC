@@ -1,6 +1,5 @@
 package multi.pro01.restaurant;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +20,11 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	@Override
 	public int insert(RestaurantVO restaurant) {
 		return dao.insert(restaurant);
+	}
+
+	@Override
+	public List<RestaurantVO> restaurantlist() {
+		return dao.restaurantlist();
 	}
 	
 }

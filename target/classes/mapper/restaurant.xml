@@ -10,4 +10,7 @@
 	<insert id="restaurant_insert" parameterType="restaurant">
 		insert into restaurant values(#{no},#{name},#{addr})
 	</insert>	
+	<select id="list" resultType="restaurant">
+  		select * from restaurant
+  	</select>
 </mapper>

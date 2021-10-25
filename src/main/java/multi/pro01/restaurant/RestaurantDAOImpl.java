@@ -1,6 +1,5 @@
 package multi.pro01.restaurant;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -24,6 +23,11 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 	public int insert(RestaurantVO restaurant) {
 		int result = sqlSession.insert("pro01.restaurant.restaurant_insert", restaurant);
 		return result;
+	}
+
+	@Override
+	public List<RestaurantVO> restaurantlist() {
+		return sqlSession.selectList("pro01.restaurant.list");
 	}
 
 	
