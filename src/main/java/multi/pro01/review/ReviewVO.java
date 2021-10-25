@@ -9,8 +9,11 @@ public class ReviewVO {
 	private int rating;
 	
 	
+	
 	public ReviewVO() {
 	}
+	
+	
 	
 	public ReviewVO(String res_name, String rev_content, String type_of_food, int rating) {
 		super();
@@ -20,7 +23,8 @@ public class ReviewVO {
 		this.rating = rating;
 		//this.category = category;
 	}
-
+	
+	
 //	public MultipartFile[] getFiles() {
 //		return files;
 //	}
