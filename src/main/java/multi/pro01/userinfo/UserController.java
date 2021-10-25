@@ -64,7 +64,7 @@ public class UserController {
 
 		return mav;
 	}
-	@RequestMapping("/logout.do")
+	@RequestMapping("/user/logout.do")
 	public String logout(HttpSession ses) throws Exception{
 		if(ses != null) {
 			ses.invalidate();

@@ -30,7 +30,7 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("#submit").click(function(){
-					alert("리뷰 작성이 완료되었습니다!");
+					alert("리뷰 작성이 완료되었습니다");
 				})
 			});
 		</script>
@@ -339,12 +339,12 @@
 				<div class="mb-3">
 					<label for="inputsubject">식당이름</label> <input type="text"
 						class="form-control mt-1" id="res_name" name="res_name"
-						placeholder="식당 이름">
+						placeholder="식당 이름" required>
 				</div>				
 				<div class="mb-3">
-					<label for="inputsubject">음식 종류</label> <input type="text"
+					<label for="inputsubject">메뉴 이름</label> <input type="text"
 						class="form-control mt-1" id="type_of_food" name="type_of_food"
-						placeholder="음식 종류">
+						placeholder="음식 종류" required>
 				</div>				
 				<div>
 					<label for="inputsubject">별점 주기</label>
