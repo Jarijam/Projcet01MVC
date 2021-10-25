@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");		
-		 
+		/* int size = restaurantList.size(); */
 	%>
 	<form  action="/pro01/restaurant/search.do">
 	<section class="bg-success py-5">
@@ -50,7 +50,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<%-- 	<% for(int i=0;i<size;i++){
+				 	<%-- <% for(int i=0;i<size;i++){
 					RestaurantVO user = restaurantList.get(i);
 					%>			
 					<tr>
@@ -58,7 +58,7 @@
 						<td><%= user.getRestaurant_name() %></td>											
 						<td><%= user.getRestaurant_addr() %></td>						
 					</tr>
-					<% } %> --%>
+					<% } %>   --%>
 			</tbody>
 		</table>
 		</div>			
