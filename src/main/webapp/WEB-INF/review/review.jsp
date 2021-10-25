@@ -134,7 +134,7 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
                                     <li>
                                     	<% int rating = review.getRating(); %>
-                                        <%for (int j =1; j<=rating; j++) {%>
+                                        <%for (int j =1;j<=rating;j++) {%>
                                         <i class="text-warning fa fa-star"></i>
                                         <%} %>
                                         <%for (int k=1;k<=5-rating;k++) { %>
