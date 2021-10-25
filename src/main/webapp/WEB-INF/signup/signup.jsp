@@ -53,7 +53,7 @@
 							<br/>
 							<div>
 								<h4>이름</h4>
-								<input type="text" placeholder="이름" name="name" minlength="3" required>
+								<input type="text" placeholder="이름" name="name" minlength="2" required>
 							</div>
 							<br/>
 							<div>
