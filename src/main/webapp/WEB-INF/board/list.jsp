@@ -18,9 +18,9 @@
 </script>
 </head>
 <body>
-	<%-- <% ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>)request.getAttribute("restaurant_list");
+	<% ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>)request.getAttribute("restaurant_list");
 		int size = restaurantList.size();
-	%> --%>
+	%> 
 	<h3>사원목록보기</h3>
 	<div style="padding-top: 30px">
 		<div class="col-md-3" style="padding-bottom: 10px">
@@ -40,22 +40,19 @@
 					<th>사번</th>
 					<th>성명</th>
 					<th>부서코드</th>
-					<th>주소</th>
+					
 				</tr>
 			</thead>
 			<tbody>
-				<%-- <% for(int i=0;i<size;i++){
+				<% for(int i=0;i<size;i++){
 					RestaurantVO user = restaurantList.get(i);
-				%>
-				
+				%>				
 					<tr>
 						<td><%= user.getRestaurant_no()%></td>
-						<td><%= user.get %></td>	
-										
-						<td><%= user.getDeptno() %></td>
-						<td><%= user.getAddr() %></td>
+						<td><%= user.getRestaurant_name() %></td>											
+						<td><%= user.getRestaurant_addr() %></td>						
 					</tr>
-				<% } %> --%>
+				<% } %>
 			</tbody>
 		</table>
 	</div>

@@ -23,7 +23,7 @@ public class RestaurantController {
 	}
 	
 	@RequestMapping("/restaurant/search.do")
-	public ModelAndView restaurantlist(String restaurant) {
+	public ModelAndView restaurantsearch(String restaurant) {
 		System.out.println("mapping확인"+restaurant);		
 		ModelAndView mav = new ModelAndView();		
 		List<RestaurantVO> restaurant_name = service.searchList(restaurant);
@@ -32,7 +32,7 @@ public class RestaurantController {
 		return mav;
 	}
 	@RequestMapping("/restaurant/list.do")
-	public ModelAndView newrestaurantlist(String restaurant) {
+	public ModelAndView restaurantlist(String restaurant) {
 		ModelAndView mav = new ModelAndView();
 		List<RestaurantVO> restaurant_list = service.restaurantlist();
 		mav.setViewName("restaurant/list");
