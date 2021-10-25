@@ -32,16 +32,7 @@ public class IndexController {
 		System.out.println("pro01 review 모아보기 실행");
 		return "review_form"; //tiles 설정 파일에 등록된 view 이름(review)
 	}
-	@RequestMapping("/login.do")
-	public String login() {
-		System.out.println("pro01 로그인 실행");
-		return "login"; //tiles 설정 파일에 등록된 view 이름(review)
-	}
-	@RequestMapping("/signup.do")
-	public String signup() {
-		System.out.println("pro01 회원가입 실행");
-		return "signup"; //tiles 설정 파일에 등록된 view 이름(review)
-	}
+
 	@RequestMapping("/restaurant.do")
 	public String restaurant() {
 		System.out.println("prob01 식당검색 실행");

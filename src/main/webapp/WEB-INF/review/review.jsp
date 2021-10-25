@@ -30,7 +30,7 @@ https://templatemo.com/tm-559-zay-shop
 </head>
 
 <body>
-<% ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)request.getAttribute("reviewlist"); 
+	<% ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)request.getAttribute("reviewlist"); 
 		 int size = reviewlist.size();  
 	%>
     <!-- Start Content -->

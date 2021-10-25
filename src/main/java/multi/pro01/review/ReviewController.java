@@ -34,7 +34,7 @@ public class ReviewController {
 	public ModelAndView getReviewList() {
 		ModelAndView mav = new ModelAndView();
 		List<ReviewVO> reviewlist = service.getReviewList();
-		mav.setViewName("review/list");
+		mav.setViewName("/pro01/review/list");
 		mav.addObject("reviewlist", reviewlist);
 		return mav;
 	}
