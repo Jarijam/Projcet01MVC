@@ -36,7 +36,14 @@ create table userinfo(
 	name varchar2(10),
 	cellnum varchar2(12));
 
+review 테이블 새로 만들것
 
+create table review(
+	res_name varchar2(20),
+	type_of_food varchar2(10),
+	rating number,
+	rev_content varchar2(500),
+	rev_date date);
 
 정원님
 
