@@ -1,3 +1,4 @@
+<%@page import="multi.pro01.userinfo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
@@ -26,12 +27,21 @@
 			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 			crossorigin="" />
 		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
-			
+		
+		<% 
+			UserVO user = (UserVO) session.getAttribute("loginOKUser");
+		%>
 		<script type="text/javascript">
-			$(document).ready(function(){		
+			$(document).ready(function(){
+		<% if(user == null){%>
+				$("#submit").click(function(){
+				alert("로그인 후 작성이 가능합니다!");
+				})
+		<% }else{%>
 				$("#submit").click(function(){
 					alert("리뷰 작성이 완료되었습니다!");
 				})
+		<% }%>
 			});
 		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -62,7 +72,7 @@
 	</head>
 
 <body>
-
+	
 	<!-- Start Content Page -->
 	<div class="container-fluid bg-light py-5">
 		<div class="col-md-6 m-auto text-center">
@@ -389,12 +399,21 @@
 	                </script>
 				</div>
 				
+				<% if(user != null){ %>
 				<div class="row">
-					<div class="col text-end mt-2">
+					<div class="col text-end mt-2">					
 						<button type="submit" class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button>
-					</div>
+					</div>					
 				</div>
-			</form>
+				</form>
+				<% }else{ %>
+				</form>
+				<div class="row">
+					<div class="col text-end mt-2">					
+						<button type="submit" class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button>
+					</div>					
+				</div>
+				<% }%>
 			</div>
 		</div>
 

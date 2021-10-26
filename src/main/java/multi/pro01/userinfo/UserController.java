@@ -16,7 +16,12 @@ public class UserController {
 	@Autowired
 	UserService service;
 	
-	@RequestMapping("/user/insert.do")
+	@RequestMapping("/login.do")	// 로그인 페이지로 연결
+	public String login_page() {
+		return "login";
+	}
+	
+	@RequestMapping("/user/insert.do")	// 회원가입 버튼
 	public String insert(UserVO command) {
 		service.insert(command);
 		return "redirect:/login.do";
