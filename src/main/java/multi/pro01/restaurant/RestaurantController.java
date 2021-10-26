@@ -22,16 +22,15 @@ public class RestaurantController {
 		
 	}
 	
+	/*
+	 * @RequestMapping("/restaurant/search.do") public ModelAndView
+	 * restaurantsearch(String restaurant) {
+	 * System.out.println("mapping확인"+restaurant); ModelAndView mav = new
+	 * ModelAndView(); List<RestaurantVO> restaurant_name =
+	 * service.searchList(restaurant); mav.addObject("restaurant_name",
+	 * restaurant_name); mav.setViewName("pro01/restaurant_list"); return mav; }
+	 */
 	@RequestMapping("/restaurant/search.do")
-	public ModelAndView restaurantsearch(String restaurant) {
-		System.out.println("mapping확인"+restaurant);		
-		ModelAndView mav = new ModelAndView();		
-		List<RestaurantVO> restaurant_name = service.searchList(restaurant);
-		mav.addObject("restaurant_name", restaurant_name);
-		mav.setViewName("pro01/restaurant_list");
-		return mav;
-	}
-	@RequestMapping("/pro01/restaurant.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		ModelAndView mav = new ModelAndView();
 		List<RestaurantVO> restaurant_list = service.restaurantlist();
