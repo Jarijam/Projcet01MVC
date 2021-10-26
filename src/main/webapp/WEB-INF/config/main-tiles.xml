@@ -15,7 +15,7 @@
 	<definition name ="index" extends="indexTemplate">
 	</definition>
 	
-	<definition name="review" extends="indexTemplate">
+	<definition name="reviewlist" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/review/review.jsp"/>
 	</definition>
 	
