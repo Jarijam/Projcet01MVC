@@ -24,9 +24,15 @@
 				$("#userid").on("keyup", function(){
 					$.get("/pro01/user/idCheck.do", {"id":$("#userid").val()},
 							function(data){
-								$("#checkVal").text(data);
+								$("#checkId").text(data);
 							}, "text")
 				})
+				/* $("#email").on("keyup", function(){
+					$.get("/pro01/user/emailCheck.do", {"email":$("#email").val()},
+							function(data){
+								$("#checkEmail").text(data);
+							}, "text")
+				}) */
 			});
 		</script>
 	</head>
@@ -42,7 +48,7 @@
 							<div>
 								<h4>아이디</h4>
 								<input type="text" placeholder="아이디" name="userid" minlength="4" required>
-								<span id="checkVal">${result}</span>
+								<span id="checkId">${result}</span>
 							</div>
 							
 							<br/>
@@ -63,7 +69,11 @@
 							<br/> 
 							<div>
 								<h4>이메일</h4>
-								<input type="text" placeholder="이메일" name="email" required> <input type="submit" value="회원가입">
+								<input type="text" placeholder="이메일" name="email" required>
+								<span id="checkEmail">${email_check}</span>
+								<br/>
+								<br/>
+								<input type="submit" value="회원가입">
 							</div>
 						</form>
 					</div>
