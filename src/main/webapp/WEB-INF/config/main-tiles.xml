@@ -46,4 +46,8 @@
 	<definition name="kakaomap" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/user/kakaomaptest.jsp"/>
 	</definition>
+	
+	<definition name="restaurant/insert" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/restaurant_write.jsp"/>
+	</definition>
 </tiles-definitions>

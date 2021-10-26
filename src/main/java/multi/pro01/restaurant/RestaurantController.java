@@ -15,11 +15,10 @@ public class RestaurantController {
 	RestaurantService service;
 	
 	@RequestMapping("/restaurant/insert.do")
-	public String insert(RestaurantVO restaurant) {
-		System.out.println("dao연동확인"+restaurant);				
-		service.insert(restaurant);
-		return "redirect:/pro01/restaurant/insertPage.do";
-		
+	public String insert(RestaurantVO command) {
+		System.out.println("dao연동확인"+command);				
+		service.insert(command);
+		return "redirect:/restaurant/restaurantlist.do";		
 	}
 	
 	/*
@@ -30,6 +29,7 @@ public class RestaurantController {
 	 * service.searchList(restaurant); mav.addObject("restaurant_name",
 	 * restaurant_name); mav.setViewName("pro01/restaurant_list"); return mav; }
 	 */
+	
 	@RequestMapping("/restaurant/restaurantlist.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		ModelAndView mav = new ModelAndView();

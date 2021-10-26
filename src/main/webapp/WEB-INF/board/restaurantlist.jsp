@@ -63,7 +63,17 @@
 					<% } %>
 			</tbody>
 		</table>
-		</div>			
+		</div>		
+		<!-- <form action="#">
+		<select name="tag">
+			<option value="id">작성자</option>
+			<option value="title">제목</option>
+			<option value="content">본문</option>
+			<option value="write_date">작성일</option>
+		</select> <input type="text" name="search" /> <input type="submit" value="검색"> -->
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="/pro01/restaurant/insertPage.do" style="text-align: right;">글쓰기</a></li>
+		</ul>	
 	</body>
 
 </html>

@@ -18,8 +18,9 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	}
 
 	@Override
-	public int insert(RestaurantVO restaurant) {
-		return dao.insert(restaurant);
+	public int insert(RestaurantVO user) {
+		System.out.println("서비스단 insert=>"+user);
+		return dao.insert(user);		
 	}
 
 	@Override

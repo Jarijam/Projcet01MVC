@@ -1,9 +1,9 @@
 package multi.pro01.restaurant;
 
 public class RestaurantVO {
-	String restaurant_name;
-	String restaurant_no;
-	String restaurant_addr;
+	private String restaurant_name;
+	private String restaurant_no;
+	private String restaurant_addr;
 	
 	
 	public RestaurantVO() {
@@ -16,7 +16,7 @@ public class RestaurantVO {
 		this.restaurant_name = restaurant_name;
 		this.restaurant_addr = restaurant_addr;
 	}
-
+	
 	public String getRestaurant_name() {
 		return restaurant_name;
 	}

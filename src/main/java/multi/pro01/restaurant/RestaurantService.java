@@ -4,6 +4,7 @@ import java.util.List;
 
 public interface RestaurantService {	
 	List<RestaurantVO> searchList(String restaurant);
-	int insert(RestaurantVO restaurant);	
+	
+	int insert(RestaurantVO user);		
 	List<RestaurantVO> restaurantlist();
 }
