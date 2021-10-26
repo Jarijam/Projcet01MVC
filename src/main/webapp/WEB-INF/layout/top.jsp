@@ -49,7 +49,7 @@
 	    <nav class="navbar navbar-expand-lg navbar-light shadow">
 	        <div class="container d-flex justify-content-between align-items-center">
 	
-	            <a class="navbar-brand text-success logo h1 align-self-center" href="index.do">
+	            <a class="navbar-brand text-success logo h1 align-self-center" href="/pro01/index.do">
 	                LHL
 	            </a>
 	
@@ -70,7 +70,7 @@
 	                            <a class="nav-link" href="/pro01/review/reviewlist.do">리뷰 모음</a>
 	                        </li>
 	                        <li class="nav-item">
-	                            <a class="nav-link" href="/pro01/review_write.do">리뷰 작성</a>
+	                            <a class="nav-link" href="/pro01/review/review_write.do">리뷰 작성</a>
 	                        </li>
 	                    </ul>
 	                </div>

@@ -1,13 +1,10 @@
 package multi.pro01.review;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -24,7 +21,7 @@ public class ReviewController {
 		int result = service.insert(command);
 		
 		if (result >=1) {
-			url = "redirect:/review.do";
+			url = "redirect:/review/reviewlist.do";
 		}else {
 			url = "redirect:/pro01/review_write.do";
 		}
@@ -34,10 +31,15 @@ public class ReviewController {
 	public ModelAndView getReviewList() {
 		ModelAndView mav = new ModelAndView();
 		List<ReviewVO> reviewlist = service.getReviewList();
-		mav.setViewName("review");
+		mav.setViewName("reviewlist");
 		mav.addObject("reviewlist", reviewlist);
 		return mav;
 	}
+//	@RequestMapping("/review/review_form.do")
+//	public String review_form() {
+//		System.out.println("pro01 review 모아보기 실행");
+//		return "review_form"; //tiles 설정 파일에 등록된 view 이름(review)
+//	}
 //	@RequestMapping("/review/list.do")
 //	public ModelAndView reviewlist(String category) {
 //		System.out.println("===========>"+category);

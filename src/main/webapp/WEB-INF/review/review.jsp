@@ -113,7 +113,7 @@ https://templatemo.com/tm-559-zay-shop
                                     <!-- <form action="/pro01/review/select.do"></form> -->
                                     <ul class="list-unstyled">
                                         <!-- <li><a class="btn btn-success text-white" href="review_form.do"><i class="far fa-heart"></i></a></li> -->
-                                        <li><a class="btn btn-success text-white mt-2" href="review_form.do"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="/pro01/review/review_form.do"><i class="far fa-eye"></i></a></li>
                                        <!--  <li><a class="btn btn-success text-white mt-2" href="review_form.do"><i class="fas fa-cart-plus"></i></a></li> -->
                                     </ul>
                                 </div>
