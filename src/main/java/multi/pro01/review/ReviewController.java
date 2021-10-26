@@ -24,7 +24,7 @@ public class ReviewController {
 		int result = service.insert(command);
 		
 		if (result >=1) {
-			url = "redirect:/review.do";
+			url = "redirect:/index.do";
 		}else {
 			url = "redirect:/pro01/review_write.do";
 		}

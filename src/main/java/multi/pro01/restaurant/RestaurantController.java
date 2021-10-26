@@ -30,6 +30,7 @@ public class RestaurantController {
 	 * service.searchList(restaurant); mav.addObject("restaurant_name",
 	 * restaurant_name); mav.setViewName("pro01/restaurant_list"); return mav; }
 	 */
+	
 	@RequestMapping("/restaurant/search.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		ModelAndView mav = new ModelAndView();

@@ -28,9 +28,9 @@
 		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
 			
 		<script type="text/javascript">
-			$(document).ready(function(){
+			$(document).ready(function(){		
 				$("#submit").click(function(){
-					alert("리뷰 작성이 완료되었습니다");
+					alert("리뷰 작성이 완료되었습니다!");
 				})
 			});
 		</script>
@@ -335,7 +335,7 @@
 	<!-- Start Contact -->
 	<div class="container py-5">
 		<div class="row py-5">
-			<form class="col-md-9 m-auto" method="post" role="form" action="/pro01/review/insert.do">
+			<form class="col-md-9 m-auto" name="review" method="post" role="form" action="/pro01/review/insert.do">
 				<div class="mb-3">
 					<label for="inputsubject">식당이름</label> <input type="text"
 						class="form-control mt-1" id="res_name" name="res_name"
@@ -391,8 +391,7 @@
 				
 				<div class="row">
 					<div class="col text-end mt-2">
-						<button type="submit" class="btn btn-success btn-lg px-3" name="submit">리뷰 작성</button>
-						
+						<button type="submit" class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button>
 					</div>
 				</div>
 			</form>
