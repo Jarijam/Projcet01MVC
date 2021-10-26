@@ -347,14 +347,14 @@
 		<div class="row py-5">
 			<form class="col-md-9 m-auto" name="review" method="post" role="form" action="/pro01/review/insert.do">
 				<div class="mb-3">
-					<label for="inputsubject">식당이름</label> <input type="text"
+					<label for="inputsubject">식당 이름</label> <input type="text"
 						class="form-control mt-1" id="res_name" name="res_name"
 						placeholder="식당 이름" required>
 				</div>				
 				<div class="mb-3">
 					<label for="inputsubject">메뉴 이름</label> <input type="text"
 						class="form-control mt-1" id="type_of_food" name="type_of_food"
-						placeholder="음식 종류" required>
+						placeholder="메뉴" required>
 				</div>				
 				<div>
 					<label for="inputsubject">별점 주기</label>
