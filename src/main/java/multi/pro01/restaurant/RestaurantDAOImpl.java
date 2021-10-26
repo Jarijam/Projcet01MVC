@@ -31,5 +31,10 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 		return sqlSession.selectList("pro01.restaurant.list");
 	}
 
+	@Override
+	public int update(RestaurantVO user) {
+		return 0;
+	}
+
 	
 } 

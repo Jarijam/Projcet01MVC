@@ -30,11 +30,6 @@ public class RestaurantController {
 	 * restaurant_name); mav.setViewName("pro01/restaurant_list"); return mav; }
 	 */
 	
-<<<<<<< HEAD
-=======
-	/* @RequestMapping("/restaurant/search.do") */
-
->>>>>>> bc46b8e80592756989ff032ee77225080d66dfae
 	@RequestMapping("/restaurant/restaurantlist.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		ModelAndView mav = new ModelAndView();
