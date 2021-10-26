@@ -5,17 +5,19 @@ public class UserVO {
 	private String password;
 	private String name;
 	private String cellnum;
+	private String email;
 	
 	public UserVO() {
 		
 	}
 
-	public UserVO(String userid, String password, String name, String cellnum) {
+	public UserVO(String userid, String password, String name, String cellnum, String email) {
 		super();
 		this.userid = userid;
 		this.password = password;
 		this.name = name;
 		this.cellnum = cellnum;
+		this.email = email;
 	}
 	
 	public UserVO(String userid, String password) {
@@ -54,6 +56,14 @@ public class UserVO {
 
 	public void setCellnum(String cellnum) {
 		this.cellnum = cellnum;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	

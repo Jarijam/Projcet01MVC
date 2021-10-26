@@ -27,24 +27,26 @@
                 	<div class="col-md-8 text-white">
                     	<h1>로그인</h1>                   
                 	</div>
-                <form method="post" action="/pro01/user/login.do" class="form-horizontal">
-               		<div>
-                		<div class="">아이디</div>
-                		<input type="text" name="userid" size="20">                	
-						<div class="">비밀번호</div>
-						<input type="password" name="password" size="20">
-						<div>
-						<input type="checkbox" name="chk"><label for="chk">아이디 저장</label>
-						</div>
-						<br/>
-						<div>	
-						<input type="submit" value="로그인"><a href="signup.do"><input type="button" value="회원가입"></a>
-						</div>
-               		</div>
-           		</form>            
-            	</div>
+             		<form method="post" action="/pro01/user/login.do" class="form-horizontal">
+	               		<div>
+	                		<div class="">아이디</div>
+	                		<input type="text" name="userid" size="20">                	
+							<div class="">비밀번호</div>
+							<input type="password" name="password" size="20">
+							<div>
+							<input type="checkbox" name="chk"><label for="chk">아이디 저장</label>
+							</div>
+							<br/>
+							<div>	
+							<input type="submit" value="로그인"><a href="/pro01/user/signup.do"><input type="button" value="회원가입"></a>
+							</div>
+	               		</div>
+           			</form>
+   
+           		</div>
 			</div>
     	</section>
+   
     
     <!-- <section class="container py-5">
         <div class="row text-center pt-5 pb-3">

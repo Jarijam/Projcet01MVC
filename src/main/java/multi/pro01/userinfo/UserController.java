@@ -21,6 +21,11 @@ public class UserController {
 		return "login";
 	}
 	
+	@RequestMapping("/user/signup.do")	// 회원가입 페이지로 연결
+	public String signup_page() {
+		return "signup";
+	}
+	
 	@RequestMapping("/user/insert.do")	// 회원가입 버튼
 	public String insert(UserVO command) {
 		service.insert(command);

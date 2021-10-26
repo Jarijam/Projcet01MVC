@@ -48,7 +48,7 @@
 							<br/>
 							<div>	
 								<h4>비밀번호</h4>
-								<input type="text" placeholder="비밀번호" name="password" minlength="5" required>
+								<input type="password" placeholder="비밀번호" name="password" minlength="5" required>
 							</div>
 							<br/>
 							<div>
@@ -58,7 +58,12 @@
 							<br/>
 							<div>
 								<h4>전화번호</h4>
-								<input type="text" placeholder="전화번호" name="cellnum" minlength="010" required> <input type="submit" value="회원가입">
+								<input type="text" placeholder="전화번호" name="cellnum" minlength="3" required>
+							</div>
+							<br/> 
+							<div>
+								<h4>이메일</h4>
+								<input type="text" placeholder="이메일" name="email" required> <input type="submit" value="회원가입">
 							</div>
 						</form>
 					</div>
