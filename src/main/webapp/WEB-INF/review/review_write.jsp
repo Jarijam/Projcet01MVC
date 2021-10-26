@@ -410,7 +410,7 @@
 				</form>
 				<div class="row">
 					<div class="col text-end mt-2">					
-						<button type="submit" class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button>
+						<a href="/pro01/login.do"><button class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button></a>
 					</div>					
 				</div>
 				<% }%>
