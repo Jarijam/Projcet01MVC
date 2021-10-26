@@ -64,7 +64,7 @@
 	                            <a class="nav-link" href="/pro01/index.do">Home</a>
 	                        </li>
 	                        <li class="nav-item">                           
-	                            <a class="nav-link" href="/pro01/restaurant/search.do">식당검색</a>
+	                            <a class="nav-link" href="/pro01/restaurant/restaurantlist.do">식당 모음</a>
 	                        </li>
 	                        <li class="nav-item">
 	                            <a class="nav-link" href="/pro01/review/reviewlist.do">리뷰 모음</a>

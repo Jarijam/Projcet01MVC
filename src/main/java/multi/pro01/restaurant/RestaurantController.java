@@ -31,7 +31,9 @@ public class RestaurantController {
 	 * restaurant_name); mav.setViewName("pro01/restaurant_list"); return mav; }
 	 */
 	
-	@RequestMapping("/restaurant/search.do")
+	/* @RequestMapping("/restaurant/search.do") */
+
+	@RequestMapping("/restaurant/restaurantlist.do")
 	public ModelAndView restaurantlist(String restaurant) {
 		ModelAndView mav = new ModelAndView();
 		List<RestaurantVO> restaurant_list = service.restaurantlist();
