@@ -35,23 +35,23 @@ public class ReviewController {
 		mav.addObject("reviewlist", reviewlist);
 		return mav;
 	}
-//	@RequestMapping("/review/review_form.do")
-//	public String review_form() {
-//		System.out.println("pro01 review 모아보기 실행");
-//		return "review_form"; //tiles 설정 파일에 등록된 view 이름(review)
-//	}
-//	@RequestMapping("/review/list.do")
-//	public ModelAndView reviewlist(String category) {
-//		System.out.println("===========>"+category);
-//		ModelAndView mav = new ModelAndView("review/list");
-////		List<ReviewVO> reviewlist = service.findByCategory(category);
-//		//List<ReviewVO> reviewlist = service;
-//		//dao에서 결과가 넘어오는 경우 디버깅 작업은 넘어오는 데이터 sysout으로 컨트롤러 단까지 모두 출력해보기
-//		//tiles에 등록한 뷰의 이름
-//		 mav.setViewName("review/list"); 
-//		//mav.addObject("reviewlist", reviewlist);
-//		//mav.addObject("category", category);
-////		return mav;
-//	}
+	
+	@RequestMapping(value = "/review/read.do")
+	public ModelAndView read(String review_no, String state) {
+		System.out.println("read controller,"+review_no+","+state);
+		ModelAndView mav = new ModelAndView();
+		ReviewVO review = service.read(review_no);
+		String viewName="";
+		if(state.equals("READ")) {
+			viewName="review/read";
+		}else {
+			viewName="review/update";
+		}
+		mav.setViewName(viewName);
+		mav.addObject("review", review);
+		return mav;
+		
+	}
+
 	
 }

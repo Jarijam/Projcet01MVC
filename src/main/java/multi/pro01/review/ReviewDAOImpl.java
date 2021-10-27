@@ -22,6 +22,11 @@ public class ReviewDAOImpl implements ReviewDAO {
 	public List<ReviewVO> getReviewList() {
 		return sqlSession.selectList("project.review.list");
 	}
+
+	@Override
+	public ReviewVO read(String review_no) {
+		return sqlSession.selectOne("project.review.read", review_no);
+	}
 	
 //	@Override
 //	public List<ReviewVO> reviewList() {

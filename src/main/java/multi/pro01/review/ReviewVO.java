@@ -7,14 +7,30 @@ public class ReviewVO {
 	private String type_of_food;
 	//String category;
 	private int rating;
+	String review_no;
 	
 	
 	
+	
+
+
+
 	public ReviewVO() {
 	}
 	
 	
 	
+	public ReviewVO(String res_name, String rev_content, String type_of_food, int rating, String review_no) {
+		super();
+		this.res_name = res_name;
+		this.rev_content = rev_content;
+		this.type_of_food = type_of_food;
+		this.rating = rating;
+		this.review_no = review_no;
+	}
+
+
+
 	public ReviewVO(String res_name, String rev_content, String type_of_food, int rating) {
 		super();
 		this.res_name = res_name;
@@ -32,7 +48,12 @@ public class ReviewVO {
 //	public void setFiles(MultipartFile[] files) {
 //		this.files = files;
 //	}
-
+	public String getReview_no() {
+		return review_no;
+	}
+	public void setReview_no(String review_no) {
+		this.review_no = review_no;
+	}
 	public String getRes_name() {
 		return res_name;
 	}

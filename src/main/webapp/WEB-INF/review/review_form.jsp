@@ -35,8 +35,8 @@ https://templatemo.com/tm-559-zay-shop
 </head>
 
 <body>
-	<% ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)request.getAttribute("reviewlist"); 
-		 /* int size = reviewlist.size(); */  
+	<% ReviewVO review = (ReviewVO)request.getAttribute("review"); 
+		  int rating = review.getRating();    
 	%>
     <!-- Open Content -->
     <section class="bg-light">
@@ -143,18 +143,19 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2" id="">식당이름</h1>
+                            <h1 class="h2" id="">${review.res_name }</h1>
                             <p class="h3 py-2" id="">식당주소</p>
                             <p class="h3 py-2" id="">전화번호</p>
-                            <p class="h4 py-2" id="">음식 종류</p>
+                            <p class="h4 py-2" id="">${review.type_of_food }</p>
                             <p class="h4 py-2" id="">식당 홈페이지 바로가기</p>
                             <p class="py-2">
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <span class="list-inline-item text-dark">별점 4.8 | 36 리뷰</span>
+                                        <%for (int j =1;j<=rating;j++) {%>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <%} %>
+                                        <%for (int k=1;k<=5-rating;k++) { %>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <%} %>
+                                <span class="list-inline-item text-dark">별점 ${review.rating }</span>
                             </p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
@@ -166,15 +167,15 @@ https://templatemo.com/tm-559-zay-shop
                             </ul>
 
                             <h5>리뷰내용:</h5>
-                            <p>500바이트 작성 제한: 맛있구요 맛있어요 짱짱맨</p>
-                            <ul class="list-inline">
+                            <p>${review.rev_content }</p>
+                            <!-- <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <h6>Avaliable Color :</h6>
                                 </li>
                                 <li class="list-inline-item">
                                     <p class="text-muted"><strong>White / Black</strong></p>
                                 </li>
-                            </ul>
+                            </ul> -->
 
                             <!-- <h6>Specification:</h6>
                             <ul class="list-unstyled pb-3">
