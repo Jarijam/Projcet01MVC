@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
 <title>인사관리시스템</title>
 
@@ -13,11 +14,21 @@
 	</script>
 </head>
 
+
+	<head>
+		<title>zz</title>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#category").val("${restaurant.category}").attr("selected","selected");
+			});
+		</script>
+	</head>
+
 <body>
 	<form class="form-horizontal" 
 		action="#" 
 		method="post" >		
-		<div class="form-group">
+		<!-- <div class="form-group">
 			<div class="col-md-2 text-right">
 				<label for="id" class="control-label">번호</label>
 			</div>
@@ -62,7 +73,7 @@
 				style="width: 500px; height: 400px; border: solid 1px;">
 				
 				</div>
-		</div>
+		</div> -->
 
 		<div class="form-group">
 			<div class="col-md-10 text-center">
@@ -70,7 +81,7 @@
 				value="수정">
 
 				<button type="button" class="btn btn-danger btn-lg"
-					onclick="location.href='/erp/board/list.do'">
+					onclick="location.href='/pro01/restaurant/restaurantlist.do'">
 					<i class="fa fa-fw fa-close"></i> 목록
 				</button>
 				<button type="button" class="btn btn-danger btn-lg"

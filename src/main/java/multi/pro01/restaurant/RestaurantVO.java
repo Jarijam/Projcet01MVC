@@ -4,12 +4,16 @@ public class RestaurantVO {
 	private String restaurant_name;
 	private String restaurant_no;
 	private String restaurant_addr;
+	String category;
 	
 	
 	public RestaurantVO() {
 		
 	}
-	
+	public String getCategory() {
+		return category;
+	}
+
 	public RestaurantVO(String restaurant_no, String restaurant_name, String restaurant_addr) {
 		super();
 		this.restaurant_no = restaurant_no;
@@ -25,12 +29,17 @@ public class RestaurantVO {
 		this.restaurant_name = restaurant_name;
 	}
 
+//	@Override
+//	public String toString() {
+//		return "RestaurantVO [restaurant_name=" + restaurant_name + ", restaurant_no=" + restaurant_no
+//				+ ", restaurant_addr=" + restaurant_addr + "]";
+//	}
+
 	@Override
 	public String toString() {
 		return "RestaurantVO [restaurant_name=" + restaurant_name + ", restaurant_no=" + restaurant_no
-				+ ", restaurant_addr=" + restaurant_addr + "]";
+				+ ", restaurant_addr=" + restaurant_addr + ", category=" + category + "]";
 	}
-
 	public String getRestaurant_no() {
 		return restaurant_no;
 	}
