@@ -5,7 +5,7 @@
 
 <mapper namespace="project.review">
 	<insert id="insert" parameterType="review">
-		insert into review values(#{res_name}, #{type_of_food}, #{rating}, #{rev_content}, sysdate, review_seq.nextval)
+		insert into review values(#{res_name}, #{type_of_food}, #{rating}, #{rev_content}, sysdate, review_no.nextval)
 	</insert>
 	<select id="list" resultType="review" >
 		select * from review
