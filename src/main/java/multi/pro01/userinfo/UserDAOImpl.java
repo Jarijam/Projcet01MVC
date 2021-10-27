@@ -24,6 +24,7 @@ public class UserDAOImpl implements UserDAO {
 			return true;	// 아이디가 없으면 true
 		}
 	}
+
 	@Override
 	public UserVO login(UserVO loginUser) {
 		UserVO loginOK = sqlSession.selectOne("project.user.login", loginUser);

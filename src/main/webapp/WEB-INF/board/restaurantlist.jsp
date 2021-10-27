@@ -5,7 +5,19 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html>
 <html lang="en">
-
+<script type="text/javascript">
+	category = "${category}";
+	//alert(category);
+	//category설정하기
+	$(document).ready(function(){
+		$("#category").val(category).attr("selected", "selected")
+		//<select>에서 선택이 바뀔때마다 change 이벤트발생 -> change이벤트가 발생하면 /board/list/do를 호출하면서
+		//category파라미터를 넘김
+		$("#category").change(function(){
+			location.href="/pro01/restaurant/restaurantlist.do?category="+encodeURI($(this).val())
+		});
+	});
+</script>
 <head>
 <title>식당검색 페이지</title>
 </head>
@@ -38,8 +50,9 @@
 			<form>
 				<select name="category"  id="category">
 					<option value="all">전체게시물</option>
-					<option value="경조사">경조사</option>
-					<option value="사내소식">사내소식</option>				
+					<option value="한식">한식</option>
+					<option value="중식">중식</option>	
+					<option value="일식">일식</option>				
 				</select>
 			</form>
 		</div>
@@ -57,7 +70,8 @@
 					%>			
 					<tr>
 						<td><%= user.getRestaurant_no() %></td>
-						<td><%= user.getRestaurant_name() %></td>											
+						<%-- <td><a href="/pro01/restaurant/restaurantread.do?restaurant_no=<%= user.getRestaurant_no()%>&state=READ"><%= user.getTitle() %></a></td>
+						 --%><td><%= user.getRestaurant_name() %></td>											
 						<td><%= user.getRestaurant_addr() %></td>						
 					</tr>
 					<% } %>

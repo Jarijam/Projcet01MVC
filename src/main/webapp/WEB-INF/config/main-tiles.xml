@@ -23,7 +23,7 @@
 		<put-attribute name="content" value="/WEB-INF/review/review_write.jsp"/>
 	</definition>
 	
-	<definition name="review_form" extends="indexTemplate">
+	<definition name="review/read" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/review/review_form.jsp"/>
 	</definition>
 	

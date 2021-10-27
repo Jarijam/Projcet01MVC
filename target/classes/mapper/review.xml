@@ -5,10 +5,13 @@
 
 <mapper namespace="project.review">
 	<insert id="insert" parameterType="review">
-		insert into review values(#{res_name}, #{type_of_food}, #{rating}, #{rev_content}, sysdate)
+		insert into review values(#{res_name}, #{type_of_food}, #{rating}, #{rev_content}, sysdate, review_seq.nextval)
 	</insert>
 	<select id="list" resultType="review" >
 		select * from review
+	</select>
+	<select id="read" resultType="review" parameterType="String"> <!-- ajax위해 필요한 사전작업 -->
+		select * from review where review_no=#{review_no}
 	</select>
 	<!-- <select id="category" parameterType="String" resultType="review"> ajax위해 필요한 사전작업
 		select * from review where category=#{category}

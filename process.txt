@@ -41,7 +41,8 @@ create table userinfo(
 	userid varchar2(10) primary key,
 	password varchar2(15),
 	name varchar2(10),
-	cellnum varchar2(12));
+	cellnum varchar2(12),
+	email varchar2(30));
 
 review 테이블 새로 만들것
 
@@ -50,7 +51,15 @@ create table review(
 	type_of_food varchar2(10),
 	rating number,
 	rev_content varchar2(500),
-	rev_date date);
+	rev_date date,
+	review_no number);
+
+*review_no에 시퀀스 추가 꼭 해줄것!
+ create sequence review_no
+    increment by 1
+    start with 1
+    nominvalue
+    nomaxvalue;
 
 정원님
 

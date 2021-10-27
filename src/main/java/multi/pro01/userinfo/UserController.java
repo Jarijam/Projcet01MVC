@@ -47,6 +47,16 @@ public class UserController {
 		}
 		return result;
 	}
+	
+	@RequestMapping(value="/user/emailCheck.do", method=RequestMethod.GET, produces = "application/text;charset=utf-8")
+	public @ResponseBody String emailCheck(String email) {
+		String email_check = "";
+		boolean check = email.matches("[A-z0-9\\. ]+[@]{1,1}[A-z0-9\\. ]+");
+		if(!check) {
+			email_check = "적합한 이메일 형식이 아닙니다";
+		}
+		return email_check;
+	}
 
 	@RequestMapping("/userlist.do")
 	public ModelAndView getMemberList() {

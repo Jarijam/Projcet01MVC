@@ -65,7 +65,7 @@
 	<!-- ============================================================================================ -->
 	
 	
-	<context:component-scan base-package="com.sds.pro01" />
+	<context:component-scan base-package="com.sds.pro01" />	
 	<context:component-scan base-package="main"/>
 	<context:component-scan base-package="multi"/>
 	

@@ -47,6 +47,11 @@ public class ReviewServiceImp implements ReviewService {
 		return dao.getReviewList();
 	}
 
+	@Override
+	public ReviewVO read(String review_no) {
+		return dao.read(review_no);
+	}
+
 //	@Override
 //	public List<ReviewVO> searchList(String search) {
 //		// TODO Auto-generated method stub
