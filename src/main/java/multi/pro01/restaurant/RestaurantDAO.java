@@ -8,4 +8,6 @@ public interface RestaurantDAO {
 	int update(RestaurantVO user);
 	List<RestaurantVO> restaurantlist();
 	int insert(RestaurantVO user);
+
+	RestaurantVO read(String restaurant_no);
 }

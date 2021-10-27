@@ -70,8 +70,8 @@
 					%>			
 					<tr>
 						<td><%= user.getRestaurant_no() %></td>
-						<%-- <td><a href="/pro01/restaurant/restaurantread.do?restaurant_no=<%= user.getRestaurant_no()%>&state=READ"><%= user.getTitle() %></a></td>
-						 --%><td><%= user.getRestaurant_name() %></td>											
+						<td><a href="/pro01/restaurant/read.do?restaurant_no=<%= user.getRestaurant_no()%>&state=READ"><%= user.getRestaurant_name() %></a></td>
+						<td><%= user.getRestaurant_name() %></td>											
 						<td><%= user.getRestaurant_addr() %></td>						
 					</tr>
 					<% } %>

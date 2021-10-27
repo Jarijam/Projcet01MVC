@@ -61,6 +61,7 @@ create table review(
     nominvalue
     nomaxvalue;
 
+  select review_no.nextval from dual;
 정원님
 
 review view설정 //완료

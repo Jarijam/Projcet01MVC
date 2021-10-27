@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -13,16 +12,16 @@
 		});
 	</script>
 </head>
+
 <body>
 	<form class="form-horizontal" 
 		action="#" 
-		method="post" >
-		
+		method="post" >		
 		<div class="form-group">
 			<div class="col-md-2 text-right">
 				<label for="id" class="control-label">번호</label>
 			</div>
-			<div class="col-md-8">${board.board_no}</div>
+			<div class="col-md-8"></div>
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
@@ -39,21 +38,21 @@
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="id" class="control-label">작성자</label>
+				<label for="id" class="control-label">작성자123</label>
 			</div>
-			<div class="col-md-8">${board.id}</div>
+			<div class="col-md-8"></div>
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
 				<label for="title" class="control-label">제목</label>
 			</div>
-			<div class="col-md-8">${board.title}</div>
+			<div class="col-md-8"></div>
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
 				<label for="title" class="control-label">작성날짜</label>
 			</div>
-			<div class="col-md-8">${board.write_date}</div>
+			<div class="col-md-8"></div>
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
@@ -61,16 +60,17 @@
 			</div>
 			<div class="col-md-8"
 				style="width: 500px; height: 400px; border: solid 1px;">
-				${board.content}
+				
 				</div>
 		</div>
+
 		<div class="form-group">
 			<div class="col-md-10 text-center">
-				<button type="button" class="btn btn-lg btn-primary" 
-				onclick="location.href='/mvc/board/read.do?board_no=1&state=UPDATE'">				
-				<i class="fa fa-fw fa-close"></i> 수정
+				<input type="submit" class="btn btn-lg btn-primary" 
+				value="수정">
+
 				<button type="button" class="btn btn-danger btn-lg"
-					onclick="location.href='/mvc/board/list.do'">
+					onclick="location.href='/erp/board/list.do'">
 					<i class="fa fa-fw fa-close"></i> 목록
 				</button>
 				<button type="button" class="btn btn-danger btn-lg"
@@ -80,6 +80,5 @@
 			</div>
 		</div>
 	</form>
->>>>>>> c7495d2a3816e632c0adbfcb69648532bfdb3653
 </body>
 </html>

@@ -13,4 +13,7 @@
 	<select id="list" resultType="restaurant">
   		select * from restaurant
   	</select>
+  	<select id="read" resultType="restaurant" parameterType="String">
+  		select * from restaurant where restaurant_no=#{restaurant_no}
+  	</select>	
 </mapper>

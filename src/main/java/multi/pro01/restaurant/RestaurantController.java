@@ -20,7 +20,21 @@ public class RestaurantController {
 		service.insert(command);
 		return "redirect:/restaurant/restaurantlist.do";		
 	}
-	
+	@RequestMapping("/restaurant/read.do")
+	public ModelAndView read(String restaurant_no, String state) {
+		System.out.println("read컨트롤러=>"+restaurant_no+","+state);
+		ModelAndView mav = new ModelAndView();
+		RestaurantVO restaurant = service.read(restaurant_no);
+		String viewName = "";
+		if(state.equals("READ")) {
+			viewName = "restaurant/read";
+		}else {
+			viewName = "restaurant/update";
+		}
+		mav.setViewName(viewName);
+		mav.addObject("restaurant",restaurant);
+		return mav;
+	}
 	/*
 	 * @RequestMapping("/restaurant/search.do") public ModelAndView
 	 * restaurantsearch(String restaurant) {

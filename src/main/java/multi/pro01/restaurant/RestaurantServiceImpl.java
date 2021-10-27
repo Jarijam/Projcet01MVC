@@ -32,5 +32,10 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	public int update(RestaurantVO user) {
 		return 0;
 	}
+
+	@Override
+	public RestaurantVO read(String restaurant_no) {
+		return dao.read(restaurant_no);
+	}
 	
 }
