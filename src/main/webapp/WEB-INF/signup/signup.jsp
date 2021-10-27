@@ -27,11 +27,23 @@
 								$("#checkId").text(data);
 							}, "text")
 				})
-				/* $("#email").on("keyup", function(){
+				$("#email").on("keyup", function(){
 					$.get("/pro01/user/emailCheck.do", {"email":$("#email").val()},
 							function(data){
 								$("#checkEmail").text(data);
 							}, "text")
+				})
+				$("#cellnum").on("keyup", function(){
+					$.get("/pro01/user/cellnumCheck.do", {"cellnum":$("#cellnum").val()},
+							function(data){
+								$("#checkCellnum").text(data);
+							}, "text")
+				})
+				/* $("#signup").click(function(){
+					$.get("/pro01/user/idCheck.do",{"id":$("#userid").val()}
+					function(data){
+						alert("잘못된 정보가 존재합니다.");
+					})
 				}) */
 			});
 		</script>
@@ -47,7 +59,7 @@
 							<hr/>
 							<div>
 								<h4>아이디</h4>
-								<input type="text" placeholder="아이디" name="userid" minlength="4" required>
+								<input type="text" placeholder="아이디" id="userid" name="userid" minlength="4" required>
 								<span id="checkId">${result}</span>
 							</div>
 							
@@ -64,16 +76,16 @@
 							<br/>
 							<div>
 								<h4>전화번호</h4>
-								<input type="text" placeholder="전화번호" name="cellnum" minlength="3" required>
+								<input type="text" placeholder="'-'제외한 숫자만 입력" name="cellnum" minlength="3" required>
 							</div>
 							<br/> 
 							<div>
 								<h4>이메일</h4>
-								<input type="text" placeholder="이메일" name="email" required>
+								<input type="text" placeholder="이메일" id="email" name="email" required>
 								<span id="checkEmail">${email_check}</span>
 								<br/>
 								<br/>
-								<input type="submit" value="회원가입">
+								<input type="submit" id="signup" value="회원가입">
 							</div>
 						</form>
 					</div>

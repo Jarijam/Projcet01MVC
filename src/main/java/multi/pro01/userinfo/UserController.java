@@ -28,8 +28,15 @@ public class UserController {
 	
 	@RequestMapping("/user/insert.do")	// 회원가입 버튼
 	public String insert(UserVO command) {
-		service.insert(command);
-		return "redirect:/login.do";
+		String userid = command.getUserid();
+		boolean state = service.idCheck(userid);
+		if(state) {
+			service.insert(command);
+			return "redirect:/login.do";
+		}else {
+			return "redirect:/user/signup.do";
+		}
+		
 	}
 	
 	@RequestMapping(value="/user/idCheck.do", method=RequestMethod.GET, produces = "application/text;charset=utf-8")
@@ -42,7 +49,7 @@ public class UserController {
 			if(state) {
 				result = "사용 가능한 아이디";
 			}else {
-				result = "사용 불가한 아이디";
+				result = "사용 불가능한 아이디";
 			}
 		}
 		return result;
@@ -56,6 +63,15 @@ public class UserController {
 			email_check = "적합한 이메일 형식이 아닙니다";
 		}
 		return email_check;
+	}
+	@RequestMapping(value="/user/cellnumCheck.do", method=RequestMethod.GET, produces = "application/text;charset=utf-8")
+	public @ResponseBody String cellnumCheck(String cellnum) {
+		String cellnum_check = "";
+		boolean check = cellnum.matches("[010]{1,1}");
+		if(!check) {
+			cellnum_check = "적합한 이메일 형식이 아닙니다";
+		}
+		return cellnum_check;
 	}
 
 	@RequestMapping("/userlist.do")
