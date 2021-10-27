@@ -36,5 +36,10 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 		return 0;
 	}
 
+	@Override
+	public RestaurantVO read(String restaurant_no) {
+		return sqlSession.selectOne("pro01.restaurant.read", restaurant_no);
+	}
+
 	
 } 
