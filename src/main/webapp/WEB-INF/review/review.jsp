@@ -138,7 +138,7 @@
                                         <i class="text-muted fa fa-star"></i> -->
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0"><%= review.getType_of_food() %></p>
+                                <p class="text-center mb-0"><%= review.getMenu() %></p>
                             </div>
                         </div>
                     </div>

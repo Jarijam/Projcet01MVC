@@ -353,7 +353,7 @@
 				</div>				
 				<div class="mb-3">
 					<label for="inputsubject">메뉴 이름</label> <input type="text"
-						class="form-control mt-1" id="type_of_food" name="type_of_food"
+						class="form-control mt-1" id="menu" name="menu"
 						placeholder="메뉴" required>
 				</div>				
 				<div>
@@ -371,6 +371,11 @@
 						<label for="1-star" class="star">&#9733;</label>
 					</div>
 				</div>
+				<% if(user != null){ %>
+					<div style="display:none">
+						<input name="userid" value="<%= user.getUserid()%>">
+					</div>
+				<% } %>
 				<p></p>
 				<div class="mb-3">
 					<label for="inputmessage">리뷰내용</label>

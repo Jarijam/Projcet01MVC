@@ -141,7 +141,7 @@
                             <h1 class="h2" id="">${review.res_name }</h1>
                             <p class="h3 py-2" id="">식당주소</p>
                             <p class="h3 py-2" id="">전화번호</p>
-                            <p class="h4 py-2" id="">${review.type_of_food }</p>
+                            <p class="h4 py-2" id="">${review.menu}</p>
                             <p class="h4 py-2" id="">식당 홈페이지 바로가기</p>
                             <p class="py-2">
                                         <%for (int j =1;j<=rating;j++) {%>
@@ -157,7 +157,7 @@
                                     <h5>작성자 id:</h5>
                                 </li>
                                 <li class="list-inline-item">
-                                    <p class="text-muted"><strong>이정원</strong></p>
+                                    <p class="text-muted"><strong>${review.userid}</strong></p>
                                 </li>
                             </ul>
 

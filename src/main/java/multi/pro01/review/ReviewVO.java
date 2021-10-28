@@ -4,50 +4,33 @@ package multi.pro01.review;
 public class ReviewVO {
 	private String res_name;
 	private String rev_content;
-	private String type_of_food;
-	//String category;
+	private String menu;
 	private int rating;
 	String review_no;
-	
-	
-	
-	
-
-
+	String userid;
 
 	public ReviewVO() {
 	}
 	
-	
-	
-	public ReviewVO(String res_name, String rev_content, String type_of_food, int rating, String review_no) {
+	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid) {
 		super();
 		this.res_name = res_name;
 		this.rev_content = rev_content;
-		this.type_of_food = type_of_food;
+		this.menu = menu;
 		this.rating = rating;
 		this.review_no = review_no;
+		this.userid = userid;
 	}
 
-
-
-	public ReviewVO(String res_name, String rev_content, String type_of_food, int rating) {
+	public ReviewVO(String res_name, String rev_content, String menu, int rating) {
 		super();
 		this.res_name = res_name;
 		this.rev_content = rev_content;
-		this.type_of_food = type_of_food;
+		this.menu = menu;
 		this.rating = rating;
 		//this.category = category;
 	}
 	
-	
-//	public MultipartFile[] getFiles() {
-//		return files;
-//	}
-//
-//	public void setFiles(MultipartFile[] files) {
-//		this.files = files;
-//	}
 	public String getReview_no() {
 		return review_no;
 	}
@@ -70,12 +53,12 @@ public class ReviewVO {
 		this.rev_content = rev_content;
 	}
 	
-	public String getType_of_food() {
-		return type_of_food;
+	public String getMenu() {
+		return menu;
 	}
 	
-	public void setType_of_food(String type_of_food) {
-		this.type_of_food = type_of_food;
+	public void setMenu(String menu) {
+		this.menu = menu;
 	}
 	
 	public int getRating() {
@@ -86,10 +69,18 @@ public class ReviewVO {
 		this.rating = rating;
 	}
 
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+
 	@Override
 	public String toString() {
-//		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", type_of_food=" + type_of_food + ", files=" + files
+//		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", menu=" + menu + ", files=" + files
 //				+ "]";
-		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", type_of_food=" + type_of_food + "]";
+		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", menu=" + menu + "]";
 	}
 }
