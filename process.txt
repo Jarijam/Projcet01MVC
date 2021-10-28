@@ -12,7 +12,14 @@ fe be => 연동.
 메모장 확인!
 
 
-
+create table restaurant_data (
+	res_name varchar2(100),
+	res_addr varchar2(150),
+	menu varchar2(50),
+	res_tel varchar2(20),
+	res_menu varchar2(100));
+	
+	**res_menu 데이터 크기가 기억이 가물가물해용..
 
 
 재현님
@@ -85,10 +92,3 @@ user에 회원목록 불러오기, 개인별회원정보보기 시작.
 	-> 리뷰작성페이지가 뜨게->리뷰작성을 완료하면 디비 연동하면서 목록이 뜰 수 있게
 	
 
-리뷰 테이블 sql code.
-컬럼 : userid, rev_content, rev_date  (pk를 뭘로 해야 할까...)
- create table review(
-     userid varchar2(10),
-     rev_content varchar2(500),
-     rev_date date 
-     );
