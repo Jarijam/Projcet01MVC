@@ -16,4 +16,11 @@
 	<update id="ratingUpdate" parameterType="String">
 		update avg_rating ar set ar.avg_rating = (select round(avg(r.rating),1) from review r where r.res_name = ar.res_name);
 	</update>
+	<insert id="fileinsert" parameterType="Map">
+ 		insert all
+ 		<foreach collection="filelist" item="file" separator=" ">
+ 			into review_file values(review_no.currval,#{file_name})
+ 		</foreach>
+ 		select * from dual
+ 	</insert>
 </mapper>

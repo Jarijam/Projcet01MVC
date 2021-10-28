@@ -1,5 +1,6 @@
 package multi.pro01.review;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface ReviewDAO {
@@ -11,4 +12,6 @@ public interface ReviewDAO {
 	ReviewVO read(String review_no);
 	
 	int ratingUpdate(String userid);
+
+	int fileInsert(ArrayList<String> filelist);
 }

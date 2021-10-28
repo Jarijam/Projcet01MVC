@@ -1,78 +1,81 @@
 <%@page import="multi.pro01.userinfo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>리뷰 작성하기</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-		
-		<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
-		<link rel="stylesheet" href="/pro01/common/css/custom.css">
-		
-		<!-- Load fonts style after rendering the layout styles -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-		<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
-		<link rel="stylesheet" href="/pro01/common/css/star_rate.css">
-		
-		<!-- Load map styles -->
-		<link rel="stylesheet"
-			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-			crossorigin="" />
-		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
-		
-		<% 
-			UserVO user = (UserVO) session.getAttribute("loginOKUser");
-		%>
-		<script type="text/javascript">
-			$(document).ready(function(){
-		<% if(user == null){%>
-				$("#submit").click(function(){
-				alert("로그인 후 작성이 가능합니다!");
-				})
-		<% }else{%>
-				$("#submit").click(function(){
-					alert("리뷰 작성이 완료되었습니다!");
-				})
-		<% }%>
-			});
-		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script>
-			function count(message) {
-		        var totalByte = 0;
-		
-		        for (var index=0, length=message.length; index<length; index++) {
-		            var currentByte = message.charCodeAt(index);
-		            (currentByte > 256) ? totalByte += 2: totalByte++;
-		        }
-		        return totalByte;
-		    }
-		
-		    function checkByte(event) {
-		        const totalByte = count(event.target.value);
-		
-		        if(totalByte <= MAX_MESSAGE_BYTE) {
-		            countSpan.innerText = totalByte.toString();
-		            message= event.target.value;
-		        }else {
-		            alert(MAX_MESSAGE_BYTE+"바이트까지 작성가능합니다.");
-		            countSpan.innerText = count(message).toString();
-		            event.target.value = message;
-		        }
-		    }
-	    </script>
-	</head>
+<html>
+<head>
+<title>리뷰 작성하기</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
+<link rel="shortcut icon" type="image/x-icon"
+	href="assets/img/favicon.ico">
+
+<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
+<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+<link rel="stylesheet" href="/pro01/common/css/custom.css">
+
+<!-- Load fonts style after rendering the layout styles -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+<link rel="stylesheet" href="/pro01/common/css/star_rate.css">
+
+<!-- Load map styles -->
+<link rel="stylesheet"
+	href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+	crossorigin="" />
+<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
+
+<%
+	UserVO user = (UserVO) session.getAttribute("loginOKUser");
+%>
+<script type="text/javascript">
+	$(document).ready(function() {
+<%if (user == null) {%>
+	$("#submit").click(function() {
+			alert("로그인 후 작성이 가능합니다!");
+		})
+<%} else {%>
+	$("#submit").click(function() {
+			alert("리뷰 작성이 완료되었습니다!");
+		})
+<%}%>
+	});
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	function count(message) {
+		var totalByte = 0;
+
+		for (var index = 0, length = message.length; index < length; index++) {
+			var currentByte = message.charCodeAt(index);
+			(currentByte > 256) ? totalByte += 2 : totalByte++;
+		}
+		return totalByte;
+	}
+
+	function checkByte(event) {
+		const totalByte = count(event.target.value);
+
+		if (totalByte <= MAX_MESSAGE_BYTE) {
+			countSpan.innerText = totalByte.toString();
+			message = event.target.value;
+		} else {
+			alert(MAX_MESSAGE_BYTE + "바이트까지 작성가능합니다.");
+			countSpan.innerText = count(message).toString();
+			event.target.value = message;
+		}
+	}
+</script>
+</head>
 
 <body>
-	
+
 	<!-- Start Content Page -->
 	<div class="container-fluid bg-light py-5">
 		<div class="col-md-6 m-auto text-center">
@@ -345,82 +348,184 @@
 	<!-- Start Contact -->
 	<div class="container py-5">
 		<div class="row py-5">
-			<form class="col-md-9 m-auto" name="review" method="post" role="form" action="/pro01/review/insert.do">
+			<form class="col-md-9 m-auto" name="review" method="post" role="form"
+				action="/pro01/review/insert.do">
 				<div class="mb-3">
 					<label for="inputsubject">식당 이름</label> <input type="text"
 						class="form-control mt-1" id="res_name" name="res_name"
 						placeholder="식당 이름" required>
-				</div>				
+				</div>
 				<div class="mb-3">
 					<label for="inputsubject">메뉴 이름</label> <input type="text"
-						class="form-control mt-1" id="menu" name="menu"
-						placeholder="메뉴" required>
-				</div>				
+						class="form-control mt-1" id="menu" name="menu" placeholder="메뉴"
+						required>
+				</div>
 				<div>
 					<label for="inputsubject">별점 주기</label>
 					<div class="star-rating">
-						<input type="radio" id="5-stars" name="rating" value="5" />
-						<label for="5-stars" class="star">&#9733;</label>
-						<input type="radio" id="4-stars" name="rating" value="4" />
-						<label for="4-stars" class="star">&#9733;</label>
-						<input type="radio" id="3-stars" name="rating" value="3" />
-						<label for="3-stars" class="star">&#9733;</label>
-						<input type="radio" id="2-stars" name="rating" value="2" />
-						<label for="2-stars" class="star">&#9733;</label>
-						<input type="radio" id="1-star" name="rating" value="1" required/>
-						<label for="1-star" class="star">&#9733;</label>
+						<input type="radio" id="5-stars" name="rating" value="5" /> <label
+							for="5-stars" class="star">&#9733;</label> <input type="radio"
+							id="4-stars" name="rating" value="4" /> <label for="4-stars"
+							class="star">&#9733;</label> <input type="radio" id="3-stars"
+							name="rating" value="3" /> <label for="3-stars" class="star">&#9733;</label>
+						<input type="radio" id="2-stars" name="rating" value="2" /> <label
+							for="2-stars" class="star">&#9733;</label> <input type="radio"
+							id="1-star" name="rating" value="1" required /> <label
+							for="1-star" class="star">&#9733;</label>
 					</div>
 				</div>
-				<% if(user != null){ %>
-					<div style="display:none">
-						<input name="userid" value="<%= user.getUserid()%>">
-					</div>
-				<% } %>
-				<p></p>
+				<%
+					if (user != null) {
+				%>
+				<div style="display: none">
+					<input name="userid" value="<%=user.getUserid()%>">
+				</div>
+				<%
+					}
+				%>
+				
+					<!-- 파일 업로더 -->
+				
+					<form class="col-md-9 m-auto" method="post"
+						enctype="multipart/form-data"
+						action="/pro01/review/fileinsert.do">
+
+						<div class="form-group">
+							<div class="form-group">
+								<label for="files" class="control-label">사진1</label>
+							</div>
+							<div class="col-md-8">
+								<input type="file" class="form-control mt-1" name="files"
+									id="files" placeholder="사진선택">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-2 text-right">
+								<label for="title" class="control-label">파일2</label>
+							</div>
+							<div class="col-md-8">
+								<input type="file" class="form-control input-lg" name="files"
+									id="title" placeholder="파일선택">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-2 text-right">
+								<label for="files" class="control-label">파일3</label>
+							</div>
+							<div class="col-md-8">
+								<input type="file" class="form-control input-lg" name="files"
+									id="files" placeholder="파일선택">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-2 text-right">
+								<label for="files" class="control-label">파일4</label>
+							</div>
+							<div class="col-md-8">
+								<input type="file" class="form-control input-lg" name="files"
+									id="files" placeholder="파일선택">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-2 text-right">
+								<label for="title" class="control-label">파일5</label>
+							</div>
+							<div class="col-md-8">
+								<input type="file" class="form-control input-lg" name="files"
+									id="title" placeholder="파일선택">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-10 text-center">
+								<input type="submit" class="btn btn-lg btn-primary" value="글쓰기">
+
+								<button type="button" class="btn btn-danger btn-lg"
+									onclick="javascript:cancelCheck()">
+									<i class="fa fa-fw fa-close"></i> 취소
+								</button>
+							</div>
+						</div>
+					</form>
+				
+				
 				<div class="mb-3">
 					<label for="inputmessage">리뷰내용</label>
-					<textarea class="form-control mt-1" id="text-area" name="rev_content"
-						placeholder="리뷰 작성하기" rows="8"></textarea>
-					<div><span id="count"></span><span id="max-count"></span></div>
-					 <script type="text/javascript">
-	                    $(document).ready(function () {
-	                        $('#test').on('keyup', function () {
-	                            $('#test_cnt').html("(" + $(this).val().length + " /100)");
-	
-	                            if ($(this).val().length > 200) {
-	                                $(this).val($(this).val().substring(0, 100));
-	                                $('#test_cnt').html("(100 / 100)");
-	                            }
-	                        });
-	                    });
-	
-	                    document.getElementById("text-area").addEventListener('keyup', checkByte);
-	                    var countSpan = document.getElementById('count');
-	                    var massage = '';
-	                    var MAX_MESSAGE_BYTE = 500;
-	                    var slash = '/';
-	                    document.getElementById('max-count').innerHTML = slash.toString()+MAX_MESSAGE_BYTE.toString();
-	                    
-	                </script>
+					<textarea class="form-control mt-1" id="text-area"
+						name="rev_content" placeholder="리뷰 작성하기" rows="8"></textarea>
+					<div>
+						<span id="count"></span><span id="max-count"></span>
+					</div>
+					<script type="text/javascript">
+						$(document)
+								.ready(
+										function() {
+											$('#test')
+													.on(
+															'keyup',
+															function() {
+																$('#test_cnt')
+																		.html(
+																				"("
+																						+ $(
+																								this)
+																								.val().length
+																						+ " /100)");
+
+																if ($(this)
+																		.val().length > 200) {
+																	$(this)
+																			.val(
+																					$(
+																							this)
+																							.val()
+																							.substring(
+																									0,
+																									100));
+																	$(
+																			'#test_cnt')
+																			.html(
+																					"(100 / 100)");
+																}
+															});
+										});
+
+						document.getElementById("text-area").addEventListener(
+								'keyup', checkByte);
+						var countSpan = document.getElementById('count');
+						var massage = '';
+						var MAX_MESSAGE_BYTE = 500;
+						var slash = '/';
+						document.getElementById('max-count').innerHTML = slash
+								.toString()
+								+ MAX_MESSAGE_BYTE.toString();
+					</script>
 				</div>
-				
-				<% if(user != null){ %>
+
+				<%
+					if (user != null) {
+				%>
 				<div class="row">
-					<div class="col text-end mt-2">					
-						<button type="submit" class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button>
-					</div>					
+					<div class="col text-end mt-2">
+						<button type="submit" class="btn btn-success btn-lg px-3"
+							id="submit">리뷰 작성</button>
+					</div>
 				</div>
-				</form>
-				<% }else{ %>
-				</form>
-				<div class="row">
-					<div class="col text-end mt-2">					
-						<a href="/pro01/login.do"><button class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button></a>
-					</div>					
+			</form>
+			<%
+				} else {
+			%>
+			</form>
+			<div class="row">
+				<div class="col text-end mt-2">
+					<a href="/pro01/login.do"><button
+							class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button></a>
 				</div>
-				<% }%>
 			</div>
+			<%
+				}
+			%>
 		</div>
+	</div>
 
 	<!-- End Contact -->
 

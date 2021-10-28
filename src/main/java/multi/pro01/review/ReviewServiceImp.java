@@ -1,8 +1,10 @@
 package multi.pro01.review;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,5 +32,12 @@ public class ReviewServiceImp implements ReviewService {
 	@Override
 	public int ratingUpdate(String userid) {
 		return dao.ratingUpdate(userid);
+	}
+	
+	@Override
+	public int insert(ReviewVO data,ArrayList<String> filelist) {
+		dao.insert(data);
+		dao.fileInsert(filelist);
+		return 0;
 	}
 }
