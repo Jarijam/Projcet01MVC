@@ -107,4 +107,9 @@ public class UserController {
 		}
 		return "redirect:/index.do";
 	}
+	
+	@RequestMapping("/user/find_id.do")
+	public void find_id(String userid, String cellnum, String email) {
+		
+	}
 }

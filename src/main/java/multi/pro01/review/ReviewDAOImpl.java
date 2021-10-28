@@ -27,11 +27,14 @@ public class ReviewDAOImpl implements ReviewDAO {
 	public ReviewVO read(String review_no) {
 		return sqlSession.selectOne("project.review.read", review_no);
 	}
+
+	@Override
+	public int ratingUpdate(String userid) {
+		int result = sqlSession.update("project.review.ratingUpdate", userid);
+		return 0;
+	}
 	
-//	@Override
-//	public List<ReviewVO> reviewList() {
-//		return null;
-//	}
+	
 
 	
 }

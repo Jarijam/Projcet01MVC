@@ -14,10 +14,9 @@ public class ReviewController {
 	
 	@RequestMapping("/review/insert.do")
 	public String insert(ReviewVO command) { 
-		System.out.println("========="+command);
-		
+		System.out.println("리뷰작성!");
 		service.insert(command);
-		
+		service.ratingUpdate(command.getUserid());
 		return "redirect:/review/reviewlist.do";
 	}
 	@RequestMapping("/review/reviewlist.do")
