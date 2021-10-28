@@ -10,9 +10,6 @@ public class RestaurantVO {
 	public RestaurantVO() {
 		
 	}
-	public String getCategory() {
-		return category;
-	}
 
 	public RestaurantVO(String restaurant_no, String restaurant_name, String restaurant_addr) {
 		super();
@@ -28,12 +25,6 @@ public class RestaurantVO {
 	public void setRestaurant_name(String restaurant_name) {
 		this.restaurant_name = restaurant_name;
 	}
-
-//	@Override
-//	public String toString() {
-//		return "RestaurantVO [restaurant_name=" + restaurant_name + ", restaurant_no=" + restaurant_no
-//				+ ", restaurant_addr=" + restaurant_addr + "]";
-//	}
 
 	@Override
 	public String toString() {
@@ -56,6 +47,8 @@ public class RestaurantVO {
 		this.restaurant_addr = restaurant_addr;
 	}
 
-	
+	public String getCategory() {
+		return category;
+	}
 		
 }
