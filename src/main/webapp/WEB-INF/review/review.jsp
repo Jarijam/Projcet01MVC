@@ -4,32 +4,25 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
-<html>
-	<head>
-    <title>리뷰 모아보기</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<html>
+		<head>
+	    <title>리뷰 모아보기</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	    <link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
+	    <link rel="shortcut icon" type="image/x-icon" href="/pro01/images/favicon.ico">
+	
+	    <link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+	    <link rel="stylesheet" href="/pro01/common/css/custom.css">
+	
+	    <!-- Load fonts style after rendering the layout styles -->
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+	    <link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+	</head>
 
-    <link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/pro01/images/favicon.ico">
-
-    <link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/pro01/common/css/templatemo.css">
-    <link rel="stylesheet" href="/pro01/common/css/custom.css">
-
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
-<!--
-    
-TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop
-
--->
-</head>
-
-<body>
+	<body>
 	<% ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)request.getAttribute("reviewlist"); 
 		 int size = reviewlist.size();  
 	%>
@@ -103,7 +96,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row">
                     <% for(int i=0; i<size; i++) {
                     	ReviewVO review = reviewlist.get(i);	
-                    	%>
+                   	%>
                     
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
@@ -120,7 +113,7 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                             <!-- card start -->
                             <div class="card-body">
-                                <a href="review_form.do" class="h3 text-decoration-none"><%= review.getRes_name() %></a>
+                                <a href="#" class="h3 text-decoration-none"><%= review.getRes_name() %></a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>식당 주소(?)</li>
                                     <li class="pt-2">

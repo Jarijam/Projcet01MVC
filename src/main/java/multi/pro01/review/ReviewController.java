@@ -13,19 +13,12 @@ public class ReviewController {
 	ReviewService service;
 	
 	@RequestMapping("/review/insert.do")
-	
 	public String insert(ReviewVO command) { 
 		System.out.println("========="+command);
 		
-		String url = "";
-		int result = service.insert(command);
+		service.insert(command);
 		
-		if (result >=1) {
-			url = "redirect:/review/reviewlist.do";
-		}else {
-			url = "redirect:/pro01/review_write.do";
-		}
-		return url;
+		return "redirect:/review/reviewlist.do";
 	}
 	@RequestMapping("/review/reviewlist.do")
 	public ModelAndView getReviewList() {

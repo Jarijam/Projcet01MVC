@@ -1,3 +1,4 @@
+<%@page import="multi.pro01.userinfo.UserVO"%>
 <%@page import="multi.pro01.review.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -25,18 +26,12 @@
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick.min.css">
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
     
-
-    
-<!-- TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop
-
--->
 </head>
 
 <body>
-	<% ReviewVO review = (ReviewVO)request.getAttribute("review"); 
-		  int rating = review.getRating();    
+	<%
+		ReviewVO review = (ReviewVO)request.getAttribute("review"); 
+		int rating = review.getRating();
 	%>
     <!-- Open Content -->
     <section class="bg-light">
