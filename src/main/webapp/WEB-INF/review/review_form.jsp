@@ -142,7 +142,7 @@
                             <p class="h3 py-2" id="">식당주소</p>
                             <p class="h3 py-2" id="">전화번호</p>
                             <p class="h4 py-2" id="">${review.menu}</p>
-                            <p class="h4 py-2" id="">식당 홈페이지 바로가기</p>
+                            <p class="h4 py-2" id=""><a href="#"> 홈페이지로 이동</a></p>
                             <p class="py-2">
                                         <%for (int j =1;j<=rating;j++) {%>
                                         <i class="text-warning fa fa-star"></i>

@@ -52,8 +52,8 @@ create table review(
 	rating number,
 	rev_content varchar2(500),
 	rev_date date,
-	review_no number
-	userid varchar2(30);
+	review_no number,
+	userid varchar2(30)
 	);
 	
 *review_no에 시퀀스 추가 꼭 해줄것!
