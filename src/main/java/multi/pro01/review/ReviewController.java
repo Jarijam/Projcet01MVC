@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.WebUtils;
@@ -25,7 +24,7 @@ public class ReviewController {
 	public String insert(ReviewVO command) { 
 		System.out.println("리뷰작성!");
 		service.insert(command);
-		service.ratingUpdate(command.getUserid());
+		service.ratingUpdate(command.getRes_name());
 		return "redirect:/review/reviewlist.do";
 	}
 	
@@ -57,6 +56,7 @@ public class ReviewController {
 	public ModelAndView getReviewList() {
 		ModelAndView mav = new ModelAndView();
 		List<ReviewVO> reviewlist = service.getReviewList();
+		
 		mav.setViewName("reviewlist");
 		mav.addObject("reviewlist", reviewlist);
 		return mav;

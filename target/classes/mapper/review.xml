@@ -14,7 +14,7 @@
 		select * from review where review_no=#{review_no}
 	</select>
 	<update id="ratingUpdate" parameterType="String">
-		update avg_rating ar set ar.avg_rating = (select round(avg(r.rating),1) from review r where r.res_name = ar.res_name);
+		update avg_rating ar set ar.avg_rating = (select round(avg(r.rating),1) from review r where r.#{res_name} = ar.#{res_name});
 	</update>
 	<insert id="fileinsert" parameterType="Map">
  		insert all

@@ -30,8 +30,8 @@ public class ReviewServiceImp implements ReviewService {
 	}
 
 	@Override
-	public int ratingUpdate(String userid) {
-		return dao.ratingUpdate(userid);
+	public int ratingUpdate(String res_name) {
+		return dao.ratingUpdate(res_name);
 	}
 	
 	@Override

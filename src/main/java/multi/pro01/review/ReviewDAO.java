@@ -11,7 +11,7 @@ public interface ReviewDAO {
 	
 	ReviewVO read(String review_no);
 	
-	int ratingUpdate(String userid);
+	int ratingUpdate(String res_name);
 
 	int fileInsert(ArrayList<String> filelist);
 }

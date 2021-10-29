@@ -69,10 +69,10 @@
 					RestaurantVO user = restaurantList.get(i);
 					%>			
 					<tr>
-						<td><%= user.getRestaurant_no() %></td>
-						<td><a href="/pro01/restaurant/read.do?restaurant_no=<%= user.getRestaurant_no()%>&state=READ"><%= user.getRestaurant_name() %></a></td>
-						<td><%= user.getRestaurant_name() %></td>											
-						<td><%= user.getRestaurant_addr() %></td>						
+						<td><%= user.getRes_num() %></td>
+						<td><a href="/pro01/restaurant/read.do?restaurant_no=<%= user.getRes_name()%>&state=READ"><%= user.getRes_name() %></a></td>
+						<td><%= user.getRes_name() %></td>											
+						<td><%= user.getRes_addr() %></td>						
 					</tr>
 					<% } %>
 			</tbody>

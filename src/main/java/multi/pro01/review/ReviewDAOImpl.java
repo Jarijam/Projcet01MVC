@@ -32,8 +32,8 @@ public class ReviewDAOImpl implements ReviewDAO {
 	}
 
 	@Override
-	public int ratingUpdate(String userid) {
-		int result = sqlSession.update("project.review.ratingUpdate", userid);
+	public int ratingUpdate(String res_name) {
+		int result = sqlSession.update("project.review.ratingUpdate", res_name);
 		return 0;
 	}
 	
