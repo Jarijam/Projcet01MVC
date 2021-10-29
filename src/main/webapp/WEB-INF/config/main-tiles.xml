@@ -35,12 +35,12 @@
 		<put-attribute name="content" value="/WEB-INF/user/signup.jsp"/>
 	</definition>
 	
-	<definition name="restaurant" extends="indexTemplate">
-		<put-attribute name="content" value="/WEB-INF/board/restaurantlist.jsp"/>
+	<definition name="find_id" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/find_id.jsp"/>
 	</definition>
 	
-	<definition name="userlist" extends="indexTemplate">
-		<put-attribute name="content" value="/WEB-INF/user/userlist.jsp"/>
+	<definition name="restaurant" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/restaurantlist.jsp"/>
 	</definition>
 	
 	<definition name="kakaomap" extends="indexTemplate">

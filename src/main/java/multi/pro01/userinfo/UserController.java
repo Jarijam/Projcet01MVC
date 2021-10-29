@@ -109,7 +109,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/user/find_id.do")
-	public void find_id(String userid, String cellnum, String email) {
-		
+	public String find_id(String userid, String cellnum, String email) {
+		return "find_id";
 	}
 }
