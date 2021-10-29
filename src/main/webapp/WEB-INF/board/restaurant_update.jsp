@@ -6,22 +6,20 @@
 			<meta charset="UTF-8">
 			<title>Insert title here</title>		
 		</head>
-	<body>	
-		<h4>식당 수정하기</h4>
-		<i class="fa fa-angle-right"></i> 게시글 수정하기
-		
+	<body>			
+		<i class="fa fa-angle-right"></i> 식당 수정하기		
 	<hr>
 	<div class="row mt">
 		<div class="col-lg-12">
 			<div class="form-panel">
 
 				<form class="form-horizontal style-form"
-				 action="/erp/board/update.do" method="post">
-					<div class="form-group">
+				 action="#" method="post">
+					<!-- <div class="form-group">
 						<div class="col-md-2 text-right">
 							<label for="id" class="control-label">번호</label>
 						</div>
-						<div class="col-md-8"></div>
+						<div class="col-md-8">z</div>
 					</div>
 					<input type="hidden" name="board_no" value="">
 					<div class="form-group">
@@ -44,15 +42,23 @@
 								
 							</p>
 						</div>
+					</div> -->
 					
 						<div class="form-group">
-							<label class="col-sm-2 col-sm-2 control-label">제목</label>
+							<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" name="title" value=""> <span
-									class="help-block">게시글 유형에 맞는 내용으로 작성 부탁드립니다. </span>
-							</div>
+								<input type="text" class="form-control" value="${restaurant.name}"> <span
+									class="help-block"></span>
 						</div>
 						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">식당주소</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control"  value="${restaurant.addr}"> <span
+									class="help-block">
+									게시글 유형에 맞는 내용으로 작성 부탁드립니다. </span>
+							</div>
+						</div>
+						<!-- <div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">내용</label>
 							<div class="col-sm-8">
 								<textarea id="content"
@@ -60,7 +66,7 @@
 									rows=15 name="content"></textarea>
 
 							</div>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<div class="col-lg-4 text-center"></div>
 							<div class="col-lg-2 text-center">

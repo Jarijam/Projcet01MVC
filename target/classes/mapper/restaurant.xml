@@ -16,4 +16,11 @@
   	<select id="read" resultType="restaurant" parameterType="String">
   		select * from restaurant where restaurant_no=#{restaurant_no}
   	</select>	
+<!--   	<select id="delete" resultType="restaurant" parameterType="String">
+  		delete from restaurant where restaurant_no=#{restaurant_no}
+  	</select>
+  	<select id="update" resultType="restaurant" parameterType="String">
+  		update restaurant set restaurant_no=#{restaurant_no}
+  	</select>	 -->
+  	
 </mapper>

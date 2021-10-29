@@ -77,15 +77,16 @@
 
 		<div class="form-group">
 			<div class="col-md-10 text-center">
-				<input type="submit" class="btn btn-lg btn-primary" 
-				value="수정">
-
+				<button type="button" class="btn btn-danger btn-lg" 
+					onclick="location.href='/pro01/restaurant/read.do?/restaurant_no=1&state=UPDATE'">
+					<i class="fa fa-fw fa-close"></i> 수정
+				</button>
 				<button type="button" class="btn btn-danger btn-lg"
 					onclick="location.href='/pro01/restaurant/restaurantlist.do'">
 					<i class="fa fa-fw fa-close"></i> 목록
 				</button>
 				<button type="button" class="btn btn-danger btn-lg"
-					id="deletebtn">
+					onclick="location.href='/pro01/restaurant/delete.do'">
 					<i class="fa fa-fw fa-close"></i> 삭제
 				</button>
 			</div>
