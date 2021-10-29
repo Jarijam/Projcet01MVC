@@ -54,4 +54,8 @@
 	<definition name="restaurant/read" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/board/restaurant_read.jsp"/>
 	</definition>
+	
+	<definition name="restaurant/update" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/restaurant_update.jsp"/>
+	</definition>
 </tiles-definitions>

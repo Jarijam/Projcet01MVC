@@ -1,5 +1,6 @@
 package multi.pro01.review;
 
+import org.springframework.web.multipart.MultipartFile;
 
 public class ReviewVO {
 	private String res_name;
@@ -8,10 +9,25 @@ public class ReviewVO {
 	private int rating;
 	String review_no;
 	String userid;
+	MultipartFile[] files;
 
 	public ReviewVO() {
 	}
 	
+	
+	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid,
+			MultipartFile[] files) {
+		super();
+		this.res_name = res_name;
+		this.rev_content = rev_content;
+		this.menu = menu;
+		this.rating = rating;
+		this.review_no = review_no;
+		this.userid = userid;
+		this.files = files;
+	}
+
+
 	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid) {
 		super();
 		this.res_name = res_name;
@@ -76,6 +92,16 @@ public class ReviewVO {
 	public void setUserid(String userid) {
 		this.userid = userid;
 	}
+	
+	public MultipartFile[] getFiles() {
+		return files;
+	}
+
+
+	public void setFiles(MultipartFile[] files) {
+		this.files = files;
+	}
+
 
 	@Override
 	public String toString() {

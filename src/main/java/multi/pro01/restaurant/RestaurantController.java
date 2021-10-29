@@ -14,6 +14,8 @@ public class RestaurantController {
 	@Autowired
 	RestaurantService service;
 	
+	
+	
 	@RequestMapping("/restaurant/insert.do")
 	public String insert(RestaurantVO command) {
 		System.out.println("dao연동확인"+command);				
