@@ -13,8 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.WebUtils;
 
-import multi.pro01.restaurant.RestaurantVO;
-
 @Controller
 public class ReviewController { 
 	@Autowired
