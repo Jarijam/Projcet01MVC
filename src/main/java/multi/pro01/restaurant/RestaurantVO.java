@@ -73,7 +73,13 @@ public class RestaurantVO {
 	@Override
 	public String toString() {
 		return "RestaurantVO [res_name=" + res_name + ", res_addr=" + res_addr + ", res_type=" + res_type + ", res_num="
-				+ res_num + ", res_menu=" + res_menu + "]";
+				+ res_num + ", res_menu=" + res_menu + ", category=" + category + "]";
 	}
+
+	
+
+	
+
+	
 		
 }
