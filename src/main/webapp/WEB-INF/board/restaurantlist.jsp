@@ -73,7 +73,7 @@
 					<th>식당주소</th>
 					<th>음식종류</th>	
 					<th>식당번호</th>	
-					<th>식당주메뉴</th>					
+					<th>식당주메뉴</th>
 				</tr>
 			</thead>
 			<tbody>

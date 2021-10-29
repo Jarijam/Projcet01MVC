@@ -8,15 +8,6 @@ public class RestaurantVO {
 	private String res_menu;
 	String category;
 	
-	
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
 	public RestaurantVO() {
 		
 	}
@@ -29,7 +20,15 @@ public class RestaurantVO {
 		this.res_num = res_num;
 		this.res_menu = res_menu;
 	}
-	
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+		
 	public String getRes_menu() {
 		return res_menu;
 	}
