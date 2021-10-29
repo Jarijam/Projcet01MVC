@@ -17,7 +17,10 @@ create table restaurant (
 	res_addr varchar2(150),
 	menu varchar2(50),
 	res_tel varchar2(20),
-	res_menu varchar2(100));
+	res_menu varchar2(100)
+	);
+
+
 	
 create table review_file (
 	review_no varchar2(30),

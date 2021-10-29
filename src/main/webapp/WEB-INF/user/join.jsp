@@ -42,7 +42,7 @@
 							</div>
 							
 							<div>	
-							<a href="#"><!-- "/pro01/user/find_id.do" --><input type="button" value="아이디 찾기"></a> <a href="#"><input type="button" value="비밀번호 찾기"></a>
+							<a href="/pro01/user/find_id.do"><input type="button" value="아이디 찾기"></a> <a href="#"><input type="button" value="비밀번호 찾기"></a>
 							</div>
 	               		</div>
            			</form>
