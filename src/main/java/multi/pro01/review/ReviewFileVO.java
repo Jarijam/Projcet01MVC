@@ -1,12 +1,13 @@
 package multi.pro01.review;
 
-public class ReviewFileDTO {
+public class ReviewFileVO {
 	String review_no;
 	String file_name;
-	public ReviewFileDTO(){
+	
+	public ReviewFileVO(){
 		
 	}
-	public ReviewFileDTO(String review_no, String file_name) {
+	public ReviewFileVO(String review_no, String file_name) {
 		super();
 		this.review_no = review_no;
 		this.file_name = file_name;

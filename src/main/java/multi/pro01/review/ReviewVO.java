@@ -1,5 +1,7 @@
 package multi.pro01.review;
 
+import java.util.Arrays;
+
 import org.springframework.web.multipart.MultipartFile;
 
 public class ReviewVO {
@@ -15,28 +17,42 @@ public class ReviewVO {
 	}
 	
 	
-	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid,
+	
+	public ReviewVO(String res_name, String rev_content, String menu, int rating, String userid,
 			MultipartFile[] files) {
 		super();
 		this.res_name = res_name;
 		this.rev_content = rev_content;
 		this.menu = menu;
 		this.rating = rating;
-		this.review_no = review_no;
 		this.userid = userid;
 		this.files = files;
 	}
 
 
-	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid) {
-		super();
-		this.res_name = res_name;
-		this.rev_content = rev_content;
-		this.menu = menu;
-		this.rating = rating;
-		this.review_no = review_no;
-		this.userid = userid;
-	}
+
+//	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid,
+//			MultipartFile[] files) {
+//		super();
+//		this.res_name = res_name;
+//		this.rev_content = rev_content;
+//		this.menu = menu;
+//		this.rating = rating;
+//		this.review_no = review_no;
+//		this.userid = userid;
+//		this.files = files;
+//	}
+//
+//
+//	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid) {
+//		super();
+//		this.res_name = res_name;
+//		this.rev_content = rev_content;
+//		this.menu = menu;
+//		this.rating = rating;
+//		this.review_no = review_no;
+//		this.userid = userid;
+//	}
 
 	public ReviewVO(String res_name, String rev_content, String menu, int rating) {
 		super();
@@ -103,10 +119,19 @@ public class ReviewVO {
 	}
 
 
+
 	@Override
 	public String toString() {
-//		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", menu=" + menu + ", files=" + files
-//				+ "]";
-		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", menu=" + menu + "]";
+		return "ReviewVO [res_name=" + res_name + ", rev_content=" + rev_content + ", menu=" + menu + ", rating="
+				+ rating + ", review_no=" + review_no + ", userid=" + userid + ", files=" + Arrays.toString(files)
+				+ "]";
 	}
+
+
+	/*
+	 * @Override public String toString() { // return "ReviewVO [res_name=" +
+	 * res_name + ", rev_content=" + rev_content + ", menu=" + menu + ", files=" +
+	 * files // + "]"; return "ReviewVO [res_name=" + res_name + ", rev_content=" +
+	 * rev_content + ", menu=" + menu + "]"; }
+	 */
 }

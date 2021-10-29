@@ -13,11 +13,15 @@ public class ReviewServiceImp implements ReviewService {
 	@Autowired
 	ReviewDAO dao;
 
-	@Override
-	public int insert(ReviewVO review)  {
-		System.out.println("review서비스단 insert =>"+review);
-		return dao.insert(review);
-	}
+	
+	  @Override 
+	  public int insert(ReviewVO review,ArrayList<String> filelist) {
+		  System.out.println("review서비스단 insert =>"+review); 
+	  		int result = dao.insert(review);
+	  	dao.fileInsert(filelist); 
+	  	return result;
+	  }
+	 
 
 	@Override
 	public List<ReviewVO> getReviewList() {
@@ -35,9 +39,9 @@ public class ReviewServiceImp implements ReviewService {
 	}
 	
 	@Override
-	public int insert(ReviewVO data,ArrayList<String> filelist) {
-		dao.insert(data);
-		dao.fileInsert(filelist);
-		return 0;
+	public int fileinsert(ReviewVO data,ArrayList<String> filelist) {
+		return dao.fileInsert(filelist); 
 	}
+
+	
 }

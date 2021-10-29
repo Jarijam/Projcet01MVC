@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface ReviewService {
-	int insert(ReviewVO review);
+	int insert(ReviewVO review,ArrayList<String> filelist);
 	List<ReviewVO> getReviewList();
 	ReviewVO read(String review_no);
 	int ratingUpdate(String res_name);
-	int insert(ReviewVO data, ArrayList<String> filelist);
+	int fileinsert(ReviewVO data, ArrayList<String> filelist);
+	
 }
 
 

@@ -348,8 +348,10 @@
 	<!-- Start Contact -->
 	<div class="container py-5">
 		<div class="row py-5">
-			<form class="col-md-9 m-auto" name="review" method="post" role="form"
+			<form class="col-md-9 m-auto"
+			 name="review" method="post" role="form" enctype="multipart/form-data"
 				action="/pro01/review/insert.do">
+				
 				<div class="mb-3">
 					<label for="inputsubject">식당 이름</label> <input type="text"
 						class="form-control mt-1" id="res_name" name="res_name"
@@ -386,10 +388,10 @@
 				
 					<!-- 파일 업로더 -->
 				
-					<form class="col-md-9 m-auto" method="post"
+				<!-- 	<form class="col-md-9 m-auto" method="post"
 						enctype="multipart/form-data"
 						action="/pro01/review/fileinsert.do">
-
+ -->
 						<div class="form-group">
 							<div class="form-group">
 								<label for="files" class="control-label">사진1</label>
@@ -399,7 +401,7 @@
 									id="files" placeholder="사진선택">
 							</div>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<div class="col-md-2 text-right">
 								<label for="title" class="control-label">파일2</label>
 							</div>
@@ -409,7 +411,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="col-md-2 text-right">
+				 			<div class="col-md-2 text-right">
 								<label for="files" class="control-label">파일3</label>
 							</div>
 							<div class="col-md-8">
@@ -434,8 +436,8 @@
 								<input type="file" class="form-control input-lg" name="files"
 									id="title" placeholder="파일선택">
 							</div>
-						</div>
-						<div class="form-group">
+						</div> -->
+						<!-- <div class="form-group">
 							<div class="col-md-10 text-center">
 								<input type="submit" class="btn btn-lg btn-primary" value="글쓰기">
 
@@ -444,8 +446,8 @@
 									<i class="fa fa-fw fa-close"></i> 취소
 								</button>
 							</div>
-						</div>
-					</form>
+						</div> -->
+					<!-- </form> -->
 				
 				
 				<div class="mb-3">
@@ -510,13 +512,12 @@
 							id="submit">리뷰 작성</button>
 					</div>
 				</div>
-			</form>
 			<%
 				} else {
 			%>
-			</form>
+		
 			<div class="row">
-				<div class="col text-end mt-2">
+				<div class="col text-end mt-2 form-group">
 					<a href="/pro01/login.do"><button
 							class="btn btn-success btn-lg px-3" id="submit">리뷰 작성</button></a>
 				</div>
@@ -524,6 +525,7 @@
 			<%
 				}
 			%>
+				</form>
 		</div>
 	</div>
 

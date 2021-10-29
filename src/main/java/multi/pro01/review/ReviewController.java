@@ -20,20 +20,20 @@ public class ReviewController {
 	@Autowired
 	FileUploadLogic uploadservice;
 	
-	@RequestMapping("/review/insert.do")
-	public String insert(ReviewVO command) { 
-		System.out.println("리뷰작성!");
-		service.insert(command);
-		service.ratingUpdate(command.getRes_name());
-		return "redirect:/review/reviewlist.do";
-	}
+	/*
+	 * @RequestMapping("/review/insert.do") public String insert(ReviewVO command) {
+	 * System.out.println("리뷰작성!"); service.insert(command);
+	 * service.ratingUpdate(command.getRes_name()); return
+	 * "redirect:/review/reviewlist.do"; }
+	 */
 	
 	//게시글 db에 insert
-	@RequestMapping(value="/review/fileinsert.do" ,method=RequestMethod.POST)
-	public String write(ReviewVO review,HttpServletRequest req) throws Exception{
-		System.out.println(review);	
-		System.out.println(","+review.getFiles().length);
+	@RequestMapping(value="/review/insert.do" ,method=RequestMethod.POST)
+	//@RequestMapping(value="/review/fileinsert.do" ,method=RequestMethod.POST)
+	public String insert(ReviewVO review,HttpServletRequest req) throws Exception{
+		System.out.println("++++++++++++++++"+review);	
 		MultipartFile[] files = review.getFiles();
+		System.out.println(","+review.getFiles().length);
 		
 		//2. 저장될 위치
 		String path = 
@@ -48,8 +48,10 @@ public class ReviewController {
 				uploadservice.upload(files[i], path, fileName);
 			}
 		}
-		service.insert(review, filelist);
-		return "redirect:/board/list.do";
+		//service.fileinsert(review, filelist);
+		service.insert(review,filelist);
+		service.ratingUpdate(review.getRes_name());
+		return "redirect:/review/reviewlist.do";
 	}
 	
 	@RequestMapping("/review/reviewlist.do")

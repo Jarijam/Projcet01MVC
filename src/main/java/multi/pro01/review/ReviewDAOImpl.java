@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
 public class ReviewDAOImpl implements ReviewDAO {
 
@@ -46,6 +47,10 @@ public class ReviewDAOImpl implements ReviewDAO {
 			sqlSession.insert("project.review.fileinsert",paramMap);
 		return sub;
 	}
-
+	
+	@Override
+	public ReviewFileVO readFile(String review_no) {
+		return sqlSession.selectOne("project.review.read", review_no);
+	}
 	
 }

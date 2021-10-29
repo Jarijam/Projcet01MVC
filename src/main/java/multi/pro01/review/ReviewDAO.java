@@ -14,4 +14,6 @@ public interface ReviewDAO {
 	int ratingUpdate(String res_name);
 
 	int fileInsert(ArrayList<String> filelist);
+	
+	ReviewFileVO readFile(String review_no);
 }
