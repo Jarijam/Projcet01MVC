@@ -4,7 +4,7 @@
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<title>Insert title here</title>
+			<title>식당추가</title>
 		</head>
 	<body>
 		<h3>식당 추가하기</h3>
@@ -19,31 +19,42 @@
 					<option value="일식">일식</option>	
 				</select>
 			</div> -->
-			<div>
-				<label class="col-sm-2 col-sm-2 control-label">번호</label>
+			
+				<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="restaurant_no">
+						<input type="text" class="form-control" name="res_name">
+							<span class="help-block"></span>
+					</div>
+			
+			<div class="form-group">
+				<label class="col-sm-2 col-sm-2 control-label">식당 주소</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="res_addr">
 							<span class="help-block"></span>
 					</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 col-sm-2 control-label">식당 이름</label>
+				<label class="col-sm-2 col-sm-2 control-label">음식 종류</label>
 					<div class="col-sm-8">
-						<textarea id="content"
-							style="width: 100%; border: 1; overflow: visible; text-overflow: ellipsis;"
-							rows=5 name="restaurant_name">식당 작성
-						</textarea>
+						<input type="text" class="form-control" name="res_type">
+							<span class="help-block"></span>
 					</div>
+			</div>	
+			<div class="form-group">
+				<label class="col-sm-2 col-sm-2 control-label">식당 번호</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="res_num">
+							<span class="help-block"></span>
+					</div>	
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 col-sm-2 control-label">식당 주소</label>
+				<label class="col-sm-2 col-sm-2 control-label">식당 주메뉴</label>
 					<div class="col-sm-8">
-						<textarea id="content"
-							style="width: 100%; border: 1; overflow: visible; text-overflow: ellipsis;"
-							rows=5 name="restaurant_addr">주소 쓰셈
-						</textarea>
-					</div>					
+						<input type="text" class="form-control" name="res_menu">
+							<span class="help-block"></span>
+					</div>				
 			</div>
+										
 			<div class="form-group">
 				<div class="col-lg-4 text-center">
 				</div>

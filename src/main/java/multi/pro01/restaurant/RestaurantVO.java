@@ -6,8 +6,17 @@ public class RestaurantVO {
 	private String res_type;
 	private String res_num;
 	private String res_menu;
+	String category;
 	
 	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	public RestaurantVO() {
 		
 	}
