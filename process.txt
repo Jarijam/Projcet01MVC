@@ -12,15 +12,16 @@ fe be => 연동.
 메모장 확인!
 
 
-create table restaurant_data (
+create table restaurant (
 	res_name varchar2(100),
 	res_addr varchar2(150),
 	menu varchar2(50),
 	res_tel varchar2(20),
 	res_menu varchar2(100));
 	
-	**res_menu 데이터 크기가 기억이 가물가물해용..
-
+create table review_file (
+	review_no varchar2(30),
+	file_name varchar2(100));
 
 재현님
 view설정 마무리	//완료
