@@ -28,25 +28,15 @@ public class ReviewVO {
 	}
 
 
-	public ReviewVO(String res_name, String rev_content, String menu, int rating, String review_no, String userid) {
+	public ReviewVO(String res_name, String rev_content, String menu, int rating, String userid) {
 		super();
 		this.res_name = res_name;
 		this.rev_content = rev_content;
 		this.menu = menu;
 		this.rating = rating;
-		this.review_no = review_no;
 		this.userid = userid;
 	}
-
-	public ReviewVO(String res_name, String rev_content, String menu, int rating) {
-		super();
-		this.res_name = res_name;
-		this.rev_content = rev_content;
-		this.menu = menu;
-		this.rating = rating;
-		//this.category = category;
-	}
-	
+		
 	public String getReview_no() {
 		return review_no;
 	}
