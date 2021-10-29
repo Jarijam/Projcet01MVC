@@ -88,6 +88,7 @@ create table restaurant(
        res_menu varchar2(100));
 //식당 테이블 만들기
 
+alter table restaurant add rating varchar2(10); //식당 테이블에 점수 컬럼 추가
 
 정원님
 

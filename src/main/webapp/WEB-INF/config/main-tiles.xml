@@ -28,11 +28,11 @@
 	</definition>
 	
 	<definition name="login" extends="indexTemplate">
-		<put-attribute name="content" value="/WEB-INF/login/join.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/user/join.jsp"/>
 	</definition>
 	
 	<definition name="signup" extends="indexTemplate">
-		<put-attribute name="content" value="/WEB-INF/signup/signup.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/user/signup.jsp"/>
 	</definition>
 	
 	<definition name="restaurant" extends="indexTemplate">
