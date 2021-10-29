@@ -25,6 +25,16 @@
 	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");		
 		int size = restaurantList.size();
 	%>
+		<!-- <form action="#">
+		<select name="tag">
+			<option value="id">작성자</option>
+			<option value="title">제목</option>
+			<option value="content">본문</option>
+			<option value="write_date">작성일</option>
+		</select> <input type="text" name="search" /> <input type="submit" value="검색"> -->
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="/pro01/restaurant/insertPage.do" style="text-align: right;">글쓰기</a></li>
+		</ul>
 	<!-- <form  action="/pro01/restaurant/search.do">
 	<section class="bg-success py-5">
 		<div class="container">
@@ -59,35 +69,30 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>번호</th>
-					<th>제목</th>
-					<th>작성자</th>					
+					<th>식당이름</th>
+					<th>식당주소</th>
+					<th>음식종류</th>	
+					<th>식당번호</th>	
+					<th>식당주메뉴</th>					
 				</tr>
 			</thead>
 			<tbody>
 				 	<% for(int i=0;i<size;i++){
-					RestaurantVO user = restaurantList.get(i);
+					RestaurantVO user = restaurantList.get(i); /* 84줄 ? 뒷 부분(restaurant_no는 컨트롤러 read.do의 String 값) */
 					%>			
 					<tr>
-						<td><%= user.getRes_num() %></td>
 						<td><a href="/pro01/restaurant/read.do?restaurant_no=<%= user.getRes_name()%>&state=READ"><%= user.getRes_name() %></a></td>
-						<td><%= user.getRes_name() %></td>											
-						<td><%= user.getRes_addr() %></td>						
+						<%-- <td><%= user.getRes_name() %></td>	 --%>										
+						<td><%= user.getRes_addr() %></td>	
+						<td><%= user.getRes_type() %></td>					
+						<td><%= user.getRes_num() %></td>
+						<td><%= user.getRes_menu() %></td>
 					</tr>
 					<% } %>
 			</tbody>
 		</table>
 		</div>		
-		<!-- <form action="#">
-		<select name="tag">
-			<option value="id">작성자</option>
-			<option value="title">제목</option>
-			<option value="content">본문</option>
-			<option value="write_date">작성일</option>
-		</select> <input type="text" name="search" /> <input type="submit" value="검색"> -->
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/pro01/restaurant/insertPage.do" style="text-align: right;">글쓰기</a></li>
-		</ul>	
+		
 	</body>
 
 </html>

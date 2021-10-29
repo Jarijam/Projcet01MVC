@@ -4,75 +4,75 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html>
 <html>
-<head>
-<title>리뷰 작성하기</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
-<link rel="shortcut icon" type="image/x-icon"
-	href="assets/img/favicon.ico">
-
-<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
-<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
-<link rel="stylesheet" href="/pro01/common/css/custom.css">
-
-<!-- Load fonts style after rendering the layout styles -->
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
-<link rel="stylesheet" href="/pro01/common/css/star_rate.css">
-
-<!-- Load map styles -->
-<link rel="stylesheet"
-	href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-	crossorigin="" />
-<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
-
-<%
-	UserVO user = (UserVO) session.getAttribute("loginOKUser");
-%>
-<script type="text/javascript">
-	$(document).ready(function() {
-<%if (user == null) {%>
-	$("#submit").click(function() {
-			alert("로그인 후 작성이 가능합니다!");
-		})
-<%} else {%>
-	$("#submit").click(function() {
-			alert("리뷰 작성이 완료되었습니다!");
-		})
-<%}%>
-	});
-</script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-	function count(message) {
-		var totalByte = 0;
-
-		for (var index = 0, length = message.length; index < length; index++) {
-			var currentByte = message.charCodeAt(index);
-			(currentByte > 256) ? totalByte += 2 : totalByte++;
-		}
-		return totalByte;
-	}
-
-	function checkByte(event) {
-		const totalByte = count(event.target.value);
-
-		if (totalByte <= MAX_MESSAGE_BYTE) {
-			countSpan.innerText = totalByte.toString();
-			message = event.target.value;
-		} else {
-			alert(MAX_MESSAGE_BYTE + "바이트까지 작성가능합니다.");
-			countSpan.innerText = count(message).toString();
-			event.target.value = message;
-		}
-	}
-</script>
-</head>
+	<head>
+		<title>리뷰 작성하기</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="apple-touch-icon" href="/pro01/images/apple-icon.png">
+		<link rel="shortcut icon" type="image/x-icon"
+			href="assets/img/favicon.ico">
+		
+		<link rel="stylesheet" href="/pro01/common/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/pro01/common/css/templatemo.css">
+		<link rel="stylesheet" href="/pro01/common/css/custom.css">
+		
+		<!-- Load fonts style after rendering the layout styles -->
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+		<link rel="stylesheet" href="/pro01/common/css/fontawesome.min.css">
+		<link rel="stylesheet" href="/pro01/common/css/star_rate.css">
+		
+		<!-- Load map styles -->
+		<link rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin="" />
+		<link rel="stylesheet" type="text/css" href="/pro01/common/css/map.css" />
+		
+		<%
+			UserVO user = (UserVO) session.getAttribute("loginOKUser");
+		%>
+		<script type="text/javascript">
+			$(document).ready(function() {
+		<%if (user == null) {%>
+			$("#submit").click(function() {
+					alert("로그인 후 작성이 가능합니다!");
+				})
+		<%} else {%>
+			$("#submit").click(function() {
+					alert("리뷰 작성이 완료되었습니다!");
+				})
+		<%}%>
+			});
+		</script>
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			function count(message) {
+				var totalByte = 0;
+		
+				for (var index = 0, length = message.length; index < length; index++) {
+					var currentByte = message.charCodeAt(index);
+					(currentByte > 256) ? totalByte += 2 : totalByte++;
+				}
+				return totalByte;
+			}
+		
+			function checkByte(event) {
+				const totalByte = count(event.target.value);
+		
+				if (totalByte <= MAX_MESSAGE_BYTE) {
+					countSpan.innerText = totalByte.toString();
+					message = event.target.value;
+				} else {
+					alert(MAX_MESSAGE_BYTE + "바이트까지 작성가능합니다.");
+					countSpan.innerText = count(message).toString();
+					event.target.value = message;
+				}
+			}
+		</script>
+	</head>
 
 <body>
 
@@ -458,38 +458,14 @@
 						<span id="count"></span><span id="max-count"></span>
 					</div>
 					<script type="text/javascript">
-						$(document)
-								.ready(
-										function() {
-											$('#test')
-													.on(
-															'keyup',
-															function() {
-																$('#test_cnt')
-																		.html(
-																				"("
-																						+ $(
-																								this)
-																								.val().length
-																						+ " /100)");
-
-																if ($(this)
-																		.val().length > 200) {
-																	$(this)
-																			.val(
-																					$(
-																							this)
-																							.val()
-																							.substring(
-																									0,
-																									100));
-																	$(
-																			'#test_cnt')
-																			.html(
-																					"(100 / 100)");
-																}
-															});
-										});
+						$(document).ready(function(){
+							$('#test').on('keyup',function() {
+								$('#test_cnt').html("("+ $(this).val().length+" /100)");
+									if ($(this).val().length > 200) {$(this).val($(this).val().substring(0,100));
+										$('#test_cnt').html("(100 / 100)");
+									}
+							});
+						});
 
 						document.getElementById("text-area").addEventListener(
 								'keyup', checkByte);

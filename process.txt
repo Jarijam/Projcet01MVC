@@ -77,11 +77,11 @@ alter table userinfo add constraints userid_pk primary key (userid);  // userinf
 
 
 create table restaurant(
-  2     res_name varchar2(100),
-  3     res_addr varchar2(200),
-  4     res_type varchar2(40),
-  5     res_num varchar2(20),
-  6     res_menu varchar2(100));
+       res_name varchar2(100),
+       res_addr varchar2(200),
+       res_type varchar2(40),
+       res_num varchar2(20),
+       res_menu varchar2(100));
 //식당 테이블 만들기
 
 

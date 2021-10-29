@@ -19,7 +19,7 @@ public class ReviewController {
 	ReviewService service;
 	@Autowired
 	FileUploadLogic uploadservice;
-	
+	 
 	/*
 	 * @RequestMapping("/review/insert.do") public String insert(ReviewVO command) {
 	 * System.out.println("리뷰작성!"); service.insert(command);
@@ -58,7 +58,6 @@ public class ReviewController {
 	public ModelAndView getReviewList() {
 		ModelAndView mav = new ModelAndView();
 		List<ReviewVO> reviewlist = service.getReviewList();
-		
 		mav.setViewName("reviewlist");
 		mav.addObject("reviewlist", reviewlist);
 		return mav;

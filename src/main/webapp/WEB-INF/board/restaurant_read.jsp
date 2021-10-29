@@ -1,84 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
-
-<head>
-<title>인사관리시스템</title>
-
-	<% //BoardVO board = (BoardVO)request.getAttribute("board"); %>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#category").val("${board.category}").attr("selected", "selected");
-		});
-	</script>
-</head>
-
-
 	<head>
-		<title>zz</title>
-		<script type="text/javascript">
+		<title>식당</title>
+	 <script type="text/javascript">
 			$(document).ready(function(){
 				$("#category").val("${restaurant.category}").attr("selected","selected");
 			});
 		</script>
 	</head>
-
 <body>
 	<form class="form-horizontal" 
 		action="#" 
-		method="post" >		
-		<!-- <div class="form-group">
+		method="post" >	
+					
+		 <div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="id" class="control-label">번호</label>
+				<label for="res_name" class="control-label">식당이름</label>
 			</div>
-			<div class="col-md-8"></div>
+			<div class="col-md-8">${restaurant.res_name}</div>
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="id" class="control-label">게시글종류</label>
+				<label for="res_addr" class="control-label">식당주소</label>
 			</div>
-			<div class="col-md-3">
-				<select name="category" class="form-control" 
-							id="category">
-					<option value="경조사">경조사</option>
-					<option value="사내소식">사내소식</option>
-					<option value="게시판">게시판(익명)</option>
-				</select>
-			</div>
+			<div class="col-md-8">${restaurant.res_addr}</div>
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="id" class="control-label">작성자123</label>
-			</div>
-			<div class="col-md-8"></div>
+				<label for="res_type" class="control-label">음식종류</label>
+			</div>			
+			<div class="col-md-8">${restaurant.res_type}</div>								
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="title" class="control-label">제목</label>
-			</div>
-			<div class="col-md-8"></div>
+				<label for="res_num" class="control-label">식당번호</label>
+			</div>		
+			<div class="col-md-8">${restaurant.res_num}</div>								
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="title" class="control-label">작성날짜</label>
-			</div>
-			<div class="col-md-8"></div>
+				<label for="res_menu" class="control-label">식당주메뉴</label>
+			</div>		
+			<div class="col-md-8">${restaurant.res_menu}</div>								
 		</div>
-		<div class="form-group">
-			<div class="col-md-2 text-right">
-				<label for="text" class="control-label">내용</label>
-			</div>
-			<div class="col-md-8"
-				style="width: 500px; height: 400px; border: solid 1px;">
-				
-				</div>
-		</div> -->
-
-		<div class="form-group">
+		
+		 <div class="form-group">
 			<div class="col-md-10 text-center">
 				<button type="button" class="btn btn-danger btn-lg" 
-					onclick="location.href='/pro01/restaurant/read.do?/restaurant_no=1&state=UPDATE'">
+					onclick="location.href='/pro01/restaurant/read.do?restaurant_no=1&state=UPDATE'">
 					<i class="fa fa-fw fa-close"></i> 수정
 				</button>
 				<button type="button" class="btn btn-danger btn-lg"
@@ -90,7 +60,7 @@
 					<i class="fa fa-fw fa-close"></i> 삭제
 				</button>
 			</div>
-		</div>
+		</div> 
 	</form>
 </body>
 </html>

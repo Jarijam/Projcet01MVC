@@ -47,14 +47,33 @@
 						<div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" value="${restaurant.name}"> <span
+								<input type="text" class="form-control" value="${restaurant.res_name}"> <span
 									class="help-block"></span>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">식당주소</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control"  value="${restaurant.addr}"> <span
+								<input type="text" class="form-control" value="${restaurant.res_addr}"> <span
+									class="help-block"></span>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">음식종류</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" value="${restaurant.res_type}"> <span
+									class="help-block"></span>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">식당번호</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" value="${restaurant.res_num}"> <span
+									class="help-block"></span>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 col-sm-2 control-label">식당주메뉴</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control"  value="${restaurant.res_menu}"> <span
 									class="help-block">
+									
 									게시글 유형에 맞는 내용으로 작성 부탁드립니다. </span>
 							</div>
 						</div>
