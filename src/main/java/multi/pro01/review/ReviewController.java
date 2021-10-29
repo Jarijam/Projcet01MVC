@@ -76,8 +76,7 @@ public class ReviewController {
 		}
 		mav.setViewName(viewName);
 		mav.addObject("review", review);
-		return mav;
-		
+		return mav;		
 	}
 
 	

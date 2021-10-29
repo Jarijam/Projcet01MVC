@@ -10,19 +10,18 @@
 	<insert id="restaurant_insert" parameterType="restaurant">
 		insert into restaurant values(#{restaurant_no},#{restaurant_name},#{restaurant_addr})
 	</insert>	
+	
 	<select id="list" resultType="restaurant">
   		select * from restaurant
   	</select>
   	<select id="read" resultType="restaurant" parameterType="String">
   		select * from restaurant where res_name=#{res_name}
   	</select>	
-   	<select id="delete" resultType="restaurant" parameterType="String">
+   	<!-- <delete id="delete" parameterType="String">
   		delete from restaurant where restaurant_no=#{restaurant_no}
-  	</select>
-  	<select id="update" resultType="restaurant" parameterType="String">
-  		update restaurant set where
-  		res_name=#{res_name}
-  		
-  	</select>
+  	</delete> -->
+  	<update id="update" parameterType="String">
+  		update restaurant set res_name=#{res_name},res_addr=#{res_addr},res_type=#{res_type},res_menu=#{res_menu} where res_name=#{res_name}		
+  	</update>
   	
 </mapper>
