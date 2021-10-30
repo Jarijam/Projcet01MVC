@@ -38,7 +38,6 @@
 					<div class="form-group" style="border: 1px solid #eff2f7;">
 						<label class="col-sm-2 col-sm-2 control-label">작성자</label>
 						<div class="col-sm-10">
-
 							<p class="form-control-static">
 								
 							</p>
@@ -88,7 +87,6 @@
 								<textarea id="content"
 									style="width: 100%; border: 1; overflow: visible; text-overflow: ellipsis;"
 									rows=15 name="content"></textarea>
-
 							</div>
 						</div> -->
 						<div class="form-group">
@@ -101,8 +99,9 @@
 								<button type="reset" class="btn btn-default"
 									style="width: 100px; background-color: #9a9a9a">취소</button>
 							</div>
-
+	
 						</div>
+						<button id="btn-remove" class="btn btn-danger">delete</button>
 					</form>
 			
 			</div>

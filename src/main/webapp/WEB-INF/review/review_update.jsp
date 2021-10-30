@@ -4,43 +4,47 @@
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<title>식당추가</title>
+			<title>리뷰수정</title>
 		</head>
 	<body>
-		<h3>식당 추가하기</h3>
-		<form action="/pro01/restaurant/insert.do" method="post">					
+		<h3>리뷰수정</h3>
+		<form action="#" method="post">
+			<div class="form-group">			
 				<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="">
-							<span class="help-block"></span>
-					</div>			
-			<div class="form-group">
-				<label class="col-sm-2 col-sm-2 control-label">식당 주소</label>
-					<div class="col-sm-8">
-						<input type="text" class="form-control" name="">
+						<input type="text" class="form-control" name="res_name" value="${review.res_name}">
 							<span class="help-block"></span>
 					</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 col-sm-2 control-label">음식 종류</label>
+				<label class="col-sm-2 col-sm-2 control-label">메뉴이름</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="">
+						<input type="text" class="form-control" name="menu" value="${review.menu}"> <span
+							class="help-block"></span>
+						</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 col-sm-2 control-label">별점</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="res_type">
 							<span class="help-block"></span>
 					</div>
 			</div>	
 			<div class="form-group">
-				<label class="col-sm-2 col-sm-2 control-label">식당 번호</label>
+				<label class="col-sm-2 col-sm-2 control-label">사진</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="">
+						<input type="text" class="form-control" name="res_num">
 							<span class="help-block"></span>
 					</div>	
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 col-sm-2 control-label">식당 주메뉴</label>
+				<label class="col-sm-2 col-sm-2 control-label">리뷰내용</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="">
-							<span class="help-block"></span>
-					</div>				
+						<textarea id="content"
+							style="width: 100%; border: 1; overflow: visible; text-overflow: ellipsis;"
+							rows=15 name="rev_content">${review.res_content }</textarea>
+
+							</div>		
 			</div>
 										
 			<div class="form-group">
@@ -56,8 +60,7 @@
 							style="width: 100px; background-color: #9a9a9a">취소
 					</button>
 				</div>			
-			</div>		
-			<button id="btn-remove" class="btn btn-danger">delete</button>			
+			</div>					
 			</form>
 	</body>
 </html>

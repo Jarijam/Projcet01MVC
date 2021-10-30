@@ -27,6 +27,15 @@ public class ReviewController {
 	 * "redirect:/review/reviewlist.do"; }
 	 */
 	
+	//리뷰수정
+	@RequestMapping("/review/update.do")
+	public String update(ReviewVO review_update) {
+		System.out.println("연동확인"+review_update);
+		service.insert(review_update, null);
+		return "/review/reviewlist.do";
+	}
+	
+	
 	//게시글 db에 insert
 	@RequestMapping(value="/review/insert.do" ,method=RequestMethod.POST)
 	//@RequestMapping(value="/review/fileinsert.do" ,method=RequestMethod.POST)
@@ -67,7 +76,7 @@ public class ReviewController {
 	public ModelAndView read(String review_no, String state) {
 		System.out.println("read controller,"+review_no+","+state);
 		ModelAndView mav = new ModelAndView();
-		ReviewVO review = service.read(review_no);
+		ReviewVO review = service.read(review_no);		
 		String viewName="";
 		if(state.equals("READ")) {
 			viewName="review/read";

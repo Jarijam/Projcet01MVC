@@ -54,4 +54,10 @@ public class ReviewDAOImpl implements ReviewDAO {
 		
 	}
 	
+	//review_update
+	@Override
+	public int update(ReviewVO review_update) {
+		return 0;
+	}
+	
 }

@@ -64,4 +64,9 @@ public class ReviewServiceImp implements ReviewService {
 			}
 		}
 	}
+
+	@Override
+	public int update(ReviewVO review_update) {
+		return 0;
+	}
 }

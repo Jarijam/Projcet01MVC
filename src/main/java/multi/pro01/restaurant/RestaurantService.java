@@ -10,5 +10,5 @@ public interface RestaurantService {
 	int update(RestaurantVO user);
 	int insert(RestaurantVO user);		
 	List<RestaurantVO> restaurantlist();
-	RestaurantVO read(String restaurant_no);
+	RestaurantVO read(String restaurant);
 }

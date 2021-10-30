@@ -23,15 +23,21 @@ public class RestaurantController {
 	
 	@RequestMapping("/restaurant/insert.do")
 	public String insert(RestaurantVO command) {
-		System.out.println("dao연동확인"+command);				
-		service.insert(command);
-		return "redirect:/restaurant/restaurantlist.do";		
+		System.out.println("dao연동확인"+command);	
+		String url ="";
+		int result = service.insert(command);
+		if(result>=1) {
+			url = "redirect:/restaurant/restaurantlist.do?category=all";
+		}else {
+			url = "redirect:/restaurant/insertPage.do";
+		}
+		return url;	
 	}
 	@RequestMapping("/restaurant/read.do")
-	public ModelAndView read(String restaurant_no, String state) {
-		System.out.println("read컨트롤러=>"+restaurant_no+","+state);
+	public ModelAndView read(String restaurant, String state) {
+		System.out.println("read컨트롤러=>"+restaurant+","+state);
 		ModelAndView mav = new ModelAndView();
-		RestaurantVO restaurant = service.read(restaurant_no);
+		RestaurantVO restaurant_read = service.read(restaurant);
 		String viewName = "";
 		if(state.equals("READ")) {
 			viewName = "restaurant/read";
@@ -39,7 +45,7 @@ public class RestaurantController {
 			viewName = "restaurant/update";
 		}
 		mav.setViewName(viewName);
-		mav.addObject("restaurant",restaurant);
+		mav.addObject("restaurant",restaurant_read);
 		return mav;
 	}
 	/*

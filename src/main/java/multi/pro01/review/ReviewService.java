@@ -13,6 +13,8 @@ public interface ReviewService {
 	int fileinsert(ReviewVO data, ArrayList<String> filelist);
 	void upload(MultipartFile file,String path,String fileName);
 	
+	//review_update
+	int update(ReviewVO review_update);
 }
 
 

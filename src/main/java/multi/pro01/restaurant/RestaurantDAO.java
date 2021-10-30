@@ -10,5 +10,5 @@ public interface RestaurantDAO {
 	int insert(RestaurantVO user);
 	int delete(RestaurantVO user);
 
-	RestaurantVO read(String restaurant_no);
+	RestaurantVO read(String restaurant);
 }

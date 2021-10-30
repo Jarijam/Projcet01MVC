@@ -1,4 +1,5 @@
 <%-- <%@page import="multi.pro01.userinfo.UserVO"%> --%>
+<%@page import="multi.pro01.restaurant.RestaurantVO"%>
 <%@page import="multi.pro01.review.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -33,6 +34,7 @@
 		ReviewVO review = (ReviewVO)request.getAttribute("review"); 
 		int rating = review.getRating();
 	%>
+	
     <!-- Open Content -->
     <section class="bg-light">
         <div class="container pb-5">
@@ -135,12 +137,13 @@
                     </div>
                 </div>
                 <!-- col end -->
+              		
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
                             <h1 class="h2" id="">${review.res_name }</h1>
-                            <p class="h3 py-2" id="res_addr">주소:${restaurant.res_addr}</p>
-                            <p class="h3 py-2" id="res_num">전화번호:{restaurant.res_num}</p>
+                            <p class="h3 py-2" id="">${restaurant.res_addr}</p>                             	                         
+                            <p class="h3 py-2" id="">${restaurant.res_num}</p>
                             <p class="h4 py-2" id="">${review.menu}</p>
                             <p class="h4 py-2" id=""><a href="#"> 홈페이지로 이동</a></p>
                             <p class="py-2">
@@ -215,7 +218,10 @@
                                     </div>
                                     <div class="col d-grid">
                                         <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">신고</button>
-                                    </div>
+                                    </div> 
+                                    <button type="button" onclick="location.href='/pro01/review/read.do?review_no=1&state=UPDATE'">
+										<i class="fa fa-fw fa-close"></i> 리뷰수정
+									</button>
                                 </div>
                             </form>
 
