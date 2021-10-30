@@ -32,7 +32,7 @@ public class ReviewController {
 	public String update(ReviewVO review_update) {
 		System.out.println("연동확인"+review_update);
 		service.insert(review_update, null);
-		return "/review/reviewlist.do";
+		return "redirect:/review/reviewlist.do";
 	}
 	
 	
