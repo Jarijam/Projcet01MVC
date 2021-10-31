@@ -28,7 +28,12 @@ public class ReviewServiceImp implements ReviewService {
 	public List<ReviewVO> getReviewList() {
 		return dao.getReviewList();
 	}
-
+	
+	@Override
+	public List<ReviewFileVO> getFileList() {
+		return dao.getFileList();
+	}
+	
 	@Override
 	public ReviewVO read(String review_no) {
 		return dao.read(review_no);
@@ -69,4 +74,6 @@ public class ReviewServiceImp implements ReviewService {
 	public int update(ReviewVO review_update) {
 		return 0;
 	}
+
+	
 }
