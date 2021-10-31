@@ -100,10 +100,6 @@
         <div class="container my-4">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">추가할 내용(광고 등)</h1>
-                    <p>
-                        추가할 내용들(광고 설명)                  
-                    </p>
                 </div>
                 <div class="col-lg-9 m-auto tempaltemo-carousel">
                     <div class="row d-flex flex-row">
