@@ -123,7 +123,7 @@
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/gookbap8.jpg" alt="Product Image 8">
+                                                <img class="card-img img-fluid" src="/pro01/images/taco.png" alt="Product Image 8">
                                             </a>
                                         </div>
                                         
@@ -181,10 +181,12 @@
                                     </div>
                                     <div class="col d-grid">
                                         <button type="submit" class="btn btn-success btn-lg" id="report"  value="addtocard">신고</button>
-                                    </div> 
-                                    <button type="button" onclick="location.href='/pro01/review/read.do?review_no=${review.review_no}&state=UPDATE'">
-										<i class="fa fa-fw fa-close"></i> 리뷰수정
+                                    </div>
+                                    <div class="col d-grid"> 
+                                    <button type="button" class="btn btn-success btn-lg" onclick="location.href='/pro01/review/read.do?review_no=${review.review_no}&state=UPDATE'">
+										리뷰 수정
 									</button>
+									</div>
                                 </div>
                             </form>
 
