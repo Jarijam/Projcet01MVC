@@ -106,10 +106,10 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
 
-                                <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/${review_file.filename}">
+                                <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/capture.PNG">
                                 <%-- <%= application.getRealPath("/WEB-INF/upload") %> --%>
                                 <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/캡처.png }">
-        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+       				 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <!-- <form action="/pro01/review/select.do"></form> -->
                                     <ul class="list-unstyled">
                                         <!-- <li><a class="btn btn-success text-white" href="review_form.do"><i class="far fa-heart"></i></a></li> -->

@@ -23,7 +23,7 @@
  		</foreach>
  		select * from dual
  	</insert>
- 	<select id="filelist" resultType="review">
+ 	<select id="filelist" resultType="reviewfile">
  		select *  from review_file 
  	</select>
 </mapper>
