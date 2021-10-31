@@ -26,6 +26,17 @@
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick.min.css">
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		$("#like").click(function() {
+				alert("좋아요 버튼 누르셨습니다!");
+			})
+			
+			$("#report").click(function() {
+					alert("신고가 완료되었습니다!");
+			})
+    	});
+    </script>
     
 </head>
 
@@ -162,13 +173,13 @@
                             <h5>리뷰내용:</h5>
                             <p>${review.rev_content }</p>
 							<hr>
-                            <form action="" method="GET">
+                            <form action="#" method="GET">
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">좋아요</button>
+                                        <button type="submit" class="btn btn-success btn-lg" id="like" value="buy">좋아요</button>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">신고</button>
+                                        <button type="submit" class="btn btn-success btn-lg" id="report" value="addtocard">신고</button>
                                     </div> 
                                     <button type="button" onclick="location.href='/pro01/review/read.do?review_no=1&state=UPDATE'">
 										<i class="fa fa-fw fa-close"></i> 리뷰수정
