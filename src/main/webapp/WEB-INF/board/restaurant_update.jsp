@@ -21,8 +21,8 @@
 				<form class="form-horizontal style-form"
 				 action="/pro01/restaurant/update.do" method="post">			 				
 						<div class="form-group">
-							<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 							<div class="col-sm-8">
+							<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 								<input type="text" class="form-control" name="res_name" value="${restaurant.res_name}"> <span
 									class="help-block"></span>
 							</div>
