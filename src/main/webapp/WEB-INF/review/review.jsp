@@ -3,6 +3,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@page import="java.util.ArrayList"%>
+
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -95,13 +96,14 @@
                 </div>
                 <div class="row">
                     <% for(int i=0; i<size; i++) {
-                    	ReviewVO review = reviewlist.get(i);	
+                    	ReviewVO review = reviewlist.get(i);
+                    	
                    	%>
                     
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="/pro01/images/restaurant01.PNG">
+                                <img class="card-img rounded-0 img-fluid" src="../upload/${review_file.filename }">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <!-- <form action="/pro01/review/select.do"></form> -->
                                     <ul class="list-unstyled">

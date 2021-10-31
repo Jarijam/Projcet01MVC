@@ -1,5 +1,7 @@
 package multi.pro01.review;
 
+import java.io.File;
+import java.lang.instrument.ClassFileTransformer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.WebUtils;
@@ -34,7 +37,6 @@ public class ReviewController {
 		service.insert(review_update, null);
 		return "redirect:/review/reviewlist.do";
 	}
-	
 	
 	//게시글 db에 insert
 	@RequestMapping(value="/review/insert.do" ,method=RequestMethod.POST)
@@ -64,11 +66,24 @@ public class ReviewController {
 	}
 	
 	@RequestMapping("/review/reviewlist.do")
+	//public ModelAndView getReviewList(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
 	public ModelAndView getReviewList() {
 		ModelAndView mav = new ModelAndView();
+//		System.out.println("파일이름"+file.getOriginalFilename());
+//		String root_path = request.getSession().getServletContext().getRealPath("/");
+//		String attach_path = "resources/upload/";
+//		String filename = file.getOriginalFilename();
+//		
+//		File f = new File(root_path + attach_path + filename);
+//		try {
+//			file.transferTo(f);
+//		}catch (Exception e) {
+//			System.out.println(e.getMessage());
+//		}
 		List<ReviewVO> reviewlist = service.getReviewList();
 		mav.setViewName("reviewlist");
 		mav.addObject("reviewlist", reviewlist);
+//		mav.addObject("filename", filename);
 		return mav;
 	}
 	

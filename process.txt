@@ -80,15 +80,19 @@ alter table review add constraints userid_fk foreign key (userid) references use
 alter table userinfo add constraints userid_pk primary key (userid);  // userinfo테이블의 userid 컬럼 primary key 설정
 
 
+//식당 테이블 만들기
 create table restaurant(
        res_name varchar2(100),
        res_addr varchar2(200),
        res_type varchar2(40),
        res_num varchar2(20),
        res_menu varchar2(100));
-//식당 테이블 만들기
 
-alter table restaurant add rating varchar2(10); //식당 테이블에 점수 컬럼 추가
+
+
+//식당 테이블에 점수 컬럼 추가
+alter table restaurant add rating varchar2(10); 
+
 
 정원님
 

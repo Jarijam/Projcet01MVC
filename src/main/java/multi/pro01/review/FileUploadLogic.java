@@ -1,6 +1,8 @@
 package multi.pro01.review;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,6 +33,19 @@ public class FileUploadLogic {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		}
+	}
+	
+	FileInputStream fis;
+	public void download(MultipartFile file, String path, String fileName) {
+		try {
+			
+			fis = new FileInputStream(path + File.separator+fileName);
+			fis.read(file.getBytes());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 	
