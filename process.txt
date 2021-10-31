@@ -52,8 +52,8 @@ create table userinfo(
 review 테이블 새로 만들것
 
 create table review(
-	res_name varchar2(20),
-	menu varchar2(10),
+	res_name varchar2(50),
+	menu varchar2(20),
 	rating number,
 	rev_content varchar2(500),
 	rev_date date,

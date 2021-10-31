@@ -30,5 +30,12 @@ public class UserServiceImpl implements UserService {
 	public List<UserVO> getMemberList() {
 		return null;
 	}
+
+	@Override
+	public int update_password(UserVO user) {
+		return dao.update_password(user);
+	}
+	
+	
 	
 }

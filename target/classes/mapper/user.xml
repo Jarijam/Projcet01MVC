@@ -19,4 +19,8 @@
   	<select id="list" parameterType="String" resultType="user">
   		select * from userinfo
   	</select>
+  	
+  	<update id="update_password", parameterType="user">
+  		update userinfo set password = #{password} where userid = #{userid}
+  	</update>
   </mapper>

@@ -112,4 +112,10 @@ public class UserController {
 	public String find_id(String userid, String cellnum, String email) {
 		return "find_id";
 	}
+	
+	@RequestMapping("/user/update.do")
+	public String update_password(UserVO user) {
+		service.update_password(user);
+		return "redirect:/index.do";
+	}
 }

@@ -11,6 +11,7 @@ public class UserVO {
 		
 	}
 
+	//회원 가입
 	public UserVO(String userid, String password, String name, String cellnum, String email) {
 		super();
 		this.userid = userid;
@@ -20,6 +21,7 @@ public class UserVO {
 		this.email = email;
 	}
 	
+	//로그인 및 패스워드 수정
 	public UserVO(String userid, String password) {
 		super();
 		this.userid = userid;

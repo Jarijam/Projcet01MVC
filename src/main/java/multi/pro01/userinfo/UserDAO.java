@@ -7,4 +7,5 @@ public interface UserDAO {
 	boolean idCheck(String id);
 	UserVO login(UserVO loginUser);
 	List<UserVO> getMemberList();
+	int update_password(UserVO user);
 }

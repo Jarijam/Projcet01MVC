@@ -34,6 +34,13 @@ public class UserDAOImpl implements UserDAO {
 	public List<UserVO> getMemberList() {
 		return sqlSession.selectList("project.user.list");
 	}
+	@Override
+	public int update_password(UserVO user) {
+		sqlSession.update("project.user.update_password", user);
+		return 0;
+	}
+	
+	
 	
 	
 }
