@@ -20,7 +20,7 @@
   		select * from userinfo
   	</select>
   	
-  	<update id="update_password", parameterType="user">
+  	<update id="update_password" parameterType="user">
   		update userinfo set password = #{password} where userid = #{userid}
-  	</update>
+	</update>
   </mapper>
