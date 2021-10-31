@@ -26,7 +26,7 @@
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick.min.css">
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
-    <script type="text/javascript">
+<!--     <script type="text/javascript">
     	$(document).ready(function() {
     		$("#like").click(function() {
 				alert("좋아요 버튼 누르셨습니다!");
@@ -37,13 +37,14 @@
 			})
     	});
     </script>
-    
+     -->
 </head>
 
 <body>
 	<%
 		ReviewVO review = (ReviewVO)request.getAttribute("review"); 
 		int rating = review.getRating();
+	
 	%>
 	
     <!-- Open Content -->
@@ -122,7 +123,7 @@
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/gookbap8.jpg" alt="Product Image 8">
+                                                <img class="card-img img-fluid" src="/pro01/images/taco.png" alt="Product Image 8">
                                             </a>
                                         </div>
                                         
@@ -176,14 +177,16 @@
                             <form action="#" method="GET">
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" id="like" value="buy">좋아요</button>
+                                        <button type="submit" class="btn btn-success btn-lg" id="like"  value="buy">좋아요</button>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" id="report" value="addtocard">신고</button>
-                                    </div> 
-                                    <button type="button" onclick="location.href='/pro01/review/read.do?review_no=${review.review_no}&state=UPDATE'">
-										<i class="fa fa-fw fa-close"></i> 리뷰수정
+                                        <button type="submit" class="btn btn-success btn-lg" id="report"  value="addtocard">신고</button>
+                                    </div>
+                                    <div class="col d-grid"> 
+                                    <button type="button" class="btn btn-success btn-lg" onclick="location.href='/pro01/review/read.do?review_no=${review.review_no}&state=UPDATE'">
+										리뷰 수정
 									</button>
+									</div>
                                 </div>
                             </form>
 
