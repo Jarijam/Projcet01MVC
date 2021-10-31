@@ -39,7 +39,7 @@ public class UserController {
 		
 	}
 	
-	@RequestMapping(value="/user/idCheck.do", method=RequestMethod.GET, produces = "application/text;charset=utf-8")
+	@RequestMapping(value="/user/idCheck.do", method=RequestMethod.GET, produces = "application/text;charset=utf-8")	//ajax로 아이디 중복여부 체크
 	public @ResponseBody String idCheck(String id) {
 		boolean state = service.idCheck(id);
 		String result = "";
@@ -55,7 +55,7 @@ public class UserController {
 		return result;
 	}
 	
-	@RequestMapping(value="/user/emailCheck.do", method=RequestMethod.GET, produces = "application/text;charset=utf-8")
+	@RequestMapping(value="/user/emailCheck.do", method=RequestMethod.GET, produces = "application/text;charset=utf-8")	//ajax로 이메일 형식 체크
 	public @ResponseBody String emailCheck(String email) {
 		String email_check = "";
 		boolean check = email.matches("[A-z0-9\\. ]+[@]{1,1}[A-z0-9\\. ]+");
@@ -69,7 +69,7 @@ public class UserController {
 		String cellnum_check = "";
 		boolean check = cellnum.matches("[010]{1,1}");
 		if(!check) {
-			cellnum_check = "적합한 이메일 형식이 아닙니다";
+			cellnum_check = "적합한 핸드폰 번호 형식이 아닙니다";
 		}
 		return cellnum_check;
 	}
@@ -108,13 +108,26 @@ public class UserController {
 		return "redirect:/index.do";
 	}
 	
-	@RequestMapping("/user/find_id.do")
-	public String find_id(String userid, String cellnum, String email) {
-		return "find_id";
-	}
-	
 	@RequestMapping("/user/update.do")
 	public String update() {
 		return "user/update";
+	}
+	
+	@RequestMapping("/user/update_password.do")
+	public String update_password(UserVO user) {
+		service.update_password(user);
+		return "redirect:/index.do";
+	}
+	
+	@RequestMapping("/user/update_cellnum.do")
+	public String update_cellnum(UserVO user) {
+		service.update_cellnum(user);
+		return "redirect:/index.do";
+	}
+	
+	@RequestMapping("/user/update_email.do")
+	public String update_email(UserVO user) {
+		service.update_email(user);
+		return "redirect:/index.do";
 	}
 }

@@ -26,6 +26,8 @@ public class UserVO {
 		super();
 		this.userid = userid;
 		this.password = password;
+		this.cellnum = password;
+		this.email = password;
 	}
 
 	public String getUserid() {

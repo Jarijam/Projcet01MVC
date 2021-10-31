@@ -39,12 +39,7 @@
 								$("#checkCellnum").text(data);
 							}, "text")
 				})
-				/* $("#signup").click(function(){
-					$.get("/pro01/user/idCheck.do",{"id":$("#userid").val()}
-					function(data){
-						alert("잘못된 정보가 존재합니다.");
-					})
-				}) */
+				
 			});
 		</script>
 	</head>
@@ -77,6 +72,7 @@
 							<div>
 								<h4>전화번호</h4>
 								<input type="text" placeholder="'-'제외한 숫자만 입력" name="cellnum" minlength="3" required>
+								<span id="checkCellnum">${cellnum_check}</span>
 							</div>
 							<br/> 
 							<div>

@@ -8,4 +8,6 @@ public interface UserDAO {
 	UserVO login(UserVO loginUser);
 	List<UserVO> getMemberList();
 	int update_password(UserVO user);
+	int update_email(UserVO user);
+	int update_cellnum(UserVO user);
 }

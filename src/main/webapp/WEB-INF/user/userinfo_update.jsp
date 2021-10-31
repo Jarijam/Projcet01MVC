@@ -1,3 +1,4 @@
+<%@page import="multi.pro01.userinfo.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
 							}, "text")
 				})
 				$("#email").on("keyup", function(){
-					$.get("/pro01/user/emailCheck.do", {"email":$("#email").val()},
+					$.get("/pro01/user/emailCheck.do", {"email":$("#password").val()},
 							function(data){
 								$("#checkEmail").text(data);
 							}, "text")
@@ -38,50 +39,74 @@
 							function(data){
 								$("#checkCellnum").text(data);
 							}, "text")
-				})				
+				})
+				$("#submit").click(function() {
+					alert("정보 수정이 완료되었습니다!");
+				})
 			});
 		</script>
 	</head>
 	<body>
+		<%
+			UserVO user = (UserVO) session.getAttribute("loginOKUser");
+		%>
 		<br/>
 		<section class="bg-success py-5">
 			<div class="container">
 				<div class="row align-items-center py-5">
 					<div class="col-md-8 text-white">
-						<form method="post" action="/pro01/user/insert.do" class="form-horizontal">
-							<h2>회원정보 수정하기</h2>
+						<h2>회원정보 조회 및 수정하기</h2>
+						<hr/>
+						<div>
+							<h4>아이디</h4>
 							<hr/>
-							<div>
-								<h4>아이디</h4>
-								<input type="text" placeholder="아이디" id="userid" name="userid" minlength="4" required>
-								<span id="checkId">${result}</span>
-							</div>
-							
-							<br/>
-							<div>	
-								<h4>비밀번호</h4>
-								<input type="password" placeholder="비밀번호" name="password" minlength="5" required>
-							</div>
-							<br/>
-							<div>
-								<h4>이름</h4>
-								<input type="text" placeholder="이름" name="name" minlength="2" required>
-							</div>
-							<br/>
-							<div>
-								<h4>전화번호</h4>
-								<input type="text" placeholder="'-'제외한 숫자만 입력" name="cellnum" minlength="3" required>
-							</div>
-							<br/> 
-							<div>
-								<h4>이메일</h4>
-								<input type="text" placeholder="이메일" id="email" name="email" required>
-								<span id="checkEmail">${email_check}</span>
-								<br/>
-								<br/>
-								<input type="submit" id="signup" value="회원가입">
-							</div>
-						</form>
+							<h5><b><%=user.getUserid()%></b></h5>
+						</div>
+						<br/>
+						<div>	
+							<h4>비밀번호</h4>
+							<hr/>
+							<form method="post" action="/pro01/user/update_password.do" class="form-horizontal">
+								<div style="display: none">
+									<input name="userid" value="<%=user.getUserid()%>">
+								</div>
+								<h5><%=user.getPassword()%>&nbsp;<input type="password" placeholder="바꿀 비밀번호" name="password" minlength="5" required>
+									<input type="submit" id="submit" value="수정하기">
+								</h5>
+							</form>
+						</div>
+						<br/>
+						<div>
+							<h4>이름</h4>
+							<hr/>
+							<h5><%=user.getName()%></h5>
+						</div>
+						<br/>
+						<div>
+							<h4>전화번호</h4>
+							<hr/>
+							<form method="post" action="/pro01/user/update_cellnum.do" class="form-horizontal">
+								<div style="display: none">
+									<input name="userid" value="<%=user.getUserid()%>">
+								</div>
+								<h5><%=user.getCellnum()%>&nbsp;<input type="text" placeholder="'-'제외한 숫자만 입력" name="password" minlength="10" required>
+									<input type="submit" id="submit" value="수정하기">
+								</h5>
+							</form>
+						</div>
+						<br/> 
+						<div>
+							<h4>이메일</h4>
+							<hr/>
+							<form method="post" action="/pro01/user/update_email.do" class="form-horizontal">
+								<div style="display: none">
+									<input name="userid" value="<%=user.getUserid()%>">
+								</div>
+								<h5><%=user.getEmail()%>&nbsp;<input type="text" placeholder="이메일" name="password" minlength="8" required>
+									<span id="checkEmail">${email_check}</span><input type="submit" id="submit" value="수정하기">
+								</h5>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

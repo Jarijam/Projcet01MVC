@@ -35,6 +35,16 @@ public class UserServiceImpl implements UserService {
 	public int update_password(UserVO user) {
 		return dao.update_password(user);
 	}
+
+	@Override
+	public int update_email(UserVO user) {
+		return dao.update_email(user);
+	}
+
+	@Override
+	public int update_cellnum(UserVO user) {
+		return dao.update_cellnum(user);
+	}
 	
 	
 	

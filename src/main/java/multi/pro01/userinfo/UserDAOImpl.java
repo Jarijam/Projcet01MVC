@@ -39,7 +39,16 @@ public class UserDAOImpl implements UserDAO {
 		sqlSession.update("project.user.update_password", user);
 		return 0;
 	}
-	
+	@Override
+	public int update_cellnum(UserVO user) {
+		sqlSession.update("project.user.update_cellnum", user);
+		return 0;
+	}
+	@Override
+	public int update_email(UserVO user) {
+		sqlSession.update("project.user.update_email", user);
+		return 0;
+	}
 	
 	
 	

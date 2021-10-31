@@ -23,4 +23,10 @@
   	<update id="update_password" parameterType="user">
   		update userinfo set password = #{password} where userid = #{userid}
 	</update>
+	<update id="update_cellnum" parameterType="user">
+  		update userinfo set cellnum = #{password} where userid = #{userid}
+	</update>
+	<update id="update_email" parameterType="user">
+  		update userinfo set email = #{password} where userid = #{userid}
+	</update>
   </mapper>
