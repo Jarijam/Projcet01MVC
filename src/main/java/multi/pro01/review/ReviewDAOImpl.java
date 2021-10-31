@@ -26,12 +26,23 @@ public class ReviewDAOImpl implements ReviewDAO {
 	public List<ReviewVO> getReviewList() {
 		return sqlSession.selectList("project.review.list");
 	}
-
+	
+	@Override
+	public List<ReviewFileVO> getFileList() {
+		return sqlSession.selectList("project.review.filelist");
+	}
+	
 	@Override
 	public ReviewVO read(String review_no) {
 		return sqlSession.selectOne("project.review.read", review_no);
 	}
-
+	
+	@Override
+	public ReviewFileVO readFile(String review_no) {
+		return sqlSession.selectOne("project.review.read", review_no);
+		
+	}
+	
 	@Override
 	public int ratingUpdate(String res_name) {
 		int result = sqlSession.update("project.review.ratingUpdate", res_name);
@@ -48,16 +59,14 @@ public class ReviewDAOImpl implements ReviewDAO {
 		return sub;
 	}
 	
-	@Override
-	public ReviewFileVO readFile(String review_no) {
-		return sqlSession.selectOne("project.review.read", review_no);
-		
-	}
+	
 	
 	//review_update
 	@Override
 	public int update(ReviewVO review_update) {
 		return 0;
 	}
+
+	
 	
 }

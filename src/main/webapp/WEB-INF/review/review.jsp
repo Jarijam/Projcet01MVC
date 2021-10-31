@@ -1,4 +1,5 @@
 <%@page import="multi.pro01.review.ReviewVO"%>
+<%@page import="multi.pro01.review.ReviewFileVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
@@ -27,6 +28,7 @@
 	<% ArrayList<ReviewVO> reviewlist = (ArrayList<ReviewVO>)request.getAttribute("reviewlist"); 
 		 int size = reviewlist.size();  
 	%>
+	<% ArrayList<ReviewFileVO> filelist = (ArrayList<ReviewFileVO>)request.getAttribute("filelist"); %>
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
@@ -97,16 +99,17 @@
                 <div class="row">
                     <% for(int i=0; i<size; i++) {
                     	ReviewVO review = reviewlist.get(i);
-                    	
+                    	ReviewFileVO file = filelist.get(i); 
                    	%>
                     
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
+
                                 <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/${review_file.filename}">
-                                <%= application.getRealPath("/WEB-INF/upload") %>
+                                <%-- <%= application.getRealPath("/WEB-INF/upload") %> --%>
                                 <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/캡처.png }">
-                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <!-- <form action="/pro01/review/select.do"></form> -->
                                     <ul class="list-unstyled">
                                         <!-- <li><a class="btn btn-success text-white" href="review_form.do"><i class="far fa-heart"></i></a></li> -->

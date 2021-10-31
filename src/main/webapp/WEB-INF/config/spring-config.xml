@@ -22,6 +22,9 @@
 	<!-- css와 javascript -->
 	<resources mapping="/common/**"
 		location="/WEB-INF/static/common/" />
+	<!-- uplooad 파일들 -->
+	<resources mapping="/upload/**"
+		location="/WEB-INF/static/upload/"/>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
