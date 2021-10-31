@@ -181,7 +181,7 @@
                                     <div class="col d-grid">
                                         <button type="submit" class="btn btn-success btn-lg" id="report" value="addtocard">신고</button>
                                     </div> 
-                                    <button type="button" onclick="location.href='/pro01/review/read.do?review_no=1&state=UPDATE'">
+                                    <button type="button" onclick="location.href='/pro01/review/read.do?review_no=${review.review_no}&state=UPDATE'">
 										<i class="fa fa-fw fa-close"></i> 리뷰수정
 									</button>
                                 </div>

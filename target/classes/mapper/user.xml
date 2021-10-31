@@ -29,4 +29,7 @@
 	<update id="update_email" parameterType="user">
   		update userinfo set email = #{password} where userid = #{userid}
 	</update>
+	<delete id="delete" parameterType="String">
+		delete from userinfo where userid = #{userid}
+	</delete>
   </mapper>
