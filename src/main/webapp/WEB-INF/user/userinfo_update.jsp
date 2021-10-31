@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>회원가입 페이지</title>
+		<title>회원수정 페이지</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -38,13 +38,7 @@
 							function(data){
 								$("#checkCellnum").text(data);
 							}, "text")
-				})
-				/* $("#signup").click(function(){
-					$.get("/pro01/user/idCheck.do",{"id":$("#userid").val()}
-					function(data){
-						alert("잘못된 정보가 존재합니다.");
-					})
-				}) */
+				})				
 			});
 		</script>
 	</head>
@@ -55,7 +49,7 @@
 				<div class="row align-items-center py-5">
 					<div class="col-md-8 text-white">
 						<form method="post" action="/pro01/user/insert.do" class="form-horizontal">
-							<h2>회원가입 하기</h2>
+							<h2>회원정보 수정하기</h2>
 							<hr/>
 							<div>
 								<h4>아이디</h4>
