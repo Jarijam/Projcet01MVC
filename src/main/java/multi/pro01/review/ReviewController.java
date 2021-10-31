@@ -81,9 +81,10 @@ public class ReviewController {
 //			System.out.println(e.getMessage());
 //		}
 		List<ReviewVO> reviewlist = service.getReviewList();
+		List<ReviewFileVO> filelist = service.getFileList();
 		mav.setViewName("reviewlist");
 		mav.addObject("reviewlist", reviewlist);
-//		mav.addObject("filename", filename);
+		mav.addObject("filelist", filelist);
 		return mav;
 	}
 	
