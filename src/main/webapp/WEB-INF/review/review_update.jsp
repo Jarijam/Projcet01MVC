@@ -52,14 +52,19 @@
 				</div>
 				<div class="col-lg-2 text-center">
 					<button type="submit" class="btn btn-success"
-							style="width: 100px; background-color: #0ea006">등록
+							style="width: 100px; background-color: #0ea006">수정
 					</button>
 				</div>
 				<div class="col-lg-2 text-center">
 					<button type="reset" class="btn btn-default"
 							style="width: 100px; background-color: #9a9a9a">취소
 					</button>
-				</div>			
+				</div>	
+				<div class="col-lg-2 text-center">
+					<button type="submit" class="btn btn-success"
+							style="width: 100px; background-color: #0ea006">삭제
+					</button>
+				</div>		
 			</div>					
 			</form>
 	</body>

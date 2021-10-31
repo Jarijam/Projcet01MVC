@@ -104,7 +104,7 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <%= application.getRealPath("/WEB-INF/upload") %>
-                                <%= application.get %>
+                                
                                 <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/캡처.png }">
                                 
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
