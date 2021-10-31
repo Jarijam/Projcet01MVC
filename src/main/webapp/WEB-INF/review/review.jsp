@@ -106,9 +106,8 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
 
-                                <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/capture.PNG">
+                                <img class="card-img rounded-0 img-fluid" src="/pro01/upload/capture.PNG">
                                 <%-- <%= application.getRealPath("/WEB-INF/upload") %> --%>
-                                <img class="card-img rounded-0 img-fluid" src="/WEB-INF/upload/캡처.png }">
        				 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <!-- <form action="/pro01/review/select.do"></form> -->
                                     <ul class="list-unstyled">
