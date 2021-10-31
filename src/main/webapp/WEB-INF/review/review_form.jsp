@@ -26,6 +26,17 @@
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick.min.css">
     <link rel="stylesheet" type="text/css" href="/pro01/common/css/slick-theme.css">
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		$("#like").click(function() {
+				alert("좋아요 버튼 누르셨습니다!");
+			})
+			
+			$("#report").click(function() {
+					alert("신고가 완료되었습니다!");
+			})
+    	});
+    </script>
     
 </head>
 
@@ -41,7 +52,7 @@
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="/pro01/images/product_single_10.jpg" alt="Card image cap" id="product-detail">
+                        <img class="card-img img-fluid" src="/pro01/images/gookbap1.png" alt="Card image cap" id="product-detail">
                     </div>
                     <div class="row">
                         <!--Start Controls-->
@@ -62,17 +73,17 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_01.jpg" alt="Product Image 1">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap1.png" alt="Product Image 1">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_02.jpg" alt="Product Image 2">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap2.jpg" alt="Product Image 2">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_03.jpg" alt="Product Image 3">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap3.png" alt="Product Image 3">
                                             </a>
                                         </div>
                                     </div>
@@ -84,17 +95,17 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_04.jpg" alt="Product Image 4">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap4.png" alt="Product Image 4">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_05.jpg" alt="Product Image 5">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap5.jpg" alt="Product Image 5">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_06.jpg" alt="Product Image 6">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap6.jpg" alt="Product Image 6">
                                             </a>
                                         </div>
                                     </div>
@@ -106,19 +117,15 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_07.jpg" alt="Product Image 7">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap7.jpg" alt="Product Image 7">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_08.jpg" alt="Product Image 8">
+                                                <img class="card-img img-fluid" src="/pro01/images/gookbap8.jpg" alt="Product Image 8">
                                             </a>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#">
-                                                <img class="card-img img-fluid" src="/pro01/images/product_single_09.jpg" alt="Product Image 9">
-                                            </a>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <!--/.Third slide-->
@@ -141,11 +148,18 @@
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2" id="">${review.res_name }</h1>
-                            <p class="h3 py-2" id="">${restaurant.res_addr}</p>                             	                         
-                            <p class="h3 py-2" id="">${restaurant.res_num}</p>
+                            <h2 class="h2" id="">${review.res_name }</h2>
+                           <%--  <p class="h3 py-2" id="">${restaurant.res_addr}</p>                             	                         
+                            <p class="h3 py-2" id="">${restaurant.res_num}</p> --%>
                             <p class="h4 py-2" id="">${review.menu}</p>
-                            <p class="h4 py-2" id=""><a href="#"> 홈페이지로 이동</a></p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h5>작성자 id:</h5>
+                                <li class="list-inline-item">
+                                    <p class="text-muted"><strong>${review.userid}</strong></p>
+                                </li>
+                            </ul>
+                                </li>
                             <p class="py-2">
                                         <%for (int j =1;j<=rating;j++) {%>
                                         <i class="text-warning fa fa-star"></i>
@@ -155,27 +169,19 @@
                                         <%} %>
                                 <span class="list-inline-item text-dark">별점 ${review.rating }</span>
                             </p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <h5>작성자 id:</h5>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p class="text-muted"><strong>${review.userid}</strong></p>
-                                </li>
-                            </ul>
 
                             <h5>리뷰내용:</h5>
                             <p>${review.rev_content }</p>
 							<hr>
-                            <form action="" method="GET">
+                            <form action="#" method="GET">
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">좋아요</button>
+                                        <button type="submit" class="btn btn-success btn-lg" id="like" value="buy">좋아요</button>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">신고</button>
+                                        <button type="submit" class="btn btn-success btn-lg" id="report" value="addtocard">신고</button>
                                     </div> 
-                                    <button type="button" onclick="location.href='/pro01/review/read.do?review_no=1&state=UPDATE'">
+                                    <button type="button" onclick="location.href='/pro01/review/read.do?review_no=${review.review_no}&state=UPDATE'">
 										<i class="fa fa-fw fa-close"></i> 리뷰수정
 									</button>
                                 </div>
@@ -190,477 +196,7 @@
     <!-- Close Content -->
 
     <!-- Start Article -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row text-left p-2 pb-3">
-                <h4>Related Products</h4>
-            </div>
-
-            <!--Start Carousel Wrapper-->
-            <div id="carousel-related-product">
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_08.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Red Clothing</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$20.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_09.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">White Shirt</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$25.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_10.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$45.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_11.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Black Fashion</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$60.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_08.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li class="">M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$80.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_09.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$110.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_10.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$125.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_11.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$160.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_08.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$180.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_09.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$220.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_10.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$250.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="/pro01/images/shop_11.jpg">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="review_form.jsp"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="review_form.jsp"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <a href="review_form.jsp" class="h3 text-decoration-none">Oupidatat non</a>
-                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>M/L/X/XL</li>
-                                <li class="pt-2">
-                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                </li>
-                            </ul>
-                            <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                            </ul>
-                            <p class="text-center mb-0">$300.00</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-    </section>
-    <!-- End Article -->
+    
 
 
     

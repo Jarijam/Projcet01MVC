@@ -45,6 +45,11 @@ public class UserServiceImpl implements UserService {
 	public int update_cellnum(UserVO user) {
 		return dao.update_cellnum(user);
 	}
+
+	@Override
+	public int delete(String userid) {
+		return dao.delete(userid);
+	}
 	
 	
 	

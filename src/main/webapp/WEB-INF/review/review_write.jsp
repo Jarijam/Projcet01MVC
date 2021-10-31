@@ -80,11 +80,7 @@
 	<div class="container-fluid bg-light py-5">
 		<div class="col-md-6 m-auto text-center">
 			<h1 class="h1">리뷰 작성을 해보아요</h1>
-			<p>1. 먼저 식당을 검색해서 선택해주시고 현재 위치를 확인해주세요.</p>
-			<p>2. 위치 저장이 가능해지면 위치 저장 버튼을 활성화 시키고 위치 저장 버튼이 눌리면 타이머 on (sample
-				예제 참고)</p>
-			<p>3. 타이머가 끝나기 전까지 리뷰 작성 버튼 활성화</p>
-			<p>4. 리뷰 작성 버튼을 누르면 선택한 식당 정보를 넘기고 리뷰 작성 페이지로 이동.</p>
+			
 		</div>
 	</div>
 
@@ -401,53 +397,7 @@
 									id="files" placeholder="사진선택">
 							</div>
 						</div>
-						<!-- <div class="form-group">
-							<div class="col-md-2 text-right">
-								<label for="title" class="control-label">파일2</label>
-							</div>
-							<div class="col-md-8">
-								<input type="file" class="form-control input-lg" name="files"
-									id="title" placeholder="파일선택">
-							</div>
-						</div>
-						<div class="form-group">
-				 			<div class="col-md-2 text-right">
-								<label for="files" class="control-label">파일3</label>
-							</div>
-							<div class="col-md-8">
-								<input type="file" class="form-control input-lg" name="files"
-									id="files" placeholder="파일선택">
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-md-2 text-right">
-								<label for="files" class="control-label">파일4</label>
-							</div>
-							<div class="col-md-8">
-								<input type="file" class="form-control input-lg" name="files"
-									id="files" placeholder="파일선택">
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-md-2 text-right">
-								<label for="title" class="control-label">파일5</label>
-							</div>
-							<div class="col-md-8">
-								<input type="file" class="form-control input-lg" name="files"
-									id="title" placeholder="파일선택">
-							</div>
-						</div> -->
-						<!-- <div class="form-group">
-							<div class="col-md-10 text-center">
-								<input type="submit" class="btn btn-lg btn-primary" value="글쓰기">
-
-								<button type="button" class="btn btn-danger btn-lg"
-									onclick="javascript:cancelCheck()">
-									<i class="fa fa-fw fa-close"></i> 취소
-								</button>
-							</div>
-						</div> -->
-					<!-- </form> -->
+						
 				
 				
 				<div class="mb-3">

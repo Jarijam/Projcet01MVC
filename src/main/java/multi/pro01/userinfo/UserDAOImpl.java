@@ -49,6 +49,11 @@ public class UserDAOImpl implements UserDAO {
 		sqlSession.update("project.user.update_email", user);
 		return 0;
 	}
+	@Override
+	public int delete(String userid) {
+		sqlSession.delete("project.user.delete", userid);
+		return 0;
+	}
 	
 	
 	

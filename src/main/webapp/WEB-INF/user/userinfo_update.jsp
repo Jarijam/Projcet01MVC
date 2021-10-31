@@ -106,6 +106,14 @@
 									<span id="checkEmail">${email_check}</span><input type="submit" id="submit" value="수정하기">
 								</h5>
 							</form>
+							<br/>
+							<br/>
+							<form method="post" action="/pro01/user/delete.do" class="form-horizontal">
+								<div style="display: none">
+									<input name="userid" value="<%=user.getUserid()%>">
+								</div>
+								<input type="submit" id="delete" value="회원탈퇴하기">
+							</form>
 						</div>
 					</div>
 				</div>

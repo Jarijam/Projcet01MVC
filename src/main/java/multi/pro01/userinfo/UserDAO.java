@@ -10,4 +10,5 @@ public interface UserDAO {
 	int update_password(UserVO user);
 	int update_email(UserVO user);
 	int update_cellnum(UserVO user);
+	int delete(String userid);
 }

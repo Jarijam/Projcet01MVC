@@ -59,6 +59,7 @@ public class ReviewController {
 		//service.fileinsert(review, filelist);
 		service.insert(review,filelist);
 		service.ratingUpdate(review.getRes_name());
+		System.out.println("리다이렉트 버튼 ㄱ");
 		return "redirect:/review/reviewlist.do";
 	}
 	
@@ -78,10 +79,10 @@ public class ReviewController {
 //			System.out.println(e.getMessage());
 //		}
 		List<ReviewVO> reviewlist = service.getReviewList();
-		List<ReviewFileVO> filelist = service.getFileList();
+		//List<ReviewFileVO> filelist = service.getFileList();
 		mav.setViewName("reviewlist");
 		mav.addObject("reviewlist", reviewlist);
-		mav.addObject("filelist", filelist);
+		//mav.addObject("filelist", filelist);
 		return mav;
 	}
 	

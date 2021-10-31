@@ -130,4 +130,13 @@ public class UserController {
 		service.update_email(user);
 		return "redirect:/index.do";
 	}
+	
+	@RequestMapping("/user/delete.do")
+	public String delete(String userid, HttpSession ses) throws Exception{
+		service.delete(userid);
+		if(ses != null) {
+			ses.invalidate();
+		}
+		return "redirect:/index.do";
+	}
 }
