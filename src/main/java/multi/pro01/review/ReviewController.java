@@ -99,6 +99,7 @@ public class ReviewController {
 			viewName="review/update";
 		}
 		mav.setViewName(viewName);
+		System.out.println(review);
 		mav.addObject("review", review);
 		return mav;		
 	}

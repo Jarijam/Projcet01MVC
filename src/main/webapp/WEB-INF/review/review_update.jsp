@@ -1,3 +1,4 @@
+<%@page import="multi.pro01.review.ReviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,13 +8,15 @@
 			<title>리뷰수정</title>
 		</head>
 	<body>
+		<%
+			ReviewVO review = (ReviewVO)request.getAttribute("review"); 
+		%>
 		<h3>리뷰수정</h3>
 		<form action="#" method="post">
 			<div class="form-group">			
 				<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="res_name" value="${review.res_name}">
-							<span class="help-block"></span>
+						<%= review.getRes_name() %>
 					</div>
 			</div>
 			<div class="form-group">
@@ -26,7 +29,7 @@
 			<div class="form-group">
 				<label class="col-sm-2 col-sm-2 control-label">별점</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="res_type">
+						<input type="text" class="form-control" name="res_type" value="${review.rating}">
 							<span class="help-block"></span>
 					</div>
 			</div>	
@@ -42,7 +45,7 @@
 					<div class="col-sm-8">
 						<textarea id="content"
 							style="width: 100%; border: 1; overflow: visible; text-overflow: ellipsis;"
-							rows=15 name="rev_content">${review.res_content }</textarea>
+							rows=15 name="rev_content">${review.rev_content }</textarea>
 
 							</div>		
 			</div>
