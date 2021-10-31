@@ -76,13 +76,13 @@
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#"></a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Men's</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#"></a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="#">Women's</a>
+                                <a class="h3 text-dark text-decoration-none" href="#"></a>
                             </li>
                         </ul>
                     </div>
@@ -106,9 +106,7 @@
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="/pro01/upload/capture.PNG">
-                                <img class="card-img rounded-0 img-fluid" src="/pro01/upload/capture.PNG">
        				 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                    <!-- <form action="/pro01/review/select.do"></form> -->
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white mt-2" href="/pro01/review/read.do?review_no=<%= review.getReview_no() %>&state=READ"><i class="far fa-eye"></i></a></li>
                                     </ul>
