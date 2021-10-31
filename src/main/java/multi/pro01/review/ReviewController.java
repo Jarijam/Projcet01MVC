@@ -62,6 +62,7 @@ public class ReviewController {
 		//service.fileinsert(review, filelist);
 		service.insert(review,filelist);
 		service.ratingUpdate(review.getRes_name());
+		System.out.println("리다이렉트 버튼 ㄱ");
 		return "redirect:/review/reviewlist.do";
 	}
 	
