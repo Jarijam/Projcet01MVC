@@ -35,6 +35,10 @@
 		<put-attribute name="content" value="/WEB-INF/user/signup.jsp"/>
 	</definition>
 	
+	<definition name="user/update" extends="indexTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/userinfo_update.jsp"/>
+	</definition>
+	
 	<definition name="restaurant" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/board/restaurantlist.jsp"/>
 	</definition>

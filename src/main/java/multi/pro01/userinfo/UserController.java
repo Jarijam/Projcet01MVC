@@ -114,8 +114,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/user/update.do")
-	public String update_password(UserVO user) {
-		service.update_password(user);
-		return "redirect:/index.do";
+	public String update() {
+		return "user/update";
 	}
 }
