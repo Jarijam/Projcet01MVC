@@ -67,6 +67,12 @@ public class ReviewDAOImpl implements ReviewDAO {
 		return 0;
 	}
 
+	@Override
+	public ReviewFileVO getFile(String review_no) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("project.review.filelist_read", review_no);
+	}
+
 	
 	
 }

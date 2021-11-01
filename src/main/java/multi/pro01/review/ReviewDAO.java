@@ -9,6 +9,7 @@ public interface ReviewDAO {
 	
 	List<ReviewVO> getReviewList();
 	List<ReviewFileVO> getFileList();
+	ReviewFileVO getFile(String review_no);
 	ReviewVO read(String review_no);
 	
 	int ratingUpdate(String res_name);

@@ -12,6 +12,18 @@ public class ReviewVO {
 	String review_no;
 	String userid;
 	MultipartFile[] files;
+	String reviewImg;
+	public String getReviewImg() {
+		return reviewImg;
+	}
+
+
+
+	public void setReviewImg(String reviewImg) {
+		this.reviewImg = reviewImg;
+	}
+
+
 
 	public ReviewVO() {
 	}

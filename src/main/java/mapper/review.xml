@@ -26,4 +26,7 @@
  	<select id="filelist" resultType="reviewfile">
  		select *  from review_file 
  	</select>
+ 	<select id="filelist_read" resultType="reviewfile" parameterType="String">
+ 		select *  from review_file where review_no=#{review_no}
+ 	</select>
 </mapper>
