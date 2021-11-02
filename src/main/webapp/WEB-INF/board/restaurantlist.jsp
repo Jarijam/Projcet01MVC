@@ -22,35 +22,11 @@
 <body>
 	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");		
 		int size = restaurantList.size();
-	%>
-		<!-- <form action="#">
-		<select name="tag">
-			<option value="id">작성자</option>
-			<option value="title">제목</option>
-			<option value="content">본문</option>
-			<option value="write_date">작성일</option>
-		</select> <input type="text" name="search" /> <input type="submit" value="검색"> -->
+	%>		
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="/pro01/restaurant/insertPage.do" style="text-align: right;">글쓰기</a></li>
 		</ul>
-	<!-- <form  action="/pro01/restaurant/search.do">
-	<section class="bg-success py-5">
-		<div class="container">
-			<div class="row align-items-center py-5">
-				<div class="col-md-8 text-white">
-					<h1>식당</h1>
-				</div>
-				<div>
-					<div class="">키워드로 검색하세요</div>
-					<input type="text" name="restaurant" size="50">
-				</div>
-				<div>
-					<input type="submit" value="검색">
-				</div>
-			</div>
-		</div> 
-		</section>
-		</form>  -->
+
 		<h3>맛집 목록</h3>
 	<div style="padding-top: 30px">
 		<div class="col-md-3" style="padding-bottom: 10px">
