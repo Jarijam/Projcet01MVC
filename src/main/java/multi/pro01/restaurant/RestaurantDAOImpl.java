@@ -10,14 +10,6 @@ import org.springframework.stereotype.Repository;
 public class RestaurantDAOImpl implements RestaurantDAO {
 	@Autowired
 	SqlSession sqlSession;
-				
-	@Override
-	public List<RestaurantVO> searchList(String restaurant) {
-		System.out.println("service에서넘어오는지 확인"+restaurant);		
-		List<RestaurantVO> list = sqlSession.selectList("pro01.restaurant.restaurant_list", restaurant);
-		System.out.println("db연동체크"+list);
-		return list;
-	}
 
 	@Override
 	public int insert(RestaurantVO user) {
@@ -29,6 +21,11 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 	@Override
 	public List<RestaurantVO> restaurantlist() {
 		return sqlSession.selectList("pro01.restaurant.list");
+	}
+
+	@Override
+	public List<RestaurantVO> categorySearch(String category) {
+		return sqlSession.selectList(category);
 	}
 
 	@Override
