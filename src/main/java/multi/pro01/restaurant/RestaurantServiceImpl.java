@@ -10,12 +10,6 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	@Autowired
 	RestaurantDAO dao;
 		
-	@Override
-	public List<RestaurantVO> searchList(String restaurant) {	
-		System.out.println("serviceimpl확인"+restaurant);
-		List<RestaurantVO> list = dao.searchList(restaurant);
-		return dao.searchList(restaurant); 
-	}
 
 	@Override
 	public int insert(RestaurantVO user) {
@@ -24,8 +18,14 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	}
 
 	@Override
-	public List<RestaurantVO> restaurantlist() {
-		return dao.restaurantlist();
+	public List<RestaurantVO> restaurantlist(String category) {
+		List<RestaurantVO> restaurantlist = null;
+		if(category.equals("all")) {
+			restaurantlist = dao.restaurantlist();
+		}else {
+			restaurantlist = dao.categorySearch(category);
+		}
+		return restaurantlist;		
 	}
 
 	@Override

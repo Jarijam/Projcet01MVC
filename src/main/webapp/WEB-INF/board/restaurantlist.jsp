@@ -5,22 +5,20 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html>
 <html lang="en">
-<script type="text/javascript">
-	category = "${category}";
-	//alert(category);
-	//category설정하기
-	$(document).ready(function(){
-		$("#category").val(category).attr("selected", "selected")
-		//<select>에서 선택이 바뀔때마다 change 이벤트발생 -> change이벤트가 발생하면 /board/list/do를 호출하면서
-		//category파라미터를 넘김
-		$("#category").change(function(){
-			location.href="/pro01/restaurant/restaurantlist.do?category="+encodeURI($(this).val())
-		});
-	});
-</script>
-<head>
-<title>식당검색 페이지</title>
-</head>
+	<head>
+		<title>식당검색 페이지</title>
+		<script type="text/javascript">
+			category = "${category}";
+			$(document).ready(function(){
+				$("#category").val(category).attr("selected", "selected")
+				//<select>에서 선택이 바뀔때마다 change 이벤트발생 -> change이벤트가 발생하면 /board/list/do를 호출하면서
+				//category파라미터를 넘김
+				$("#category").change(function(){
+					location.href="/pro01/restaurant/restaurantlist.do?category="+encodeURI($(this).val())
+				});
+			});
+		</script>
+	</head>
 <body>
 	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");		
 		int size = restaurantList.size();
@@ -53,7 +51,7 @@
 		</div> 
 		</section>
 		</form>  -->
-			<h3>맛집 목록</h3>
+		<h3>맛집 목록</h3>
 	<div style="padding-top: 30px">
 		<div class="col-md-3" style="padding-bottom: 10px">
 		    구분:
