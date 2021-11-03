@@ -14,7 +14,7 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 	@Override
 	public int insert(RestaurantVO user) {
 		System.out.println("restaurant테이블에 insert"+user);
-		int result = sqlSession.insert("pro01.restaurant.restaurant_insert", user);
+		int result = sqlSession.insert("pro01.restaurant.insert", user);
 		return result;
 	}
 

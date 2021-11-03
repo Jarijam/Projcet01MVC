@@ -21,7 +21,14 @@ public class RestaurantVO {
 		this.res_menu = res_menu;
 		this.rating = rating;
 	}
-
+	public RestaurantVO(String res_name, String res_addr, String res_type, String res_num, String res_menu) {
+		super();
+		this.res_name = res_name;
+		this.res_addr = res_addr;
+		this.res_type = res_type;
+		this.res_num = res_num;
+		this.res_menu = res_menu;
+	}
 	
 	public String getRating() {
 		return rating;

@@ -27,7 +27,7 @@ public class RestaurantController {
 		String url ="";
 		int result = service.insert(command);
 		if(result>=1) {
-			url = "redirect:/restaurant/restaurantlist.do?category=all";
+			url = "redirect:/restaurant/restaurantlist.do?res_type=all";
 		}else {
 			url = "redirect:/restaurant/insertPage.do";
 		}

@@ -6,11 +6,7 @@
 <mapper namespace="pro01.restaurant">
 	<select id="restaurant_list" resultType="restaurant" parameterType="String">
   		select * from restaurant where restaurant_name = #{restaurant}
-  	</select>
-	<insert id="restaurant_insert" parameterType="restaurant">
-		insert into restaurant values(#{restaurant_no},#{restaurant_name},#{restaurant_addr})
-	</insert>	
-	
+  	</select>	
 	<select id="list" resultType="restaurant">
   		select * from restaurant
   	</select>
@@ -23,9 +19,9 @@
   	<select id="read" resultType="restaurant" parameterType="String">
   		select * from restaurant where res_name=#{res_name}
   	</select>	
-   	<!-- <delete id="delete" parameterType="String">
-  		delete from restaurant where restaurant_no=#{restaurant_no}
-  	</delete> -->
+   	<insert id="insert" parameterType="restaurant">
+   		insert into restaurant values (#{res_name}, #{res_addr}, #{res_type}, #{res_num}, #{res_menu}, null)
+   	</insert>
   	<update id="update" parameterType="String">
   		update restaurant set res_name=#{res_name},res_addr=#{res_addr},res_type=#{res_type},res_menu=#{res_menu} where res_name=#{res_name}		
   	</update>
