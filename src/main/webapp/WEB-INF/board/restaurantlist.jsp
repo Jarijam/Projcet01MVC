@@ -61,7 +61,7 @@
 					RestaurantVO res = restaurantList.get(i); /* 84줄 ? 뒷 부분(restaurant_no는 컨트롤러 read.do의 String 값) */
 					%>			
 					<tr>
-						<td><a href="/pro01/restaurant/read.do?restaurant=<%= res.getRes_name()%>&state=READ"><%= res.getRes_name() %></a></td>															
+						<td><a href="/pro01/restaurant/read.do?restaurant_read=<%= res.getRes_name()%>&state=READ"><%= res.getRes_name() %></a></td>															
 						<td><%= res.getRes_addr() %></td>	
 						<td><%= res.getRes_type() %></td>					
 						<td><%= res.getRes_num() %></td>

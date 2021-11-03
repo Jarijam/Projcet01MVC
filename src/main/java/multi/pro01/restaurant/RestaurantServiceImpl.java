@@ -40,8 +40,8 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	}
 
 	@Override
-	public RestaurantVO read(String restaurant) {
-		return dao.read(restaurant);
+	public RestaurantVO read(String restaurant_read) {
+		return dao.read(restaurant_read);
 	}
 
 	@Override

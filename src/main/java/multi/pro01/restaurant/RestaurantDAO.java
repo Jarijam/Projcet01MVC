@@ -6,8 +6,10 @@ public interface RestaurantDAO {
 	int update(RestaurantVO user);
 	int insert(RestaurantVO user);
 	int delete(RestaurantVO user);
-	RestaurantVO read(String restaurant);
+	RestaurantVO read(String restaurant_read);
 	List<RestaurantVO> restaurantlist();
 	List<RestaurantVO> categorySearch(String res_type);
 	List<String> getCategory();
+	
+	
 }

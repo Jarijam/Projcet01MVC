@@ -88,6 +88,11 @@ create table restaurant(
        res_num varchar2(20),
        res_menu varchar2(100));
 
+create sequence restaurant_seq
+increment by 1
+start with 1
+minvalue 1
+maxvalue 10000;
 
 
 //식당 테이블에 점수 컬럼 추가

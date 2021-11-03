@@ -44,6 +44,12 @@
 			</div>		
 			<div class="col-md-8">${restaurant.res_menu}</div>								
 		</div>
+		<div class="form-group">
+			<div class="col-md-2 text-right">
+				<label for="res_menu" class="control-label">평점</label>
+			</div>		
+			<div class="col-md-8">${restaurant.rating}</div>								
+		</div>
 		
 		 <div class="form-group">
 			<div class="col-md-10 text-center">
