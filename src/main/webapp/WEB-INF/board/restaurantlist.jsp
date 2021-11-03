@@ -20,8 +20,10 @@
 		</script>
 	</head>
 	<body>
-	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");		
+	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");
+		ArrayList<String> category_list = (ArrayList<String>) request.getAttribute("category_list");
 		int size = restaurantList.size();
+		int sort = category_list.size();
 	%>		
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="/pro01/restaurant/insertPage.do" style="text-align: right;">글쓰기</a></li>
@@ -34,9 +36,11 @@
 			<form>
 				<select name="res_type"  id="res_type">
 					<option value="all">전체게시물</option>
-					<option value="한식">한식</option>
-					<option value="중식">중식</option>	
-					<option value="일식">일식</option>				
+					<% for(int i=0; i<sort; i++){
+						String category = category_list.get(i);
+					%>
+					<option value="<%= category%>"><%= category%></option>
+					<% } %>				
 				</select>
 			</form>
 		</div>
@@ -48,19 +52,26 @@
 					<th>음식종류</th>	
 					<th>식당번호</th>	
 					<th>식당주메뉴</th>
+					<th>평점</th>
 				</tr>
 			</thead>
 			<tbody>
 				 	<% for(int i=0;i<size;i++){
-					RestaurantVO user = restaurantList.get(i); /* 84줄 ? 뒷 부분(restaurant_no는 컨트롤러 read.do의 String 값) */
+					RestaurantVO res = restaurantList.get(i); /* 84줄 ? 뒷 부분(restaurant_no는 컨트롤러 read.do의 String 값) */
 					%>			
 					<tr>
-						<td><a href="/pro01/restaurant/read.do?restaurant=<%= user.getRes_name()%>&state=READ"><%= user.getRes_name() %></a></td>
-						<%-- <td><%= user.getRes_name() %></td>	 --%>										
-						<td><%= user.getRes_addr() %></td>	
-						<td><%= user.getRes_type() %></td>					
-						<td><%= user.getRes_num() %></td>
-						<td><%= user.getRes_menu() %></td>
+						<td><a href="/pro01/restaurant/read.do?restaurant=<%= res.getRes_name()%>&state=READ"><%= res.getRes_name() %></a></td>										
+						<td><%= res.getRes_addr() %></td>	
+						<td><%= res.getRes_type() %></td>					
+						<td><%= res.getRes_num() %></td>
+						<td><%= res.getRes_menu() %></td>
+						<td>
+							<% if(res.getRating() == null){ %>
+								평점 없음
+							<%} else{  %>
+								<%=res.getRating() %>
+							<%} %>
+						</td>
 					</tr>
 					<% } %>
 			</tbody>

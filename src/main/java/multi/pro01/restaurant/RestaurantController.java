@@ -54,8 +54,11 @@ public class RestaurantController {
 	public ModelAndView restaurantlist(String res_type) {
 		ModelAndView mav = new ModelAndView();
 		List<RestaurantVO> restaurant_list = service.restaurantlist(res_type);
+		List<String> category = service.getCategory();
+		System.out.println(category);
 		mav.setViewName("restaurant/list");
 		mav.addObject("restaurant_list",restaurant_list);
+		mav.addObject("category_list", category);
 		return mav;
 	}
 }

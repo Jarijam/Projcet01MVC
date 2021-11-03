@@ -9,4 +9,5 @@ public interface RestaurantDAO {
 	RestaurantVO read(String restaurant);
 	List<RestaurantVO> restaurantlist();
 	List<RestaurantVO> categorySearch(String res_type);
+	List<String> getCategory();
 }

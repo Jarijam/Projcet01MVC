@@ -27,6 +27,11 @@ public class RestaurantServiceImpl implements RestaurantService  {
 		}
 		return restaurantlist;		
 	}
+	
+	@Override
+	public List<String> getCategory() {
+		return dao.getCategory();
+	}
 
 	@Override
 	public int update(RestaurantVO user) {

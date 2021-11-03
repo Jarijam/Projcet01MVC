@@ -7,5 +7,6 @@ public interface RestaurantService {
 	int update(RestaurantVO user);
 	int insert(RestaurantVO user);		
 	List<RestaurantVO> restaurantlist(String res_type);
+	List<String> getCategory();
 	RestaurantVO read(String restaurant);
 }

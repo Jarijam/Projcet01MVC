@@ -6,29 +6,31 @@ public class RestaurantVO {
 	private String res_type;
 	private String res_num;
 	private String res_menu;
-	String category;
+	private String rating;
 	
 	public RestaurantVO() {
 		
 	}
 
-	public RestaurantVO(String res_name, String res_addr, String res_type, String res_num, String res_menu) {
+	public RestaurantVO(String res_name, String res_addr, String res_type, String res_num, String res_menu, String rating) {
 		super();
 		this.res_name = res_name;
 		this.res_addr = res_addr;
 		this.res_type = res_type;
 		this.res_num = res_num;
 		this.res_menu = res_menu;
+		this.rating = rating;
 	}
 
-	public String getCategory() {
-		return category;
+	
+	public String getRating() {
+		return rating;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setRating(String rating) {
+		this.rating = rating;
 	}
-		
+
 	public String getRes_menu() {
 		return res_menu;
 	}
@@ -72,7 +74,7 @@ public class RestaurantVO {
 	@Override
 	public String toString() {
 		return "RestaurantVO [res_name=" + res_name + ", res_addr=" + res_addr + ", res_type=" + res_type + ", res_num="
-				+ res_num + ", res_menu=" + res_menu + ", category=" + category + "]";
+				+ res_num + ", res_menu=" + res_menu + ", rating=" + rating + "]";
 	}
 
 	

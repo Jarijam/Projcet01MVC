@@ -28,6 +28,12 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 		return sqlSession.selectList("pro01.restaurant.categorySearch", res_type);
 	}
 
+	
+	@Override
+	public List<String> getCategory() {
+		return sqlSession.selectList("pro01.restaurant.getCategory");
+	}
+
 	@Override
 	public int update(RestaurantVO user) {
 		return 0;
