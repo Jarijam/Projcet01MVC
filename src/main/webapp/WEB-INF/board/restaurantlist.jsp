@@ -24,7 +24,7 @@
 		ArrayList<String> category_list = (ArrayList<String>) request.getAttribute("category_list");
 		int size = restaurantList.size();
 		int sort = category_list.size();
-	%>		
+	%>	<!-- 최신화시키기 -->	
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="/pro01/restaurant/insertPage.do" style="text-align: right;">글쓰기</a></li>
 		</ul>
