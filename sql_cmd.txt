@@ -1,0 +1,68 @@
+//review, review_file table
+
+ drop table review;
+
+ create table review(
+	res_name varchar2(50),
+	menu varchar2(30),
+	rating number,
+	rev_content varchar2(500),
+	rev_date date,
+	review_no number,
+	userid varchar2(30)
+	);
+
+ ***userinfo테이블에 PK설정 확인후 추가 설정해주기
+ alter table review add constraints userid_fk foreign key 
+ (userid) references userinfo (userid);
+ 
+ drop table review_file
+
+ create table review_file (
+	review_no number,
+	file_name varchar2(50));
+	
+ create sequence review_no
+    increment by 1
+    start with 1
+    nominvalue
+    nomaxvalue;
+    
+ select review_no.nextval from dual;
+ 
+ ***sequence생성 후 꼭 nexval실행 해줘야 이후 currval입력시(스프링에서) 수행 가능
+ 
+ 
+ 
+//restaurant table
+
+ drop table restaurant;
+
+ create table restaurant(
+ 	 res_name varchar2(100),
+     res_addr varchar2(200),
+     res_type varchar2(40),
+     res_num varchar2(20),
+     res_menu varchar2(100));
+    
+ create sequence restaurant_no
+ 	increment by 1
+ 	start with 1
+ 	nominvalue
+ 	nomaxvalue;
+ 	
+ ***식당 데이터 모두 입력 후 rating 컬럼 추가해주기	
+ alter table restaurant add rating varchar2(15);
+ 	
+ 
+//userinfo table
+
+ drop table userinfo;
+ 
+ create table userinfo(
+	userid varchar2(10) primary key,
+	password varchar2(15),
+	name varchar2(10),
+	cellnum varchar2(12),
+	email varchar2(30));
+ 

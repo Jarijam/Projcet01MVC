@@ -53,7 +53,7 @@ review 테이블 새로 만들것
 
 create table review(
 	res_name varchar2(50),
-	menu varchar2(20),
+	menu varchar2(30),
 	rating number,
 	rev_content varchar2(500),
 	rev_date date,
@@ -97,7 +97,7 @@ alter table restaurant add rating varchar2(10);
 정원님
 
 create table review_file (
-	review_no varchar2(10),
+	review_no number,
 	file_name varchar2(50));
 review view설정 //완료
 review 목록보여줄 페이지완성. list select, sql연동.

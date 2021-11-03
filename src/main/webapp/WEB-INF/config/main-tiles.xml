@@ -39,7 +39,7 @@
 		<put-attribute name="content" value="/WEB-INF/user/userinfo_update.jsp"/>
 	</definition>
 	
-	<definition name="restaurant" extends="indexTemplate">
+	<definition name="restaurant/list" extends="indexTemplate">
 		<put-attribute name="content" value="/WEB-INF/board/restaurantlist.jsp"/>
 	</definition>
 	

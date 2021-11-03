@@ -26,7 +26,15 @@ public class ReviewServiceImp implements ReviewService {
 
 	@Override
 	public List<ReviewVO> getReviewList() {
-		return dao.getReviewList();
+		List<ReviewVO> reviewlist =  dao.getReviewList();
+		
+		for (int i = 0; i <reviewlist.size(); i++) {
+			ReviewVO vo = reviewlist.get(i);
+			ReviewFileVO file = dao.getFile(vo.getReview_no());
+			vo.setReviewImg(file.getFile_name());
+					
+		}
+		return reviewlist;
 	}
 	
 	@Override
@@ -72,8 +80,17 @@ public class ReviewServiceImp implements ReviewService {
 
 	@Override
 	public int update(ReviewVO review_update) {
-		return 0;
+		int result = dao.update(review_update);
+		System.out.println("update-service+++++++"+result);
+		return result;
 	}
+
+	@Override
+	public int delete(String delete) {
+		return dao.delete(delete);
+	}
+
+	
 
 	
 }

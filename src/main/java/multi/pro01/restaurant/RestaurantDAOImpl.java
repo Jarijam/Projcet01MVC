@@ -10,25 +10,28 @@ import org.springframework.stereotype.Repository;
 public class RestaurantDAOImpl implements RestaurantDAO {
 	@Autowired
 	SqlSession sqlSession;
-				
-	@Override
-	public List<RestaurantVO> searchList(String restaurant) {
-		System.out.println("service에서넘어오는지 확인"+restaurant);		
-		List<RestaurantVO> list = sqlSession.selectList("pro01.restaurant.restaurant_list", restaurant);
-		System.out.println("db연동체크"+list);
-		return list;
-	}
 
 	@Override
 	public int insert(RestaurantVO user) {
 		System.out.println("restaurant테이블에 insert"+user);
-		int result = sqlSession.insert("pro01.restaurant.restaurant_insert", user);
+		int result = sqlSession.insert("pro01.restaurant.insert", user);
 		return result;
 	}
 
 	@Override
 	public List<RestaurantVO> restaurantlist() {
 		return sqlSession.selectList("pro01.restaurant.list");
+	}
+
+	@Override
+	public List<RestaurantVO> categorySearch(String res_type) {
+		return sqlSession.selectList("pro01.restaurant.categorySearch", res_type);
+	}
+
+	
+	@Override
+	public List<String> getCategory() {
+		return sqlSession.selectList("pro01.restaurant.getCategory");
 	}
 
 	@Override

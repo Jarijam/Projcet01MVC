@@ -14,20 +14,20 @@ public class RestaurantController {
 	@Autowired
 	RestaurantService service;
 	
-	@RequestMapping("/restaurant/update.do")
-	public String update(RestaurantVO user) {
-		System.out.println("연동확인"+user);
-		service.insert(user);
-		return "redirect:/restaurant/restaurantlist.do";
-	}
-	
+//	@RequestMapping("/restaurant/update.do")
+//	public String update(RestaurantVO user) {
+//		System.out.println("연동확인"+user);
+//		service.insert(user);
+//		return "redirect:/restaurant/restaurantlist.do";
+//	}
+//	
 	@RequestMapping("/restaurant/insert.do")
 	public String insert(RestaurantVO command) {
 		System.out.println("dao연동확인"+command);	
 		String url ="";
 		int result = service.insert(command);
 		if(result>=1) {
-			url = "redirect:/restaurant/restaurantlist.do?category=all";
+			url = "redirect:/restaurant/restaurantlist.do?res_type=all";
 		}else {
 			url = "redirect:/restaurant/insertPage.do";
 		}
@@ -48,21 +48,16 @@ public class RestaurantController {
 		mav.addObject("restaurant",restaurant_read);
 		return mav;
 	}
-	/*
-	 * @RequestMapping("/restaurant/search.do") public ModelAndView
-	 * restaurantsearch(String restaurant) {
-	 * System.out.println("mapping확인"+restaurant); ModelAndView mav = new
-	 * ModelAndView(); List<RestaurantVO> restaurant_name =
-	 * service.searchList(restaurant); mav.addObject("restaurant_name",
-	 * restaurant_name); mav.setViewName("pro01/restaurant_list"); return mav; }
-	 */
+
 	
 	@RequestMapping("/restaurant/restaurantlist.do")
-	public ModelAndView restaurantlist(String restaurant) {
+	public ModelAndView restaurantlist(String res_type) {
 		ModelAndView mav = new ModelAndView();
-		List<RestaurantVO> restaurant_list = service.restaurantlist();
-		mav.setViewName("restaurant");
+		List<RestaurantVO> restaurant_list = service.restaurantlist(res_type);
+		List<String> category = service.getCategory();
+		mav.setViewName("restaurant/list");
 		mav.addObject("restaurant_list",restaurant_list);
+		mav.addObject("category_list", category);
 		return mav;
 	}
 }

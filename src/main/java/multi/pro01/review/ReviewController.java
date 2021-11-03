@@ -28,10 +28,17 @@ public class ReviewController {
 	 */
 	
 	//리뷰수정
-	@RequestMapping("/review/update.do")
+	@RequestMapping("/review/update_review.do")
 	public String update(ReviewVO review_update) {
-		System.out.println("연동확인"+review_update);
-		service.insert(review_update, null);
+		System.out.println("update-controller"+review_update);
+		service.update(review_update);
+		return "redirect:/review/reviewlist.do";
+	}
+	
+	@RequestMapping("/review/delete.do")
+	public String delete(String delete) {
+		System.out.println("delete-controller");
+		service.delete(delete);
 		return "redirect:/review/reviewlist.do";
 	}
 	
@@ -79,7 +86,8 @@ public class ReviewController {
 //			System.out.println(e.getMessage());
 //		}
 		List<ReviewVO> reviewlist = service.getReviewList();
-		//List<ReviewFileVO> filelist = service.getFileList();
+		System.out.println(reviewlist);
+	//	List<ReviewFileVO> filelist = service.getFileList();
 		mav.setViewName("reviewlist");
 		mav.addObject("reviewlist", reviewlist);
 		//mav.addObject("filelist", filelist);
@@ -92,6 +100,7 @@ public class ReviewController {
 		ModelAndView mav = new ModelAndView();
 		ReviewVO review = service.read(review_no);		
 		String viewName="";
+		
 		if(state.equals("READ")) {
 			viewName="review/read";
 		}else {

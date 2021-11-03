@@ -17,14 +17,15 @@
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
 		up static resources in the ${webappRoot}/resources directory -->
 	<!-- 이미지 -->
+		<!-- uplooad 파일들 -->
+	<resources mapping="/upload/images/**"
+		location="/WEB-INF/upload/"/>
+	
 	<resources mapping="/images/**"
 		location="/WEB-INF/static/images/" />
 	<!-- css와 javascript -->
 	<resources mapping="/common/**"
 		location="/WEB-INF/static/common/" />
-	<!-- uplooad 파일들 -->
-	<resources mapping="/upload/**"
-		location="/WEB-INF/static/upload/"/>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
