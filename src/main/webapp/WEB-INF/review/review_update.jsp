@@ -12,12 +12,15 @@
 			ReviewVO review = (ReviewVO)request.getAttribute("review"); 
 		%>
 		<h3>리뷰수정</h3>
-		<form action="#" method="post">
+		<form action="/pro01/review/update_review.do" method="post">
 			<div class="form-group">			
 				<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 					<div class="col-sm-8">
 						<%= review.getRes_name() %>
 					</div>
+			</div>
+			<div style="display: none">
+				<input name="review_no" value="${review.review_no }">
 			</div>
 			<div class="form-group">
 				<label class="col-sm-2 col-sm-2 control-label">메뉴이름</label>
@@ -29,7 +32,7 @@
 			<div class="form-group">
 				<label class="col-sm-2 col-sm-2 control-label">별점</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="res_type" value="${review.rating}">
+						<input type="text" class="form-control" name="rating" value="${review.rating}">
 							<span class="help-block"></span>
 					</div>
 			</div>	

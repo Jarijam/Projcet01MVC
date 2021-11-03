@@ -37,6 +37,7 @@ public class ReviewDAOImpl implements ReviewDAO {
 		return sqlSession.selectOne("project.review.read", review_no);
 	}
 	
+	
 	@Override
 	public ReviewFileVO readFile(String review_no) {
 		return sqlSession.selectOne("project.review.read", review_no);
@@ -64,7 +65,7 @@ public class ReviewDAOImpl implements ReviewDAO {
 	//review_update
 	@Override
 	public int update(ReviewVO review_update) {
-		return 0;
+		return sqlSession.update("project.review.update_review", review_update);
 	}
 
 	@Override
@@ -72,6 +73,8 @@ public class ReviewDAOImpl implements ReviewDAO {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne("project.review.filelist_read", review_no);
 	}
+
+	
 
 	
 	

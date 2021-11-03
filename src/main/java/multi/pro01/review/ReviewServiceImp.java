@@ -80,8 +80,12 @@ public class ReviewServiceImp implements ReviewService {
 
 	@Override
 	public int update(ReviewVO review_update) {
-		return 0;
+		int result = dao.update(review_update);
+		System.out.println("update-service+++++++"+result);
+		return result;
 	}
+
+	
 
 	
 }

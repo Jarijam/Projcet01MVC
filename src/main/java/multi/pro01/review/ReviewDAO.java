@@ -18,6 +18,7 @@ public interface ReviewDAO {
 	
 	ReviewFileVO readFile(String review_no);
 	
-	//review_update
+	
 	int update(ReviewVO review_update);
+	
 }

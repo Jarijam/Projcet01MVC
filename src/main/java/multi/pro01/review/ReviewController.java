@@ -28,10 +28,10 @@ public class ReviewController {
 	 */
 	
 	//리뷰수정
-	@RequestMapping("/review/update.do")
+	@RequestMapping("/review/update_review.do")
 	public String update(ReviewVO review_update) {
-		System.out.println("연동확인"+review_update);
-		service.insert(review_update, null);
+		System.out.println("update-controller"+review_update);
+		service.update(review_update);
 		return "redirect:/review/reviewlist.do";
 	}
 	
