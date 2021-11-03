@@ -19,6 +19,7 @@ public class RestaurantServiceImpl implements RestaurantService  {
 
 	@Override
 	public List<RestaurantVO> restaurantlist(String res_type) {
+		System.out.println("서비스단 체크=>"+res_type);
 		List<RestaurantVO> restaurantlist = null;
 		if(res_type.equals("all")) {
 			restaurantlist = dao.restaurantlist();

@@ -29,5 +29,8 @@
   	<update id="update" parameterType="String">
   		update restaurant set res_name=#{res_name},res_addr=#{res_addr},res_type=#{res_type},res_menu=#{res_menu} where res_name=#{res_name}		
   	</update>
+  	<insert id="insert" parameterType="restaurant">
+  		insert into restaurant values(#{res_name}, #{res_addr}, #{res_type}, #{res_num}, #{res_menu}, #{rating})
+  	</insert>
   	
 </mapper>

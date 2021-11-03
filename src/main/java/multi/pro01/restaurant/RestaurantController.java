@@ -14,20 +14,20 @@ public class RestaurantController {
 	@Autowired
 	RestaurantService service;
 	
-	@RequestMapping("/restaurant/update.do")
-	public String update(RestaurantVO user) {
-		System.out.println("연동확인"+user);
-		service.insert(user);
-		return "redirect:/restaurant/restaurantlist.do";
-	}
-	
+//	@RequestMapping("/restaurant/update.do")
+//	public String update(RestaurantVO user) {
+//		System.out.println("연동확인"+user);
+//		service.insert(user);
+//		return "redirect:/restaurant/restaurantlist.do";
+//	}
+//	
 	@RequestMapping("/restaurant/insert.do")
 	public String insert(RestaurantVO command) {
 		System.out.println("dao연동확인"+command);	
 		String url ="";
 		int result = service.insert(command);
 		if(result>=1) {
-			url = "redirect:/restaurant/restaurantlist.do?category=all";
+			url = "redirect:/restaurant/restaurantlist.do?res_type=all";
 		}else {
 			url = "redirect:/restaurant/insertPage.do";
 		}
