@@ -57,14 +57,7 @@
 									게시글 유형에 맞는 내용으로 작성 부탁드립니다. </span>
 							</div>
 						</div>
-						<!-- <div class="form-group">
-							<label class="col-sm-2 col-sm-2 control-label">내용</label>
-							<div class="col-sm-8">
-								<textarea id="content"
-									style="width: 100%; border: 1; overflow: visible; text-overflow: ellipsis;"
-									rows=15 name="content"></textarea>
-							</div>
-						</div> -->
+					
 						<div class="form-group">
 							<div class="col-lg-4 text-center"></div>
 							<div class="col-lg-2 text-center">
@@ -77,7 +70,7 @@
 							</div>
 	
 						</div>
-						<button id="btn-remove" class="btn btn-danger">delete</button>
+						
 					</form>
 			
 			</div>
