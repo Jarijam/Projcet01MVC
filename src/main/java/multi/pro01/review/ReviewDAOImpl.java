@@ -70,8 +70,12 @@ public class ReviewDAOImpl implements ReviewDAO {
 
 	@Override
 	public ReviewFileVO getFile(String review_no) {
-		// TODO Auto-generated method stub
 		return sqlSession.selectOne("project.review.filelist_read", review_no);
+	}
+
+	@Override
+	public int delete(String delete) {
+		return sqlSession.delete("project.review.delete", delete);
 	}
 
 	

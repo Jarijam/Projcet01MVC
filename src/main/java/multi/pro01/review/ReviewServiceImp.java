@@ -85,6 +85,11 @@ public class ReviewServiceImp implements ReviewService {
 		return result;
 	}
 
+	@Override
+	public int delete(String delete) {
+		return dao.delete(delete);
+	}
+
 	
 
 	

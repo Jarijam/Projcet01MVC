@@ -35,6 +35,13 @@ public class ReviewController {
 		return "redirect:/review/reviewlist.do";
 	}
 	
+	@RequestMapping("/review/delete.do")
+	public String delete(String delete) {
+		System.out.println("delete-controller");
+		service.delete(delete);
+		return "redirect:/review/reviewlist.do";
+	}
+	
 	//게시글 db에 insert
 	@RequestMapping(value="/review/insert.do" ,method=RequestMethod.POST)
 	//@RequestMapping(value="/review/fileinsert.do" ,method=RequestMethod.POST)

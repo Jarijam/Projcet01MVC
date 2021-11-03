@@ -20,5 +20,5 @@ public interface ReviewDAO {
 	
 	
 	int update(ReviewVO review_update);
-	
+	int delete(String delete);
 }

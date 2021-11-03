@@ -61,17 +61,27 @@
 							style="width: 100px; background-color: #0ea006">수정
 					</button>
 				</div>
+				</div>
+			</form>
+			<div class="form-group">
 				<div class="col-lg-2 text-center">
 					<button type="reset" class="btn btn-default"
 							style="width: 100px; background-color: #9a9a9a">취소
 					</button>
 				</div>	
+			<form action="/pro01/review/delete.do" method="post">
+			<div class="form-group">			
+				<div style="display: none">
+				<input name="review_no" value="${review.review_no }">
+			</div>
+			</div>
 				<div class="col-lg-2 text-center">
-					<button type="submit" class="btn btn-success"
+					<button type="submit" class="btn btn-success" 
 							style="width: 100px; background-color: #0ea006">삭제
 					</button>
-				</div>		
-			</div>					
-			</form>
+				</div>
+				</form>	
+				</div>	
+							
 	</body>
 </html>
