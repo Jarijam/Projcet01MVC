@@ -51,9 +51,9 @@ public class RestaurantController {
 
 	
 	@RequestMapping("/restaurant/restaurantlist.do")
-	public ModelAndView restaurantlist(String category) {
+	public ModelAndView restaurantlist(String res_type) {
 		ModelAndView mav = new ModelAndView();
-		List<RestaurantVO> restaurant_list = service.restaurantlist(category);
+		List<RestaurantVO> restaurant_list = service.restaurantlist(res_type);
 		mav.setViewName("restaurant/list");
 		mav.addObject("restaurant_list",restaurant_list);
 		return mav;

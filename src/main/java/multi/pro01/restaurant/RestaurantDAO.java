@@ -8,5 +8,5 @@ public interface RestaurantDAO {
 	int delete(RestaurantVO user);
 	RestaurantVO read(String restaurant);
 	List<RestaurantVO> restaurantlist();
-	List<RestaurantVO> categorySearch(String category);
+	List<RestaurantVO> categorySearch(String res_type);
 }

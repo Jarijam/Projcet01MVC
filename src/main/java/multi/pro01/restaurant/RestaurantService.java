@@ -6,6 +6,6 @@ public interface RestaurantService {
 	int delete(RestaurantVO user);
 	int update(RestaurantVO user);
 	int insert(RestaurantVO user);		
-	List<RestaurantVO> restaurantlist(String category);
+	List<RestaurantVO> restaurantlist(String res_type);
 	RestaurantVO read(String restaurant);
 }

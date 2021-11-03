@@ -8,18 +8,18 @@
 	<head>
 		<title>식당검색 페이지</title>
 		<script type="text/javascript">
-			category = "${category}";
+			res_type = "${res_type}";
 			$(document).ready(function(){
-				$("#category").val(category).attr("selected", "selected")
+				$("#res_type").val(res_type).attr("selected", "selected")
 				//<select>에서 선택이 바뀔때마다 change 이벤트발생 -> change이벤트가 발생하면 /board/list/do를 호출하면서
 				//category파라미터를 넘김
-				$("#category").change(function(){
-					location.href="/pro01/restaurant/restaurantlist.do?category="+encodeURI($(this).val())
+				$("#res_type").change(function(){
+					location.href="/pro01/restaurant/restaurantlist.do?res_type="+encodeURI($(this).val())
 				});
 			});
 		</script>
 	</head>
-<body>
+	<body>
 	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");		
 		int size = restaurantList.size();
 	%>		
@@ -32,7 +32,7 @@
 		<div class="col-md-3" style="padding-bottom: 10px">
 		    구분:
 			<form>
-				<select name="category"  id="category">
+				<select name="res_type"  id="res_type">
 					<option value="all">전체게시물</option>
 					<option value="한식">한식</option>
 					<option value="중식">중식</option>	

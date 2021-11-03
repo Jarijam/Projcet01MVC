@@ -14,6 +14,9 @@
 	<select id="list" resultType="restaurant">
   		select * from restaurant
   	</select>
+  	<select id="categorySearch" parameterType="String" resultType="restaurant">
+  		select * from restaurant where res_type = #{res_type}
+  	</select>
   	<select id="read" resultType="restaurant" parameterType="String">
   		select * from restaurant where res_name=#{res_name}
   	</select>	

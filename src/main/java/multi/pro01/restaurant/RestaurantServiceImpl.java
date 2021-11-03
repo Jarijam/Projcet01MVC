@@ -18,12 +18,12 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	}
 
 	@Override
-	public List<RestaurantVO> restaurantlist(String category) {
+	public List<RestaurantVO> restaurantlist(String res_type) {
 		List<RestaurantVO> restaurantlist = null;
-		if(category.equals("all")) {
+		if(res_type.equals("all")) {
 			restaurantlist = dao.restaurantlist();
 		}else {
-			restaurantlist = dao.categorySearch(category);
+			restaurantlist = dao.categorySearch(res_type);
 		}
 		return restaurantlist;		
 	}
