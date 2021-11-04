@@ -70,18 +70,18 @@
 					</button>
 				</div>	
 			<form action="/pro01/review/delete.do" method="post">
-			<div class="form-group">			
-				<div style="display: none">
-				<input name="review_no" value="${review.review_no }">
-			</div>
-			</div>
+				<div class="form-group">			
+					<div style="display: none">
+						<input name="review_no" value="<%= review.getReview_no()%>">
+					</div>
+				</div>
 				<div class="col-lg-2 text-center">
 					<button type="submit" class="btn btn-success" 
 							style="width: 100px; background-color: #0ea006">삭제
 					</button>
 				</div>
 				</form>	
-				</div>	
+			</div>	
 							
 	</body>
 </html>

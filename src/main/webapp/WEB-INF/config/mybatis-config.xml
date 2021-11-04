@@ -3,6 +3,9 @@
 	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!-- <settings>
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings> -->
 	<typeAliases>
 		<typeAlias type="multi.pro01.userinfo.UserVO" alias="user"/>
 		<typeAlias type="multi.pro01.restaurant.RestaurantVO" alias="restaurant"/>
@@ -14,4 +17,9 @@
 		<mapper resource="mapper/restaurant.xml"/>
 		<mapper resource="mapper/review.xml"/>
 	</mappers>
+
+
+
+
+
 </configuration>
