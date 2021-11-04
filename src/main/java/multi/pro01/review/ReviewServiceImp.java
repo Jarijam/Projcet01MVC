@@ -87,7 +87,9 @@ public class ReviewServiceImp implements ReviewService {
 
 	@Override
 	public int delete(String delete) {
-		return dao.delete(delete);
+		int result = dao.delete(delete); 
+		System.out.println("delete-service++++++called"+result);
+		return result;
 	}
 
 	
