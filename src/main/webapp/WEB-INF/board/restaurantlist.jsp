@@ -17,10 +17,14 @@
 					location.href="/pro01/restaurant/restaurantlist.do?res_type="+encodeURI($(this).val())
 				});
 			});
-		</script>
+			</script>
+			
+
+
 	</head>
 	<body>
 	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");
+	ArrayList<RestaurantVO> restaurantList1 = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_res_type");
 		ArrayList<String> category_list = (ArrayList<String>) request.getAttribute("category_list");
 		int size = restaurantList.size();
 		int sort = category_list.size();

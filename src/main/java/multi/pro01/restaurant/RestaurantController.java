@@ -52,7 +52,8 @@ public class RestaurantController {
 	
 	@RequestMapping("/restaurant/restaurantlist.do")
 	public ModelAndView restaurantlist(String res_type) {
-		ModelAndView mav = new ModelAndView();
+		System.out.println("dao체크"+res_type);
+		ModelAndView mav = new ModelAndView("restaurant/list");
 		List<RestaurantVO> restaurant_list = service.restaurantlist(res_type);
 		List<String> category = service.getCategory();
 		mav.setViewName("restaurant/list");

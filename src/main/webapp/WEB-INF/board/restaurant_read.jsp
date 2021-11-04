@@ -5,7 +5,7 @@
 		<title>식당</title>
 	 <script type="text/javascript">
 			$(document).ready(function(){
-				$("#category").val("${restaurant.category}").attr("selected","selected");
+				$("#res_type").val("${restaurant.res_type}").attr("selected","selected");
 			});
 		</script>
 	</head>
