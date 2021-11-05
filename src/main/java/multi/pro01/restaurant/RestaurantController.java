@@ -22,8 +22,9 @@ public class RestaurantController {
 //	}
 //	
 	@RequestMapping("/restaurant/delete.do")
-	public String delete(String user) {
-		service.delete(user);
+	public String delete(String res_name) {
+		System.out.println(res_name);
+		service.delete(res_name);
 		return "redirect:/index.do";	
 	}
 		

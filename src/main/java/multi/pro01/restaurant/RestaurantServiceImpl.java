@@ -45,8 +45,9 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	}
 	
 	@Override
-	public int delete(String user) {
-		return dao.delete(user);
+	public int delete(String res_name) {
+		System.out.println("서비스impl"+res_name);
+		return dao.delete(res_name);
 	}
 	
 }
