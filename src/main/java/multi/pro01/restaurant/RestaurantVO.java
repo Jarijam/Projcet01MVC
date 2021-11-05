@@ -8,6 +8,7 @@ public class RestaurantVO {
 	private String res_menu;
 	private String rating;
 	
+	
 	public RestaurantVO() {
 		
 	}

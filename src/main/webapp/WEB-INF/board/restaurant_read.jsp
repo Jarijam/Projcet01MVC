@@ -1,24 +1,23 @@
+<%@page import="multi.pro01.restaurant.RestaurantVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>식당</title>
-	 <script type="text/javascript">
-			$(document).ready(function(){
-				$("#category").val("${restaurant.category}").attr("selected","selected");
-			});
-		</script>
+	
 	</head>
 <body>
+	<%	RestaurantVO restaurant = (RestaurantVO) request.getAttribute("restaurant");%>
 	<form class="form-horizontal" 
 		action="#" 
 		method="post" >	
 					
 		 <div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="res_name" class="control-label">식당이름</label>
+				<label for="res_name" class="control-label"><h3>식당이름</h3></label>
 			</div>
-			<div class="col-md-8">${restaurant.res_name}</div>
+			<div class="col-md-8"><%=restaurant.getRes_name()%></div>
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
@@ -46,7 +45,7 @@
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="res_menu" class="control-label">평점</label>
+				<label for="raing" class="control-label">평점</label>
 			</div>		
 			<div class="col-md-8">${restaurant.rating}</div>								
 		</div>
@@ -58,15 +57,16 @@
 					<i class="fa fa-fw fa-close"></i> 수정
 				</button>
 				<button type="button" class="btn btn-danger btn-lg"
-					onclick="location.href='/pro01/restaurant/restaurantlist.do'">
+					onclick="location.href='/pro01/restaurant/restaurantlist.do?res_type=all'">
 					<i class="fa fa-fw fa-close"></i> 목록
 				</button>
-				<button type="button" class="btn btn-danger btn-lg"
-					onclick="location.href='/pro01/restaurant/delete.do'">
+				<a href="/pro01/restaurant/delete.do?res_name=<%= restaurant.getRes_name()%>"><button type="button" class="btn btn-danger btn-lg">
 					<i class="fa fa-fw fa-close"></i> 삭제
-				</button>
+				</button></a>
+			
 			</div>
 		</div> 
+		
 	</form>
 </body>
 </html>

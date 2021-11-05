@@ -21,6 +21,13 @@ public class RestaurantController {
 //		return "redirect:/restaurant/restaurantlist.do";
 //	}
 //	
+	@RequestMapping("/restaurant/delete.do")
+	public String delete(String res_name) {
+		System.out.println(res_name);
+		service.delete(res_name);
+		return "redirect:/index.do";	
+	}
+		
 	@RequestMapping("/restaurant/insert.do")
 	public String insert(RestaurantVO command) {
 		System.out.println("dao연동확인"+command);	
@@ -34,10 +41,10 @@ public class RestaurantController {
 		return url;	
 	}
 	@RequestMapping("/restaurant/read.do")
-	public ModelAndView read(String restaurant, String state) {
-		System.out.println("read컨트롤러=>"+restaurant+","+state);
+	public ModelAndView read(String res_name, String state) {
+		System.out.println("read컨트롤러=>"+res_name+","+state);
 		ModelAndView mav = new ModelAndView();
-		RestaurantVO restaurant_read = service.read(restaurant);
+		RestaurantVO restaurant_read = service.read(res_name);
 		String viewName = "";
 		if(state.equals("READ")) {
 			viewName = "restaurant/read";
@@ -52,7 +59,8 @@ public class RestaurantController {
 	
 	@RequestMapping("/restaurant/restaurantlist.do")
 	public ModelAndView restaurantlist(String res_type) {
-		ModelAndView mav = new ModelAndView();
+		System.out.println("dao체크"+res_type);
+		ModelAndView mav = new ModelAndView("restaurant/list");
 		List<RestaurantVO> restaurant_list = service.restaurantlist(res_type);
 		List<String> category = service.getCategory();
 		mav.setViewName("restaurant/list");
@@ -60,4 +68,6 @@ public class RestaurantController {
 		mav.addObject("category_list", category);
 		return mav;
 	}
+	
+	
 }

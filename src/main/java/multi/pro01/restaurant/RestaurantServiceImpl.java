@@ -43,10 +43,11 @@ public class RestaurantServiceImpl implements RestaurantService  {
 	public RestaurantVO read(String restaurant_read) {
 		return dao.read(restaurant_read);
 	}
-
+	
 	@Override
-	public int delete(RestaurantVO user) {
-		return 0;
+	public int delete(String res_name) {
+		System.out.println("서비스impl"+res_name);
+		return dao.delete(res_name);
 	}
 	
 }
