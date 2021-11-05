@@ -15,7 +15,7 @@ public interface ReviewService {
 	void upload(MultipartFile file,String path,String fileName);
 	//review_update
 	int update(ReviewVO review_update);
-	int delete(String review_no);
+	int delete(String delete);
 }
 
 

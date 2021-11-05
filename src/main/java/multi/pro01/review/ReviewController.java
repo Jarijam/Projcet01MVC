@@ -38,9 +38,10 @@ public class ReviewController {
 	}
 	
 	@RequestMapping("/review/delete.do")
-	public String delete(String review_no) {
-		System.out.println("delete-controller"+review_no);
-		service.delete(review_no);
+	public String delete(String delete) {
+		System.out.println("delete-controller"+delete);
+		service.delete(delete);
+		
 		return "redirect:/review/reviewlist.do";
 	}
 	
