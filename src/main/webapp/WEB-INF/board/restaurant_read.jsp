@@ -53,7 +53,12 @@
 			</div>		
 			<div class="col-md-8">${restaurant.rating}</div>								
 		</div>
-		
+		<%-- <form method="post" action="/pro01/restaurant/delete.do" class="form-horizontal">
+								<div style="display: none">
+									<input name="userid" value="<%=restaurantList.getUserid()%>">
+								</div>
+								<input type="submit" id="delete" value="회원탈퇴하기">
+							</form> --%>
 		 <div class="form-group">
 			<div class="col-md-10 text-center">
 				<button type="button" class="btn btn-danger btn-lg" 
