@@ -5,7 +5,7 @@ import java.util.List;
 public interface RestaurantDAO {			
 	int update(RestaurantVO user);
 	int insert(RestaurantVO user);
-	int delete(RestaurantVO user);
+	int delete(String user);
 	RestaurantVO read(String restaurant_read);
 	List<RestaurantVO> restaurantlist();
 	List<RestaurantVO> categorySearch(String res_type);

@@ -25,5 +25,8 @@
   	<update id="update" parameterType="String">
   		update restaurant set res_name=#{res_name},res_addr=#{res_addr},res_type=#{res_type},res_menu=#{res_menu} where res_name=#{res_name}		
   	</update>
+  	<delete id="delete" parameterType="String">
+  		delete from restaurant where res_name=#{res_name}
+  	</delete>
   	
 </mapper>

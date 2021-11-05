@@ -1,3 +1,5 @@
+<%@page import="multi.pro01.restaurant.RestaurantVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,6 +12,7 @@
 		</script>
 	</head>
 <body>
+<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");%>
 	<form class="form-horizontal" 
 		action="#" 
 		method="post" >	
@@ -67,6 +70,7 @@
 				</button>
 			</div>
 		</div> 
+		
 	</form>
 </body>
 </html>

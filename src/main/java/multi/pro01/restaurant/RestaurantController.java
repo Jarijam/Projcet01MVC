@@ -21,6 +21,12 @@ public class RestaurantController {
 //		return "redirect:/restaurant/restaurantlist.do";
 //	}
 //	
+	@RequestMapping("/restaurant/delete.do")
+	public String delete(String user) {
+		service.delete(user);
+		return "redirect:/index.do";	
+	}
+		
 	@RequestMapping("/restaurant/insert.do")
 	public String insert(RestaurantVO command) {
 		System.out.println("dao연동확인"+command);	
@@ -61,4 +67,6 @@ public class RestaurantController {
 		mav.addObject("category_list", category);
 		return mav;
 	}
+	
+	
 }

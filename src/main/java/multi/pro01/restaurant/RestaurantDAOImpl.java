@@ -46,7 +46,8 @@ public class RestaurantDAOImpl implements RestaurantDAO {
 	}
 
 	@Override
-	public int delete(RestaurantVO user) {
+	public int delete(String user) {
+		sqlSession.delete("pro01.restaurant.delete", user);
 		return 0;
 	}
 
