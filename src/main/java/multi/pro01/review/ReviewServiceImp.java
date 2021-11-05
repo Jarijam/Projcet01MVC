@@ -28,12 +28,12 @@ public class ReviewServiceImp implements ReviewService {
 	public List<ReviewVO> getReviewList() {
 		List<ReviewVO> reviewlist =  dao.getReviewList();
 		
-//		for (int i = 0; i <reviewlist.size(); i++) {
-//			ReviewVO vo = reviewlist.get(i);
-//			ReviewFileVO file = dao.getFile(vo.getReview_no());
-//			vo.setReviewImg(file.getFile_name());
-//					
-//		}
+		for (int i = 0; i <reviewlist.size(); i++) {
+			ReviewVO vo = reviewlist.get(i);
+			ReviewFileVO file = dao.getFile(vo.getReview_no());
+			vo.setReviewImg(file.getFile_name());
+					
+		}
 		return reviewlist;
 	}
 	
@@ -86,8 +86,8 @@ public class ReviewServiceImp implements ReviewService {
 	}
 
 	@Override
-	public int delete(String delete) {
-		int result = dao.delete(delete); 
+	public int delete(String review_no) {
+		int result = dao.delete(review_no); 
 		System.out.println("delete-service++++++called"+result);
 		return result;
 	}

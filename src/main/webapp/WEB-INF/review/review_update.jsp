@@ -70,7 +70,7 @@
 							style="width: 100px; background-color: #9a9a9a">취소
 					</button>
 				</div>	
-			<form action="/pro01/review/delete.do" method="post">
+			<%-- <form action="/pro01/review/delete.do?review_no=<%= review.getReview_no()%>" method="post"> --%>
 				<div class="form-group">			
 					<div style="display: none">
 						<input name="review_no" value="<%= review.getReview_no()%>">
@@ -78,11 +78,13 @@
 					</div>
 				</div>
 				<div class="col-lg-2 text-center">
-					<button type="submit" class="btn btn-success" 
-							style="width: 100px; background-color: #0ea006">삭제
-					</button>
+					<a href="/pro01/review/delete.do?review_no=<%= review.getReview_no()%>">
+						<button type="button" class="btn btn-success" 
+								style="width: 100px; background-color: #0ea006">삭제1
+						</button>
+					</a>
 				</div>
-				</form>	
+				<!-- </form> -->	
 			</div>	
 							
 	</body>
