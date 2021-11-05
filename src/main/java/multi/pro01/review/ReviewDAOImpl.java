@@ -74,9 +74,9 @@ public class ReviewDAOImpl implements ReviewDAO {
 	}
 
 	@Override
-	public int delete(String delete) {
-		System.out.println("delete-dao+++++++++++called");
-		return sqlSession.delete("project.review.delete", delete);
+	public int delete(String review_no) {
+		System.out.println("delete-dao+++++++++++called"+review_no);
+		return sqlSession.delete("project.review.delete", review_no);
 	}
 
 	
