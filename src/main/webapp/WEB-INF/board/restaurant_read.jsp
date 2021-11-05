@@ -46,7 +46,7 @@
 		</div>
 		<div class="form-group">
 			<div class="col-md-2 text-right">
-				<label for="res_menu" class="control-label">평점</label>
+				<label for="raing" class="control-label">평점</label>
 			</div>		
 			<div class="col-md-8">${restaurant.rating}</div>								
 		</div>
@@ -58,7 +58,7 @@
 					<i class="fa fa-fw fa-close"></i> 수정
 				</button>
 				<button type="button" class="btn btn-danger btn-lg"
-					onclick="location.href='/pro01/restaurant/restaurantlist.do'">
+					onclick="location.href='/pro01/restaurant/restaurantlist.do?res_type=all'">
 					<i class="fa fa-fw fa-close"></i> 목록
 				</button>
 				<button type="button" class="btn btn-danger btn-lg"
