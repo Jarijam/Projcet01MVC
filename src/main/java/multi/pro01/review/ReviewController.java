@@ -27,6 +27,8 @@ public class ReviewController {
 	 * "redirect:/review/reviewlist.do"; }
 	 */
 	
+	
+	
 	//리뷰수정
 	@RequestMapping("/review/update_review.do")
 	public String update(ReviewVO review_update) {

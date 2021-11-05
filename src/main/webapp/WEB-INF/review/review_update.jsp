@@ -16,7 +16,8 @@
 			<div class="form-group">			
 				<label class="col-sm-2 col-sm-2 control-label">식당이름</label>
 					<div class="col-sm-8">
-						<%= review.getRes_name() %>
+						<%-- <%= review.getRes_name() %> --%>
+						${review.res_name }
 					</div>
 			</div>
 			<div style="display: none">
@@ -73,6 +74,7 @@
 				<div class="form-group">			
 					<div style="display: none">
 						<input name="review_no" value="<%= review.getReview_no()%>">
+						<%-- <input name="review_no" value="${review.review_no }"> --%>
 					</div>
 				</div>
 				<div class="col-lg-2 text-center">

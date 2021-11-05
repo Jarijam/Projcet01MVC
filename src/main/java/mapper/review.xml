@@ -17,7 +17,7 @@
 		update review set rating=#{rating}, menu=#{menu}, rev_content=#{rev_content} where review_no = #{review_no}
 	</update>
 	<delete id="delete" parameterType="String">
-		delete from review where review_no = #{review_no}
+		delete from review where review_no =#{review_no}
 	</delete>
 	<update id="ratingUpdate" parameterType="String">
 		update restaurant rt set rt.rating = (select round(avg(r.rating),1) from review r where r.res_name = rt.res_name) where rt.res_name = #{res_name}
