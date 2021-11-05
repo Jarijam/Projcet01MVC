@@ -24,7 +24,7 @@
 	</head>
 	<body>
 	<%	ArrayList<RestaurantVO> restaurantList = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_list");
-	ArrayList<RestaurantVO> restaurantList1 = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_res_type");
+/* 	ArrayList<RestaurantVO> restaurantList1 = (ArrayList<RestaurantVO>) request.getAttribute("restaurant_res_type"); */
 		ArrayList<String> category_list = (ArrayList<String>) request.getAttribute("category_list");
 		int size = restaurantList.size();
 		int sort = category_list.size();
@@ -65,7 +65,7 @@
 					RestaurantVO res = restaurantList.get(i); /* 84줄 ? 뒷 부분(restaurant_no는 컨트롤러 read.do의 String 값) */
 					%>			
 					<tr>
-						<td><a href="/pro01/restaurant/read.do?restaurant_read=<%= res.getRes_name()%>&state=READ"><%= res.getRes_name() %></a></td>															
+						<td><a href="/pro01/restaurant/read.do?res_name=<%= res.getRes_name()%>&state=READ"><%= res.getRes_name() %></a></td>															
 						<td><%= res.getRes_addr() %></td>	
 						<td><%= res.getRes_type() %></td>					
 						<td><%= res.getRes_num() %></td>

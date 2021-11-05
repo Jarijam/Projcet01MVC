@@ -34,10 +34,10 @@ public class RestaurantController {
 		return url;	
 	}
 	@RequestMapping("/restaurant/read.do")
-	public ModelAndView read(String restaurant, String state) {
-		System.out.println("read컨트롤러=>"+restaurant+","+state);
+	public ModelAndView read(String res_name, String state) {
+		System.out.println("read컨트롤러=>"+res_name+","+state);
 		ModelAndView mav = new ModelAndView();
-		RestaurantVO restaurant_read = service.read(restaurant);
+		RestaurantVO restaurant_read = service.read(res_name);
 		String viewName = "";
 		if(state.equals("READ")) {
 			viewName = "restaurant/read";
